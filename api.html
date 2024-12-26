@@ -1,0 +1,970 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Documentation &#8212; PumpProbeFitting  documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+    <link rel="stylesheet" type="text/css" href="_static/plot_directive.css?v=7f9a90b1" />
+    <link rel="stylesheet" type="text/css" href="_static/sg_gallery.css?v=d2d258e8" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'api';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="PumpProbeFitting.Fitting.Fitting.MinMaxscaler" href="srt_files/PumpProbeFitting.Fitting.Fitting.MinMaxscaler.html" />
+    <link rel="prev" title="&lt;no title&gt;" href="Examples/test_onboard.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="0.1.0." />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/PumpProbeFitting_logo.svg" class="logo__image only-light" alt="PumpProbeFitting  documentation - Home"/>
+    <img src="_static/PumpProbeFitting_logo_dark.svg" class="logo__image only-dark pst-js-only" alt="PumpProbeFitting  documentation - Home"/>
+  
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="index.html">
+    Home
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="getting_started.html">
+    Getting started
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="examples.html">
+    Examples
+  </a>
+</li>
+
+
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="#">
+    Documentation
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="PumpProbeFitting.html">
+    API Reference
+  </a>
+</li>
+
+            <li class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button"
+                data-bs-toggle="dropdown" aria-expanded="false"
+                aria-controls="pst-nav-more-links">
+                    More
+                </button>
+                <ul id="pst-nav-more-links" class="dropdown-menu">
+                    
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="contributing.html">
+    Contributing
+  </a>
+</li>
+
+                </ul>
+            </li>
+            
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/mohangiri1/PumpProbeFitting" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fab fa-github-square fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="index.html">
+    Home
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="getting_started.html">
+    Getting started
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="examples.html">
+    Examples
+  </a>
+</li>
+
+
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="#">
+    Documentation
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="PumpProbeFitting.html">
+    API Reference
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="contributing.html">
+    Contributing
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/mohangiri1/PumpProbeFitting" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fab fa-github-square fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+<nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"><p aria-level="2" class="caption" role="heading"><span class="caption-text">Fitting</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="srt_files/PumpProbeFitting.Fitting.Fitting.MinMaxscaler.html">PumpProbeFitting.Fitting.Fitting.MinMaxscaler</a></li>
+<li class="toctree-l1"><a class="reference internal" href="srt_files/PumpProbeFitting.Fitting.Fitting.bootstrap_optimization.html">PumpProbeFitting.Fitting.Fitting.bootstrap_optimization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="srt_files/PumpProbeFitting.Fitting.Fitting.VariableDependentFit.html">PumpProbeFitting.Fitting.Fitting.VariableDependentFit</a></li>
+<li class="toctree-l1"><a class="reference internal" href="srt_files/PumpProbeFitting.Fitting.Fitting.box_plot_optimized_parameters.html">PumpProbeFitting.Fitting.Fitting.box_plot_optimized_parameters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="srt_files/PumpProbeFitting.Fitting.Fitting.display_result.html">PumpProbeFitting.Fitting.Fitting.display_result</a></li>
+<li class="toctree-l1"><a class="reference internal" href="srt_files/PumpProbeFitting.Fitting.Fitting.find_t0_max_min.html">PumpProbeFitting.Fitting.Fitting.find_t0_max_min</a></li>
+<li class="toctree-l1"><a class="reference internal" href="srt_files/PumpProbeFitting.Fitting.Fitting.objective_function.html">PumpProbeFitting.Fitting.Fitting.objective_function</a></li>
+<li class="toctree-l1"><a class="reference internal" href="srt_files/PumpProbeFitting.Fitting.Fitting.plot_components.html">PumpProbeFitting.Fitting.Fitting.plot_components</a></li>
+<li class="toctree-l1"><a class="reference internal" href="srt_files/PumpProbeFitting.Fitting.Fitting.plot_fit.html">PumpProbeFitting.Fitting.Fitting.plot_fit</a></li>
+<li class="toctree-l1"><a class="reference internal" href="srt_files/PumpProbeFitting.Fitting.Fitting.plot_optimized_parameters.html">PumpProbeFitting.Fitting.Fitting.plot_optimized_parameters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="srt_files/PumpProbeFitting.Fitting.Fitting.tukey_biweight_loss.html">PumpProbeFitting.Fitting.Fitting.tukey_biweight_loss</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Models</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="srt_files/PumpProbeFitting.data_model.Models.Select_model.html">PumpProbeFitting.data_model.Models.Select_model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="srt_files/PumpProbeFitting.data_model.Models.double_exp.html">PumpProbeFitting.data_model.Models.double_exp</a></li>
+<li class="toctree-l1"><a class="reference internal" href="srt_files/PumpProbeFitting.data_model.Models.double_exp_gauss.html">PumpProbeFitting.data_model.Models.double_exp_gauss</a></li>
+<li class="toctree-l1"><a class="reference internal" href="srt_files/PumpProbeFitting.data_model.Models.exp_1_frt.html">PumpProbeFitting.data_model.Models.exp_1_frt</a></li>
+<li class="toctree-l1"><a class="reference internal" href="srt_files/PumpProbeFitting.data_model.Models.exp_1frt_2_exp.html">PumpProbeFitting.data_model.Models.exp_1frt_2_exp</a></li>
+<li class="toctree-l1"><a class="reference internal" href="srt_files/PumpProbeFitting.data_model.Models.exp_1frt_3_exp.html">PumpProbeFitting.data_model.Models.exp_1frt_3_exp</a></li>
+<li class="toctree-l1"><a class="reference internal" href="srt_files/PumpProbeFitting.data_model.Models.exp_2_frt.html">PumpProbeFitting.data_model.Models.exp_2_frt</a></li>
+<li class="toctree-l1"><a class="reference internal" href="srt_files/PumpProbeFitting.data_model.Models.exp_switch.html">PumpProbeFitting.data_model.Models.exp_switch</a></li>
+<li class="toctree-l1"><a class="reference internal" href="srt_files/PumpProbeFitting.data_model.Models.exp_switch_exp.html">PumpProbeFitting.data_model.Models.exp_switch_exp</a></li>
+<li class="toctree-l1"><a class="reference internal" href="srt_files/PumpProbeFitting.data_model.Models.frt.html">PumpProbeFitting.data_model.Models.frt</a></li>
+<li class="toctree-l1"><a class="reference internal" href="srt_files/PumpProbeFitting.data_model.Models.frt_exp_switch.html">PumpProbeFitting.data_model.Models.frt_exp_switch</a></li>
+<li class="toctree-l1"><a class="reference internal" href="srt_files/PumpProbeFitting.data_model.Models.single_exp.html">PumpProbeFitting.data_model.Models.single_exp</a></li>
+<li class="toctree-l1"><a class="reference internal" href="srt_files/PumpProbeFitting.data_model.Models.tetra_exp.html">PumpProbeFitting.data_model.Models.tetra_exp</a></li>
+<li class="toctree-l1"><a class="reference internal" href="srt_files/PumpProbeFitting.data_model.Models.triple_exp.html">PumpProbeFitting.data_model.Models.triple_exp</a></li>
+<li class="toctree-l1"><a class="reference internal" href="srt_files/PumpProbeFitting.data_model.Models.thermal_frt.html">PumpProbeFitting.data_model.Models.thermal_frt</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Models_Utilities</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="srt_files/PumpProbeFitting.data_model.Models_Utilities.get_ParamName.html">PumpProbeFitting.data_model.Models_Utilities.get_ParamName</a></li>
+<li class="toctree-l1"><a class="reference internal" href="srt_files/PumpProbeFitting.data_model.Models_Utilities.get_ParamUncertaintyName.html">PumpProbeFitting.data_model.Models_Utilities.get_ParamUncertaintyName</a></li>
+<li class="toctree-l1"><a class="reference internal" href="srt_files/PumpProbeFitting.data_model.Models_Utilities.get_bounds.html">PumpProbeFitting.data_model.Models_Utilities.get_bounds</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Utilities</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="srt_files/PumpProbeFitting.data_model.Utilities.convolution_exp.html">PumpProbeFitting.data_model.Utilities.convolution_exp</a></li>
+<li class="toctree-l1"><a class="reference internal" href="srt_files/PumpProbeFitting.data_model.Utilities.convolution_stretchedExp.html">PumpProbeFitting.data_model.Utilities.convolution_stretchedExp</a></li>
+<li class="toctree-l1"><a class="reference internal" href="srt_files/PumpProbeFitting.data_model.Utilities.exponential.html">PumpProbeFitting.data_model.Utilities.exponential</a></li>
+<li class="toctree-l1"><a class="reference internal" href="srt_files/PumpProbeFitting.data_model.Utilities.gaussian.html">PumpProbeFitting.data_model.Utilities.gaussian</a></li>
+<li class="toctree-l1"><a class="reference internal" href="srt_files/PumpProbeFitting.data_model.Utilities.heaviside.html">PumpProbeFitting.data_model.Utilities.heaviside</a></li>
+<li class="toctree-l1"><a class="reference internal" href="srt_files/PumpProbeFitting.data_model.Utilities.stretched_exponential.html">PumpProbeFitting.data_model.Utilities.stretched_exponential</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Fitting_Basis</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="srt_files/PumpProbeFitting.data_model.Fitting_Basis.ConstFunc.html">PumpProbeFitting.data_model.Fitting_Basis.ConstFunc</a></li>
+<li class="toctree-l1"><a class="reference internal" href="srt_files/PumpProbeFitting.data_model.Fitting_Basis.TransDirectFunc.html">PumpProbeFitting.data_model.Fitting_Basis.TransDirectFunc</a></li>
+<li class="toctree-l1"><a class="reference internal" href="srt_files/PumpProbeFitting.data_model.Fitting_Basis.TransDirect_frt_Func.html">PumpProbeFitting.data_model.Fitting_Basis.TransDirect_frt_Func</a></li>
+<li class="toctree-l1"><a class="reference internal" href="srt_files/PumpProbeFitting.data_model.Fitting_Basis.gauss_func.html">PumpProbeFitting.data_model.Fitting_Basis.gauss_func</a></li>
+<li class="toctree-l1"><a class="reference internal" href="srt_files/PumpProbeFitting.data_model.Fitting_Basis.instrument_response.html">PumpProbeFitting.data_model.Fitting_Basis.instrument_response</a></li>
+<li class="toctree-l1"><a class="reference internal" href="srt_files/PumpProbeFitting.data_model.Fitting_Basis.switch_backward_func.html">PumpProbeFitting.data_model.Fitting_Basis.switch_backward_func</a></li>
+<li class="toctree-l1"><a class="reference internal" href="srt_files/PumpProbeFitting.data_model.Fitting_Basis.switch_direct_func.html">PumpProbeFitting.data_model.Fitting_Basis.switch_direct_func</a></li>
+<li class="toctree-l1"><a class="reference internal" href="srt_files/PumpProbeFitting.data_model.Fitting_Basis.trans_backward_func.html">PumpProbeFitting.data_model.Fitting_Basis.trans_backward_func</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">BoundsClass</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="srt_files/PumpProbeFitting.parameter_space.BoundsClass.bound_var.html">PumpProbeFitting.parameter_space.BoundsClass.bound_var</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Goodness_of_fit</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="srt_files/PumpProbeFitting.fitting_metrics.Goodness_of_fit.AkaikeInformationCriterion.html">PumpProbeFitting.fitting_metrics.Goodness_of_fit.AkaikeInformationCriterion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="srt_files/PumpProbeFitting.fitting_metrics.Goodness_of_fit.BayesianInformationCriterion.html">PumpProbeFitting.fitting_metrics.Goodness_of_fit.BayesianInformationCriterion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="srt_files/PumpProbeFitting.fitting_metrics.Goodness_of_fit.chi_square.html">PumpProbeFitting.fitting_metrics.Goodness_of_fit.chi_square</a></li>
+<li class="toctree-l1"><a class="reference internal" href="srt_files/PumpProbeFitting.fitting_metrics.Goodness_of_fit.reduced_chi_square.html">PumpProbeFitting.fitting_metrics.Goodness_of_fit.reduced_chi_square</a></li>
+<li class="toctree-l1"><a class="reference internal" href="srt_files/PumpProbeFitting.fitting_metrics.Goodness_of_fit.r_squared.html">PumpProbeFitting.fitting_metrics.Goodness_of_fit.r_squared</a></li>
+<li class="toctree-l1"><a class="reference internal" href="srt_files/PumpProbeFitting.fitting_metrics.Goodness_of_fit.display_goodness_of_fit.html">PumpProbeFitting.fitting_metrics.Goodness_of_fit.display_goodness_of_fit</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">files_n_location</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="srt_files/PumpProbeFitting.file_module.files_n_location.ExtractFileNames.html">PumpProbeFitting.file_module.files_n_location.ExtractFileNames</a></li>
+<li class="toctree-l1"><a class="reference internal" href="srt_files/PumpProbeFitting.file_module.files_n_location.generate_path.html">PumpProbeFitting.file_module.files_n_location.generate_path</a></li>
+<li class="toctree-l1"><a class="reference internal" href="srt_files/PumpProbeFitting.file_module.files_n_location.generate_progress_path.html">PumpProbeFitting.file_module.files_n_location.generate_progress_path</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">SaveResults</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="srt_files/PumpProbeFitting.save_result.SaveResults.dataFrameofResults_withVariable.html">PumpProbeFitting.save_result.SaveResults.dataFrameofResults_withVariable</a></li>
+<li class="toctree-l1"><a class="reference internal" href="srt_files/PumpProbeFitting.save_result.SaveResults.dataframeOfResults.html">PumpProbeFitting.save_result.SaveResults.dataframeOfResults</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">GeneralPlots</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="srt_files/PumpProbeFitting.visualization.GeneralPlots.PlotExperimentalData_and_Fit.html">PumpProbeFitting.visualization.GeneralPlots.PlotExperimentalData_and_Fit</a></li>
+<li class="toctree-l1"><a class="reference internal" href="srt_files/PumpProbeFitting.visualization.GeneralPlots.PlotExperimentalData_and_Fit_combined.html">PumpProbeFitting.visualization.GeneralPlots.PlotExperimentalData_and_Fit_combined</a></li>
+<li class="toctree-l1"><a class="reference internal" href="srt_files/PumpProbeFitting.visualization.GeneralPlots.PlotResidual.html">PumpProbeFitting.visualization.GeneralPlots.PlotResidual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="srt_files/PumpProbeFitting.visualization.GeneralPlots.PlotResidual_combined.html">PumpProbeFitting.visualization.GeneralPlots.PlotResidual_combined</a></li>
+<li class="toctree-l1"><a class="reference internal" href="srt_files/PumpProbeFitting.visualization.GeneralPlots.PumpProbe_3_panel_plot_variable.html">PumpProbeFitting.visualization.GeneralPlots.PumpProbe_3_panel_plot_variable</a></li>
+<li class="toctree-l1"><a class="reference internal" href="srt_files/PumpProbeFitting.visualization.GeneralPlots.plot_A1_A2_semilog_together.html">PumpProbeFitting.visualization.GeneralPlots.plot_A1_A2_semilog_together</a></li>
+<li class="toctree-l1"><a class="reference internal" href="srt_files/PumpProbeFitting.visualization.GeneralPlots.plot_tau1_tau2_semilog_together.html">PumpProbeFitting.visualization.GeneralPlots.plot_tau1_tau2_semilog_together</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">LogLinearFit</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="srt_files/PumpProbeFitting.visualization.LogLinearFit.LogLog_LinearFit.html">PumpProbeFitting.visualization.LogLinearFit.LogLog_LinearFit</a></li>
+<li class="toctree-l1"><a class="reference internal" href="srt_files/PumpProbeFitting.visualization.LogLinearFit.Parameter_LogLinearFit_LinearScale.html">PumpProbeFitting.visualization.LogLinearFit.Parameter_LogLinearFit_LinearScale</a></li>
+<li class="toctree-l1"><a class="reference internal" href="srt_files/PumpProbeFitting.visualization.LogLinearFit.Parameter_LogLinearFit_Logscale.html">PumpProbeFitting.visualization.LogLinearFit.Parameter_LogLinearFit_Logscale</a></li>
+<li class="toctree-l1"><a class="reference internal" href="srt_files/PumpProbeFitting.visualization.LogLinearFit.Parameter_LogLinearFit_OriginalScale.html">PumpProbeFitting.visualization.LogLinearFit.Parameter_LogLinearFit_OriginalScale</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">PowerDependentResults</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="srt_files/PumpProbeFitting.visualization.PowerDependentResults.PowerVsParameter.html">PumpProbeFitting.visualization.PowerDependentResults.PowerVsParameter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="srt_files/PumpProbeFitting.visualization.PowerDependentResults.calculate_fluence.html">PumpProbeFitting.visualization.PowerDependentResults.calculate_fluence</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">TemperatureDependentResults</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="srt_files/PumpProbeFitting.visualization.TemperatureDependentResults.TemperatureVsParameter.html">PumpProbeFitting.visualization.TemperatureDependentResults.TemperatureVsParameter</a></li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">Documentation</span></li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="documentation">
+<h1>Documentation<a class="headerlink" href="#documentation" title="Link to this heading">#</a></h1>
+<section id="fitting">
+<h2>Fitting<a class="headerlink" href="#fitting" title="Link to this heading">#</a></h2>
+<div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="srt_files/PumpProbeFitting.Fitting.Fitting.MinMaxscaler.html#PumpProbeFitting.Fitting.Fitting.MinMaxscaler" title="PumpProbeFitting.Fitting.Fitting.MinMaxscaler"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Fitting.MinMaxscaler</span></code></a>(data)</p></td>
+<td><p>Scale data to the range <code class="docutils literal notranslate"><span class="pre">[-1,</span> <span class="pre">0]</span></code>.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="srt_files/PumpProbeFitting.Fitting.Fitting.bootstrap_optimization.html#PumpProbeFitting.Fitting.Fitting.bootstrap_optimization" title="PumpProbeFitting.Fitting.Fitting.bootstrap_optimization"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Fitting.bootstrap_optimization</span></code></a>(t, Thz)</p></td>
+<td><p>Fit the given time-dependent pump-probe data (<code class="docutils literal notranslate"><span class="pre">t</span></code>, <code class="docutils literal notranslate"><span class="pre">Thz</span></code>) using a specified model type and bootstrapping optimization.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="srt_files/PumpProbeFitting.Fitting.Fitting.VariableDependentFit.html#PumpProbeFitting.Fitting.Fitting.VariableDependentFit" title="PumpProbeFitting.Fitting.Fitting.VariableDependentFit"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Fitting.VariableDependentFit</span></code></a>(...[, energy, ...])</p></td>
+<td><p>Perform variable dependent fitting (eg power dependent or temperature dependent study) for a given variable (e.g., power, temperature, energy).</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="srt_files/PumpProbeFitting.Fitting.Fitting.box_plot_optimized_parameters.html#PumpProbeFitting.Fitting.Fitting.box_plot_optimized_parameters" title="PumpProbeFitting.Fitting.Fitting.box_plot_optimized_parameters"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Fitting.box_plot_optimized_parameters</span></code></a>()</p></td>
+<td><p>Visualize optimized parameters across bootstrap iterations and pairwise relationships between parameters.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="srt_files/PumpProbeFitting.Fitting.Fitting.display_result.html#PumpProbeFitting.Fitting.Fitting.display_result" title="PumpProbeFitting.Fitting.Fitting.display_result"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Fitting.display_result</span></code></a>()</p></td>
+<td><p>Display the optimized parameters along with their uncertainties and confidence intervals.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="srt_files/PumpProbeFitting.Fitting.Fitting.find_t0_max_min.html#PumpProbeFitting.Fitting.Fitting.find_t0_max_min" title="PumpProbeFitting.Fitting.Fitting.find_t0_max_min"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Fitting.find_t0_max_min</span></code></a>(t, Thz)</p></td>
+<td><p>Identify the time range near the minimum signal value where the THz signal reaches within a threshold.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="srt_files/PumpProbeFitting.Fitting.Fitting.objective_function.html#PumpProbeFitting.Fitting.Fitting.objective_function" title="PumpProbeFitting.Fitting.Fitting.objective_function"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Fitting.objective_function</span></code></a>(params, t, Thz)</p></td>
+<td><p>Compute the objective function to minimize during optimization.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="srt_files/PumpProbeFitting.Fitting.Fitting.plot_components.html#PumpProbeFitting.Fitting.Fitting.plot_components" title="PumpProbeFitting.Fitting.Fitting.plot_components"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Fitting.plot_components</span></code></a>(t)</p></td>
+<td><p>Plot the results of the fitting procedure.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="srt_files/PumpProbeFitting.Fitting.Fitting.plot_fit.html#PumpProbeFitting.Fitting.Fitting.plot_fit" title="PumpProbeFitting.Fitting.Fitting.plot_fit"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Fitting.plot_fit</span></code></a>(t, Thz, final_model_mean)</p></td>
+<td><p>Visualize the fitted model and residuals compared to the experimental data.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="srt_files/PumpProbeFitting.Fitting.Fitting.plot_optimized_parameters.html#PumpProbeFitting.Fitting.Fitting.plot_optimized_parameters" title="PumpProbeFitting.Fitting.Fitting.plot_optimized_parameters"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Fitting.plot_optimized_parameters</span></code></a>()</p></td>
+<td><p>Visualize optimized parameters across bootstrap iterations and pairwise relationships between parameters.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="srt_files/PumpProbeFitting.Fitting.Fitting.tukey_biweight_loss.html#PumpProbeFitting.Fitting.Fitting.tukey_biweight_loss" title="PumpProbeFitting.Fitting.Fitting.tukey_biweight_loss"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Fitting.tukey_biweight_loss</span></code></a>(residuals, c)</p></td>
+<td><p>Compute Tukey's biweight loss function for residuals.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="models">
+<h2>Models<a class="headerlink" href="#models" title="Link to this heading">#</a></h2>
+<div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="srt_files/PumpProbeFitting.data_model.Models.Select_model.html#PumpProbeFitting.data_model.Models.Select_model" title="PumpProbeFitting.data_model.Models.Select_model"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Models.Select_model</span></code></a>(model_type)</p></td>
+<td><p>Select and return the appropriate model function based on the model type.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="srt_files/PumpProbeFitting.data_model.Models.double_exp.html#PumpProbeFitting.data_model.Models.double_exp" title="PumpProbeFitting.data_model.Models.double_exp"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Models.double_exp</span></code></a>(t, A1, tau1, A2, tau2, ...)</p></td>
+<td><p>Custom theoretical model function for double exponential.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="srt_files/PumpProbeFitting.data_model.Models.double_exp_gauss.html#PumpProbeFitting.data_model.Models.double_exp_gauss" title="PumpProbeFitting.data_model.Models.double_exp_gauss"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Models.double_exp_gauss</span></code></a>(t, A1, tau1, A2, ...)</p></td>
+<td><p>Custom theoretical model function for double exponential and gaussian.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="srt_files/PumpProbeFitting.data_model.Models.exp_1_frt.html#PumpProbeFitting.data_model.Models.exp_1_frt" title="PumpProbeFitting.data_model.Models.exp_1_frt"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Models.exp_1_frt</span></code></a>(t, A1, tau1, A2, tau2, ...)</p></td>
+<td><p>Custom theoretical model function with finite rise time.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="srt_files/PumpProbeFitting.data_model.Models.exp_1frt_2_exp.html#PumpProbeFitting.data_model.Models.exp_1frt_2_exp" title="PumpProbeFitting.data_model.Models.exp_1frt_2_exp"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Models.exp_1frt_2_exp</span></code></a>(t, A1, tau1, A2, tau2, ...)</p></td>
+<td><p>Custom theoretical model function with one finite rise time and two exponential decays.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="srt_files/PumpProbeFitting.data_model.Models.exp_1frt_3_exp.html#PumpProbeFitting.data_model.Models.exp_1frt_3_exp" title="PumpProbeFitting.data_model.Models.exp_1frt_3_exp"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Models.exp_1frt_3_exp</span></code></a>(t, A1, tau1, A2, tau2, ...)</p></td>
+<td><p>Custom theoretical model function with one finite rise time and three exponential decays.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="srt_files/PumpProbeFitting.data_model.Models.exp_2_frt.html#PumpProbeFitting.data_model.Models.exp_2_frt" title="PumpProbeFitting.data_model.Models.exp_2_frt"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Models.exp_2_frt</span></code></a>(t, A1, tau1, A2, tau2, ...)</p></td>
+<td><p>Custom theoretical model function with finite rise time.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="srt_files/PumpProbeFitting.data_model.Models.exp_switch.html#PumpProbeFitting.data_model.Models.exp_switch" title="PumpProbeFitting.data_model.Models.exp_switch"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Models.exp_switch</span></code></a>(t, A1, tau1, A2, offset, ...)</p></td>
+<td><p>Custom theoretical model function for exponential exponential with a switch of constant.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="srt_files/PumpProbeFitting.data_model.Models.exp_switch_exp.html#PumpProbeFitting.data_model.Models.exp_switch_exp" title="PumpProbeFitting.data_model.Models.exp_switch_exp"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Models.exp_switch_exp</span></code></a>(t, A1, tau1, A2, tau2, ...)</p></td>
+<td><p>Custom theoretical model function for double exponential and a switch of background.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="srt_files/PumpProbeFitting.data_model.Models.frt.html#PumpProbeFitting.data_model.Models.frt" title="PumpProbeFitting.data_model.Models.frt"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Models.frt</span></code></a>(t, A1, tau1, offset, sig, t0, T_A)</p></td>
+<td><p>Custom theoretical model function with finite rise time.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="srt_files/PumpProbeFitting.data_model.Models.frt_exp_switch.html#PumpProbeFitting.data_model.Models.frt_exp_switch" title="PumpProbeFitting.data_model.Models.frt_exp_switch"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Models.frt_exp_switch</span></code></a>(t, A1, tau1, A2, ...)</p></td>
+<td><p>Custom theoretical model function for frt exponential with a switch of constant.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="srt_files/PumpProbeFitting.data_model.Models.single_exp.html#PumpProbeFitting.data_model.Models.single_exp" title="PumpProbeFitting.data_model.Models.single_exp"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Models.single_exp</span></code></a>(t, A1, tau1, offset, sig, t0)</p></td>
+<td><p>Custom theoretical model function for single exponential.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="srt_files/PumpProbeFitting.data_model.Models.tetra_exp.html#PumpProbeFitting.data_model.Models.tetra_exp" title="PumpProbeFitting.data_model.Models.tetra_exp"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Models.tetra_exp</span></code></a>(t, A1, tau1, A2, tau2, A3, ...)</p></td>
+<td><p>Custom theoretical model function for tetra exponential.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="srt_files/PumpProbeFitting.data_model.Models.triple_exp.html#PumpProbeFitting.data_model.Models.triple_exp" title="PumpProbeFitting.data_model.Models.triple_exp"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Models.triple_exp</span></code></a>(t, A1, tau1, A2, tau2, A3, ...)</p></td>
+<td><p>Custom theoretical model function for triple exponential.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="srt_files/PumpProbeFitting.data_model.Models.thermal_frt.html#PumpProbeFitting.data_model.Models.thermal_frt" title="PumpProbeFitting.data_model.Models.thermal_frt"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Models.thermal_frt</span></code></a>(t, A1, tau1, A2, offset, ...)</p></td>
+<td><p>Custom theoretical model function with finite rise time.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="models-utilities">
+<h2>Models_Utilities<a class="headerlink" href="#models-utilities" title="Link to this heading">#</a></h2>
+<div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="srt_files/PumpProbeFitting.data_model.Models_Utilities.get_ParamName.html#PumpProbeFitting.data_model.Models_Utilities.get_ParamName" title="PumpProbeFitting.data_model.Models_Utilities.get_ParamName"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Models_Utilities.get_ParamName</span></code></a>()</p></td>
+<td><p>Retrieve parameter names based on the selected model type.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="srt_files/PumpProbeFitting.data_model.Models_Utilities.get_ParamUncertaintyName.html#PumpProbeFitting.data_model.Models_Utilities.get_ParamUncertaintyName" title="PumpProbeFitting.data_model.Models_Utilities.get_ParamUncertaintyName"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Models_Utilities.get_ParamUncertaintyName</span></code></a>()</p></td>
+<td><p>Retrieve parameter Uncertainty names based on the selected model type.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="srt_files/PumpProbeFitting.data_model.Models_Utilities.get_bounds.html#PumpProbeFitting.data_model.Models_Utilities.get_bounds" title="PumpProbeFitting.data_model.Models_Utilities.get_bounds"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Models_Utilities.get_bounds</span></code></a>(bound_variables)</p></td>
+<td><p>Get bounds for parameters based on the selected model type.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="utilities">
+<h2>Utilities<a class="headerlink" href="#utilities" title="Link to this heading">#</a></h2>
+<div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="srt_files/PumpProbeFitting.data_model.Utilities.convolution_exp.html#PumpProbeFitting.data_model.Utilities.convolution_exp" title="PumpProbeFitting.data_model.Utilities.convolution_exp"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Utilities.convolution_exp</span></code></a>(t, tau, t0, A, sigma)</p></td>
+<td><p>Perform convolution of a exponential decay function and a Gaussian function using direct summation method.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="srt_files/PumpProbeFitting.data_model.Utilities.convolution_stretchedExp.html#PumpProbeFitting.data_model.Utilities.convolution_stretchedExp" title="PumpProbeFitting.data_model.Utilities.convolution_stretchedExp"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Utilities.convolution_stretchedExp</span></code></a>(t, tau, ...)</p></td>
+<td><p>Perform convolution of a stretched exponential decay function and a Gaussian function with given parameters using direct summation method.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="srt_files/PumpProbeFitting.data_model.Utilities.exponential.html#PumpProbeFitting.data_model.Utilities.exponential" title="PumpProbeFitting.data_model.Utilities.exponential"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Utilities.exponential</span></code></a>(t, A, T)</p></td>
+<td><p>Exponential Decay function.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="srt_files/PumpProbeFitting.data_model.Utilities.gaussian.html#PumpProbeFitting.data_model.Utilities.gaussian" title="PumpProbeFitting.data_model.Utilities.gaussian"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Utilities.gaussian</span></code></a>(x, mu, sigma)</p></td>
+<td><p>Calculate the value of a Gaussian (normal) distribution.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="srt_files/PumpProbeFitting.data_model.Utilities.heaviside.html#PumpProbeFitting.data_model.Utilities.heaviside" title="PumpProbeFitting.data_model.Utilities.heaviside"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Utilities.heaviside</span></code></a>(x)</p></td>
+<td><p>Custom Heaviside step function.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="srt_files/PumpProbeFitting.data_model.Utilities.stretched_exponential.html#PumpProbeFitting.data_model.Utilities.stretched_exponential" title="PumpProbeFitting.data_model.Utilities.stretched_exponential"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Utilities.stretched_exponential</span></code></a>(t, A, T, beta)</p></td>
+<td><p>Custom stretched/compressed function.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="fitting-basis">
+<h2>Fitting_Basis<a class="headerlink" href="#fitting-basis" title="Link to this heading">#</a></h2>
+<div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="srt_files/PumpProbeFitting.data_model.Fitting_Basis.ConstFunc.html#PumpProbeFitting.data_model.Fitting_Basis.ConstFunc" title="PumpProbeFitting.data_model.Fitting_Basis.ConstFunc"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Fitting_Basis.ConstFunc</span></code></a>(x)</p></td>
+<td><p>Constant function.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="srt_files/PumpProbeFitting.data_model.Fitting_Basis.TransDirectFunc.html#PumpProbeFitting.data_model.Fitting_Basis.TransDirectFunc" title="PumpProbeFitting.data_model.Fitting_Basis.TransDirectFunc"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Fitting_Basis.TransDirectFunc</span></code></a>(x, t0, sig, T)</p></td>
+<td><p>Transient function with direct response.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="srt_files/PumpProbeFitting.data_model.Fitting_Basis.TransDirect_frt_Func.html#PumpProbeFitting.data_model.Fitting_Basis.TransDirect_frt_Func" title="PumpProbeFitting.data_model.Fitting_Basis.TransDirect_frt_Func"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Fitting_Basis.TransDirect_frt_Func</span></code></a>(x, t0, ...)</p></td>
+<td><p>Transient function with finite rise time.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="srt_files/PumpProbeFitting.data_model.Fitting_Basis.gauss_func.html#PumpProbeFitting.data_model.Fitting_Basis.gauss_func" title="PumpProbeFitting.data_model.Fitting_Basis.gauss_func"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Fitting_Basis.gauss_func</span></code></a>(x, t0, sig)</p></td>
+<td><p>Gaussian function.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="srt_files/PumpProbeFitting.data_model.Fitting_Basis.instrument_response.html#PumpProbeFitting.data_model.Fitting_Basis.instrument_response" title="PumpProbeFitting.data_model.Fitting_Basis.instrument_response"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Fitting_Basis.instrument_response</span></code></a>(sigma, t)</p></td>
+<td><p>Define an instrument response function (IRF) as a Gaussian.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="srt_files/PumpProbeFitting.data_model.Fitting_Basis.switch_backward_func.html#PumpProbeFitting.data_model.Fitting_Basis.switch_backward_func" title="PumpProbeFitting.data_model.Fitting_Basis.switch_backward_func"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Fitting_Basis.switch_backward_func</span></code></a>(x, t0, sig)</p></td>
+<td><p>Switch function with backward response.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="srt_files/PumpProbeFitting.data_model.Fitting_Basis.switch_direct_func.html#PumpProbeFitting.data_model.Fitting_Basis.switch_direct_func" title="PumpProbeFitting.data_model.Fitting_Basis.switch_direct_func"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Fitting_Basis.switch_direct_func</span></code></a>(x, t0, sig)</p></td>
+<td><p>Switch function with direct response.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="srt_files/PumpProbeFitting.data_model.Fitting_Basis.trans_backward_func.html#PumpProbeFitting.data_model.Fitting_Basis.trans_backward_func" title="PumpProbeFitting.data_model.Fitting_Basis.trans_backward_func"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Fitting_Basis.trans_backward_func</span></code></a>(x, t0, sig, T)</p></td>
+<td><p>Transient function with backward response.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="boundsclass">
+<h2>BoundsClass<a class="headerlink" href="#boundsclass" title="Link to this heading">#</a></h2>
+<div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="srt_files/PumpProbeFitting.parameter_space.BoundsClass.bound_var.html#PumpProbeFitting.parameter_space.BoundsClass.bound_var" title="PumpProbeFitting.parameter_space.BoundsClass.bound_var"><code class="xref py py-obj docutils literal notranslate"><span class="pre">BoundsClass.bound_var</span></code></a>(t, Thz, ...)</p></td>
+<td><p>Calculate parameter bounds and applies any user-defined overrides.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="goodness-of-fit">
+<h2>Goodness of fit<a class="headerlink" href="#goodness-of-fit" title="Link to this heading">#</a></h2>
+<div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="srt_files/PumpProbeFitting.fitting_metrics.Goodness_of_fit.AkaikeInformationCriterion.html#PumpProbeFitting.fitting_metrics.Goodness_of_fit.AkaikeInformationCriterion" title="PumpProbeFitting.fitting_metrics.Goodness_of_fit.AkaikeInformationCriterion"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Goodness_of_fit.AkaikeInformationCriterion</span></code></a>()</p></td>
+<td><p>Calculate the Akaike Information Criterion (AIC).</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="srt_files/PumpProbeFitting.fitting_metrics.Goodness_of_fit.BayesianInformationCriterion.html#PumpProbeFitting.fitting_metrics.Goodness_of_fit.BayesianInformationCriterion" title="PumpProbeFitting.fitting_metrics.Goodness_of_fit.BayesianInformationCriterion"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Goodness_of_fit.BayesianInformationCriterion</span></code></a>()</p></td>
+<td><p>Calculate the Bayesian Information Criterion (BIC).</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="srt_files/PumpProbeFitting.fitting_metrics.Goodness_of_fit.chi_square.html#PumpProbeFitting.fitting_metrics.Goodness_of_fit.chi_square" title="PumpProbeFitting.fitting_metrics.Goodness_of_fit.chi_square"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Goodness_of_fit.chi_square</span></code></a>()</p></td>
+<td><p>Calculate the chi-square value.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="srt_files/PumpProbeFitting.fitting_metrics.Goodness_of_fit.reduced_chi_square.html#PumpProbeFitting.fitting_metrics.Goodness_of_fit.reduced_chi_square" title="PumpProbeFitting.fitting_metrics.Goodness_of_fit.reduced_chi_square"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Goodness_of_fit.reduced_chi_square</span></code></a>()</p></td>
+<td><p>Calculate the reduced chi-square value.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="srt_files/PumpProbeFitting.fitting_metrics.Goodness_of_fit.r_squared.html#PumpProbeFitting.fitting_metrics.Goodness_of_fit.r_squared" title="PumpProbeFitting.fitting_metrics.Goodness_of_fit.r_squared"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Goodness_of_fit.r_squared</span></code></a>()</p></td>
+<td><p>Calculate the coefficient of determination (R²).</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="srt_files/PumpProbeFitting.fitting_metrics.Goodness_of_fit.display_goodness_of_fit.html#PumpProbeFitting.fitting_metrics.Goodness_of_fit.display_goodness_of_fit" title="PumpProbeFitting.fitting_metrics.Goodness_of_fit.display_goodness_of_fit"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Goodness_of_fit.display_goodness_of_fit</span></code></a>()</p></td>
+<td><p>Display goodness-of-fit metrics in a well-formatted table.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="files-and-location">
+<h2>files and location<a class="headerlink" href="#files-and-location" title="Link to this heading">#</a></h2>
+<div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="srt_files/PumpProbeFitting.file_module.files_n_location.ExtractFileNames.html#PumpProbeFitting.file_module.files_n_location.ExtractFileNames" title="PumpProbeFitting.file_module.files_n_location.ExtractFileNames"><code class="xref py py-obj docutils literal notranslate"><span class="pre">files_n_location.ExtractFileNames</span></code></a>(...[, ...])</p></td>
+<td><p>Extract relevant information from a DataFrame based on a given energy value.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="srt_files/PumpProbeFitting.file_module.files_n_location.generate_path.html#PumpProbeFitting.file_module.files_n_location.generate_path" title="PumpProbeFitting.file_module.files_n_location.generate_path"><code class="xref py py-obj docutils literal notranslate"><span class="pre">files_n_location.generate_path</span></code></a>()</p></td>
+<td><p>Create the necessary directories for storing DataFrames and figures.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="srt_files/PumpProbeFitting.file_module.files_n_location.generate_progress_path.html#PumpProbeFitting.file_module.files_n_location.generate_progress_path" title="PumpProbeFitting.file_module.files_n_location.generate_progress_path"><code class="xref py py-obj docutils literal notranslate"><span class="pre">files_n_location.generate_progress_path</span></code></a>(energy)</p></td>
+<td><p>Create a directory for storing intermediate figures during the fitting process.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="saveresults">
+<h2>SaveResults<a class="headerlink" href="#saveresults" title="Link to this heading">#</a></h2>
+<div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="srt_files/PumpProbeFitting.save_result.SaveResults.dataFrameofResults_withVariable.html#PumpProbeFitting.save_result.SaveResults.dataFrameofResults_withVariable" title="PumpProbeFitting.save_result.SaveResults.dataFrameofResults_withVariable"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SaveResults.dataFrameofResults_withVariable</span></code></a>(...)</p></td>
+<td><p>Create a combined pandas DataFrame for multiple variables, including parameters and uncertainties using Method 'dataframeOfResults'.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="srt_files/PumpProbeFitting.save_result.SaveResults.dataframeOfResults.html#PumpProbeFitting.save_result.SaveResults.dataframeOfResults" title="PumpProbeFitting.save_result.SaveResults.dataframeOfResults"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SaveResults.dataframeOfResults</span></code></a>(...)</p></td>
+<td><p>Create a pandas DataFrame combining a single variable and its associated parameters and uncertainties.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="generalplots">
+<h2>GeneralPlots<a class="headerlink" href="#generalplots" title="Link to this heading">#</a></h2>
+<div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="srt_files/PumpProbeFitting.visualization.GeneralPlots.PlotExperimentalData_and_Fit.html#PumpProbeFitting.visualization.GeneralPlots.PlotExperimentalData_and_Fit" title="PumpProbeFitting.visualization.GeneralPlots.PlotExperimentalData_and_Fit"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GeneralPlots.PlotExperimentalData_and_Fit</span></code></a>(...)</p></td>
+<td><p>Plot experimental data and corresponding fit for a dependent variable (e.g., power, temperature).</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="srt_files/PumpProbeFitting.visualization.GeneralPlots.PlotExperimentalData_and_Fit_combined.html#PumpProbeFitting.visualization.GeneralPlots.PlotExperimentalData_and_Fit_combined" title="PumpProbeFitting.visualization.GeneralPlots.PlotExperimentalData_and_Fit_combined"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GeneralPlots.PlotExperimentalData_and_Fit_combined</span></code></a>(...)</p></td>
+<td><p>Plot experimental data and corresponding fit for a dependent variable (e.g., power, temperature).</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="srt_files/PumpProbeFitting.visualization.GeneralPlots.PlotResidual.html#PumpProbeFitting.visualization.GeneralPlots.PlotResidual" title="PumpProbeFitting.visualization.GeneralPlots.PlotResidual"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GeneralPlots.PlotResidual</span></code></a>(df_result, df_param)</p></td>
+<td><p>Plot residual for a dependent variable (e.g., power, temperature).</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="srt_files/PumpProbeFitting.visualization.GeneralPlots.PlotResidual_combined.html#PumpProbeFitting.visualization.GeneralPlots.PlotResidual_combined" title="PumpProbeFitting.visualization.GeneralPlots.PlotResidual_combined"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GeneralPlots.PlotResidual_combined</span></code></a>(...[, ...])</p></td>
+<td><p>Plot Residual for a dependent variable (e.g., power, temperature).</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="srt_files/PumpProbeFitting.visualization.GeneralPlots.PumpProbe_3_panel_plot_variable.html#PumpProbeFitting.visualization.GeneralPlots.PumpProbe_3_panel_plot_variable" title="PumpProbeFitting.visualization.GeneralPlots.PumpProbe_3_panel_plot_variable"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GeneralPlots.PumpProbe_3_panel_plot_variable</span></code></a>(...)</p></td>
+<td><p>Create a three-panel plot of pump-probe data grouped by a specified variable.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="srt_files/PumpProbeFitting.visualization.GeneralPlots.plot_A1_A2_semilog_together.html#PumpProbeFitting.visualization.GeneralPlots.plot_A1_A2_semilog_together" title="PumpProbeFitting.visualization.GeneralPlots.plot_A1_A2_semilog_together"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GeneralPlots.plot_A1_A2_semilog_together</span></code></a>(...)</p></td>
+<td><p>Plot (A_1) and (A_2) on a semilogarithmic scale with error bars for the given variable.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="srt_files/PumpProbeFitting.visualization.GeneralPlots.plot_tau1_tau2_semilog_together.html#PumpProbeFitting.visualization.GeneralPlots.plot_tau1_tau2_semilog_together" title="PumpProbeFitting.visualization.GeneralPlots.plot_tau1_tau2_semilog_together"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GeneralPlots.plot_tau1_tau2_semilog_together</span></code></a>(...)</p></td>
+<td><p>Plot (tau_1) and (tau_2) on a semilogarithmic scale with asymmetric error bars for the given variable.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="loglinearfit">
+<h2>LogLinearFit<a class="headerlink" href="#loglinearfit" title="Link to this heading">#</a></h2>
+<div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="srt_files/PumpProbeFitting.visualization.LogLinearFit.LogLog_LinearFit.html#PumpProbeFitting.visualization.LogLinearFit.LogLog_LinearFit" title="PumpProbeFitting.visualization.LogLinearFit.LogLog_LinearFit"><code class="xref py py-obj docutils literal notranslate"><span class="pre">LogLinearFit.LogLog_LinearFit</span></code></a>(x, y)</p></td>
+<td><p>Perform a log-log linear fit on the input data.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="srt_files/PumpProbeFitting.visualization.LogLinearFit.Parameter_LogLinearFit_LinearScale.html#PumpProbeFitting.visualization.LogLinearFit.Parameter_LogLinearFit_LinearScale" title="PumpProbeFitting.visualization.LogLinearFit.Parameter_LogLinearFit_LinearScale"><code class="xref py py-obj docutils literal notranslate"><span class="pre">LogLinearFit.Parameter_LogLinearFit_LinearScale</span></code></a>(...)</p></td>
+<td><p>Visualize the relationship between a parameter and temperature on a linear scale, along with a log-linear fitted curve.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="srt_files/PumpProbeFitting.visualization.LogLinearFit.Parameter_LogLinearFit_Logscale.html#PumpProbeFitting.visualization.LogLinearFit.Parameter_LogLinearFit_Logscale" title="PumpProbeFitting.visualization.LogLinearFit.Parameter_LogLinearFit_Logscale"><code class="xref py py-obj docutils literal notranslate"><span class="pre">LogLinearFit.Parameter_LogLinearFit_Logscale</span></code></a>(...)</p></td>
+<td><p>Plot temperature vs parameter on a log-log scale with an overlay of log-linear fit.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="srt_files/PumpProbeFitting.visualization.LogLinearFit.Parameter_LogLinearFit_OriginalScale.html#PumpProbeFitting.visualization.LogLinearFit.Parameter_LogLinearFit_OriginalScale" title="PumpProbeFitting.visualization.LogLinearFit.Parameter_LogLinearFit_OriginalScale"><code class="xref py py-obj docutils literal notranslate"><span class="pre">LogLinearFit.Parameter_LogLinearFit_OriginalScale</span></code></a>(...)</p></td>
+<td><p>Plot parameter vs variable_values with an overlay of log-linear fit on the original scale.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="powerdependentresults">
+<h2>PowerDependentResults<a class="headerlink" href="#powerdependentresults" title="Link to this heading">#</a></h2>
+<div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="srt_files/PumpProbeFitting.visualization.PowerDependentResults.PowerVsParameter.html#PumpProbeFitting.visualization.PowerDependentResults.PowerVsParameter" title="PumpProbeFitting.visualization.PowerDependentResults.PowerVsParameter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PowerDependentResults.PowerVsParameter</span></code></a>(...)</p></td>
+<td><p>Plot power vs a specified parameter with options for error bars, scaling, and customization.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="srt_files/PumpProbeFitting.visualization.PowerDependentResults.calculate_fluence.html#PumpProbeFitting.visualization.PowerDependentResults.calculate_fluence" title="PumpProbeFitting.visualization.PowerDependentResults.calculate_fluence"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PowerDependentResults.calculate_fluence</span></code></a>(power)</p></td>
+<td><p>Calculate the fluence of the pump laser.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="temperaturedependentresults">
+<h2>TemperatureDependentResults<a class="headerlink" href="#temperaturedependentresults" title="Link to this heading">#</a></h2>
+<div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="srt_files/PumpProbeFitting.visualization.TemperatureDependentResults.TemperatureVsParameter.html#PumpProbeFitting.visualization.TemperatureDependentResults.TemperatureVsParameter" title="PumpProbeFitting.visualization.TemperatureDependentResults.TemperatureVsParameter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">TemperatureDependentResults.TemperatureVsParameter</span></code></a>(...)</p></td>
+<td><p>Plot temperature vs a specified parameter with options for error bars, scaling, and customization.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</section>
+
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="Examples/test_onboard.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">&lt;no title&gt;</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="srt_files/PumpProbeFitting.Fitting.Fitting.MinMaxscaler.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">PumpProbeFitting.Fitting.Fitting.MinMaxscaler</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fitting">Fitting</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#models">Models</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#models-utilities">Models_Utilities</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#utilities">Utilities</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fitting-basis">Fitting_Basis</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#boundsclass">BoundsClass</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#goodness-of-fit">Goodness of fit</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#files-and-location">files and location</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#saveresults">SaveResults</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#generalplots">GeneralPlots</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#loglinearfit">LogLinearFit</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#powerdependentresults">PowerDependentResults</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#temperaturedependentresults">TemperatureDependentResults</a></li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/api.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2024 - present, Mohan Giri.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.1.3.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  <!-- # L10n: Setting the PST URL as an argument as this does not need to be localized -->
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.16.1.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

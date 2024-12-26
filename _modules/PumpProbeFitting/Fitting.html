@@ -1,0 +1,1272 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PumpProbeFitting.Fitting &#8212; PumpProbeFitting  documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=80d5e7a1" />
+    <link rel="stylesheet" type="text/css" href="../../_static/plot_directive.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery.css?v=d2d258e8" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="../../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '_modules/PumpProbeFitting/Fitting';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="0.1.0." />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/PumpProbeFitting_logo.svg" class="logo__image only-light" alt="PumpProbeFitting  documentation - Home"/>
+    <img src="../../_static/PumpProbeFitting_logo_dark.svg" class="logo__image only-dark pst-js-only" alt="PumpProbeFitting  documentation - Home"/>
+  
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../index.html">
+    Home
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../getting_started.html">
+    Getting started
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../examples.html">
+    Examples
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../api.html">
+    Documentation
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../PumpProbeFitting.html">
+    API Reference
+  </a>
+</li>
+
+            <li class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button"
+                data-bs-toggle="dropdown" aria-expanded="false"
+                aria-controls="pst-nav-more-links">
+                    More
+                </button>
+                <ul id="pst-nav-more-links" class="dropdown-menu">
+                    
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../../contributing.html">
+    Contributing
+  </a>
+</li>
+
+                </ul>
+            </li>
+            
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/mohangiri1/PumpProbeFitting" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fab fa-github-square fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar hide-on-wide">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../index.html">
+    Home
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../getting_started.html">
+    Getting started
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../examples.html">
+    Examples
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../api.html">
+    Documentation
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../PumpProbeFitting.html">
+    API Reference
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../contributing.html">
+    Contributing
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/mohangiri1/PumpProbeFitting" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fab fa-github-square fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../index.html" class="nav-link">Module code</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">PumpProbeFitting.Fitting</span></li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <h1>Source code for PumpProbeFitting.Fitting</h1><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">from</span> <span class="nn">scipy.optimize</span> <span class="kn">import</span> <span class="n">differential_evolution</span>
+<span class="kn">from</span> <span class="nn">.data_model</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span> <span class="nn">.data_model</span> <span class="kn">import</span> <span class="n">Fitting_Basis</span><span class="p">,</span> <span class="n">Models</span><span class="p">,</span> <span class="n">Models_Utilities</span>
+<span class="kn">from</span> <span class="nn">.fitting_metrics</span> <span class="kn">import</span> <span class="n">Goodness_of_fit</span>
+<span class="kn">from</span> <span class="nn">.get_data</span> <span class="kn">import</span> <span class="n">Data</span>
+<span class="kn">from</span> <span class="nn">.save_result</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span> <span class="nn">.parameter_space</span> <span class="kn">import</span> <span class="n">BoundsClass</span>
+
+<span class="c1"># modified in 12-24-2024</span>
+
+<span class="k">class</span> <span class="nc">Fitting</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Class for performing data fitting using bootstrap optimization and differential evolution.</span>
+
+<span class="sd">    Attributes</span>
+<span class="sd">    ----------</span>
+<span class="sd">    num_bootstraps : int</span>
+<span class="sd">        Number of bootstrap iterations for optimization to estimate parameter uncertainties.</span>
+<span class="sd">    selected_model_type : str</span>
+<span class="sd">        The type of model used for fitting, selected from predefined model options.</span>
+<span class="sd">    Bound_class : instance, class</span>
+<span class="sd">        Helps in getting the bounds i.e max and min value of the parameters between which optimization is to be performed.</span>
+<span class="sd">    loss : str</span>
+<span class="sd">        Loss function to use (&#39;mse&#39;, &#39;mae&#39;, &#39;chi_square&#39;, &#39;tukey&#39;, &#39;least_squares&#39;, or &#39;ridge&#39;).</span>
+<span class="sd">    MinMaxScaling : bool, optional</span>
+<span class="sd">        If `True`, applies Min-Max scaling to the `Thz` data before fitting. Default is `False`.</span>
+<span class="sd">    track_progress : bool, optional</span>
+<span class="sd">        If `True`, tracks and displays optimization progress. Default is `False`.</span>
+<span class="sd">    save_file_path : str, optional</span>
+<span class="sd">        Path to save intermediate results or progress files. Default is `&#39;./&#39;`.</span>
+<span class="sd">    plot_within_bounds : bool, optional</span>
+<span class="sd">        Default is False, if true, plots the track progress within the bounds.</span>
+
+<span class="sd">    Notes</span>
+<span class="sd">    -----</span>
+<span class="sd">        - The function supports multiple pre-defined model types for fitting. </span>
+<span class="sd">        - Parameter bounds are dynamically defined based on input data (`Thz`) and are adjusted depending on the model type.</span>
+<span class="sd">        - The fitting procedure utilizes differential evolution for global optimization within bootstrap iterations to minimize the objective function.</span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    --------</span>
+<span class="sd">    &gt;&gt;&gt; # Fit a double exponential decay model to simulated pump-probe data:</span>
+<span class="sd">    &gt;&gt;&gt; import numpy as np</span>
+<span class="sd">    &gt;&gt;&gt; t = np.linspace(0, 100, 1000)</span>
+<span class="sd">    &gt;&gt;&gt; Thz = np.exp(-(t-10) / 30) + 0.5 * np.exp(-(t-10) / 10) + np.random.normal(0, 0.1, size=t.shape)</span>
+<span class="sd">    &gt;&gt;&gt; num_bootstraps = 100</span>
+<span class="sd">    &gt;&gt;&gt; selected_model_type = &#39;double_exp&#39;</span>
+<span class="sd">    &gt;&gt;&gt; Bounds_class = Bounds()</span>
+<span class="sd">    &gt;&gt;&gt; fitting_func = Fitting(num_bootstraps, selected_model_type, Bounds_class, MinMaxScaling= True, track_progress = False, save_file_path = &#39;./&#39;)</span>
+<span class="sd">    &gt;&gt;&gt; fitted_params, uncertainties, final_model_mean = fitting_func.bootstrap_optimization(t, Thz)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">num_bootstraps</span><span class="p">,</span> <span class="n">selected_model_type</span><span class="p">,</span> <span class="n">Bounds_class</span><span class="p">,</span> <span class="n">loss</span> <span class="o">=</span> <span class="s1">&#39;mae&#39;</span>
+                 <span class="p">,</span> <span class="n">MinMaxScaling</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span> <span class="n">track_progress</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span> <span class="n">save_file_path</span> <span class="o">=</span> <span class="s1">&#39;./&#39;</span><span class="p">,</span> <span class="n">plot_within_bounds</span> <span class="o">=</span> <span class="kc">False</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Initialize the Fitting instance.</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">num_bootstraps</span> <span class="o">=</span> <span class="n">num_bootstraps</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">selected_model_type</span> <span class="o">=</span> <span class="n">selected_model_type</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">theoretical_model</span> <span class="o">=</span>  <span class="n">Models</span><span class="o">.</span><span class="n">Select_model</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">selected_model_type</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">loss</span> <span class="o">=</span> <span class="n">loss</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">track_progress</span> <span class="o">=</span> <span class="n">track_progress</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">save_file_path</span> <span class="o">=</span> <span class="n">save_file_path</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">MinMaxScaling</span> <span class="o">=</span> <span class="n">MinMaxScaling</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">Bounds_class</span> <span class="o">=</span> <span class="n">Bounds_class</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">param_names</span> <span class="o">=</span> <span class="n">Models_Utilities</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">selected_model_type</span><span class="p">)</span><span class="o">.</span><span class="n">get_ParamName</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">plot_within_bounds</span> <span class="o">=</span> <span class="n">plot_within_bounds</span>
+
+<div class="viewcode-block" id="Fitting.objective_function">
+<a class="viewcode-back" href="../../generated/PumpProbeFitting.Fitting.Fitting.objective_function.html#PumpProbeFitting.Fitting.Fitting.objective_function">[docs]</a>
+    <span class="k">def</span> <span class="nf">objective_function</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">params</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="n">Thz</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Compute the objective function to minimize during optimization.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        params : array-like</span>
+<span class="sd">            Model parameters to optimize.</span>
+<span class="sd">        t : array-like</span>
+<span class="sd">            Time data.</span>
+<span class="sd">        Thz : array-like</span>
+<span class="sd">            Experimental THz data.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">            float</span>
+<span class="sd">                Value of the loss function for the given parameters.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">model</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">theoretical_model</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="o">*</span><span class="n">params</span><span class="p">)</span>
+        <span class="n">residuals</span> <span class="o">=</span> <span class="n">Thz</span> <span class="o">-</span> <span class="n">model</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">loss</span> <span class="o">==</span> <span class="s1">&#39;mse&#39;</span><span class="p">:</span>
+            <span class="c1"># Mean Squared Error (MSE)</span>
+            <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">((</span><span class="n">residuals</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+        
+        <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">loss</span> <span class="o">==</span> <span class="s1">&#39;least_squares&#39;</span><span class="p">:</span>
+            <span class="c1"># Least Squares</span>
+            <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">((</span><span class="n">residuals</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+        
+        <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">loss</span> <span class="o">==</span> <span class="s1">&#39;chi_square&#39;</span><span class="p">:</span>
+            <span class="c1"># Chi-square</span>
+            <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">residuals</span><span class="o">**</span><span class="mi">2</span> <span class="o">/</span> <span class="n">Thz</span><span class="o">.</span><span class="n">var</span><span class="p">())</span>
+        
+        <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">loss</span> <span class="o">==</span> <span class="s1">&#39;mae&#39;</span><span class="p">:</span>
+            <span class="c1"># Mean Absolute Error (MAE)</span>
+            <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">residuals</span><span class="p">))</span>
+        
+        <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">loss</span> <span class="o">==</span> <span class="s1">&#39;tukey&#39;</span><span class="p">:</span>
+            <span class="c1"># Tukey&#39;s Biweight Loss</span>
+            <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">tukey_biweight_loss</span><span class="p">(</span><span class="n">residuals</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="mi">4</span><span class="p">))</span>
+        
+        <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">loss</span> <span class="o">==</span> <span class="s1">&#39;least_squares&#39;</span><span class="p">:</span>
+            <span class="c1"># Least Squares</span>
+            <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">((</span><span class="n">residuals</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+        
+        <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">loss</span> <span class="o">==</span> <span class="s1">&#39;ridge&#39;</span><span class="p">:</span>
+            <span class="n">alpha</span><span class="o">=</span><span class="mf">0.01</span>
+            <span class="c1"># Ridge Regression</span>
+            <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">((</span><span class="n">residuals</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span> <span class="o">+</span> <span class="n">alpha</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">params</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>  <span class="c1"># Ridge penalty term added</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Invalid loss function. Choose &#39;mse&#39;, &#39;mae&#39;, &#39;chi_square&#39;, &#39;tukey&#39;, &#39;least_squares&#39;, or &#39;ridge&#39;.&quot;</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="Fitting.tukey_biweight_loss">
+<a class="viewcode-back" href="../../generated/PumpProbeFitting.Fitting.Fitting.tukey_biweight_loss.html#PumpProbeFitting.Fitting.Fitting.tukey_biweight_loss">[docs]</a>
+    <span class="k">def</span> <span class="nf">tukey_biweight_loss</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">residuals</span><span class="p">,</span> <span class="n">c</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Compute Tukey&#39;s biweight loss function for residuals.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        residuals : array-like</span>
+<span class="sd">            Differences between observed and predicted values.</span>
+<span class="sd">        c : float</span>
+<span class="sd">            Tuning constant for the loss calculation.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        array-like</span>
+<span class="sd">            Tukey&#39;s biweight loss values for residuals.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">scaled_residuals</span> <span class="o">=</span> <span class="n">residuals</span> <span class="o">/</span> <span class="n">c</span>
+        <span class="n">mask</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">scaled_residuals</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="mi">1</span>
+        <span class="k">return</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">scaled_residuals</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span> <span class="o">*</span> <span class="n">mask</span></div>
+
+        
+<div class="viewcode-block" id="Fitting.bootstrap_optimization">
+<a class="viewcode-back" href="../../generated/PumpProbeFitting.Fitting.Fitting.bootstrap_optimization.html#PumpProbeFitting.Fitting.Fitting.bootstrap_optimization">[docs]</a>
+    <span class="k">def</span> <span class="nf">bootstrap_optimization</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="n">Thz</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Fit the given time-dependent pump-probe data (``t``, ``Thz``) using a specified model type and bootstrapping optimization.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        t : numpy.ndarray</span>
+<span class="sd">            Array of time points.</span>
+<span class="sd">        Thz : numpy.ndarray</span>
+<span class="sd">            Array of measured data points corresponding to the time array `t`.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        fitted_params : numpy.ndarray</span>
+<span class="sd">            Optimized parameters for the selected model, averaged over bootstrap samples.</span>
+<span class="sd">        uncertainties : numpy.ndarray</span>
+<span class="sd">            Estimated uncertainties of the fitted parameters based on bootstrap results.</span>
+<span class="sd">        final_model_mean : numpy.ndarray</span>
+<span class="sd">            The mean of all bootstrap model predictions, representing the final fitted model.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">MinMaxScaling</span><span class="p">:</span>
+            <span class="n">Thz</span> <span class="o">=</span> <span class="n">Fitting</span><span class="o">.</span><span class="n">MinMaxscaler</span><span class="p">(</span><span class="n">Thz</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">bounds</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">Bounds_class</span><span class="o">.</span><span class="n">bound_var</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">Thz</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">selected_model_type</span><span class="p">)</span>
+        <span class="c1"># Initialize arrays to store optimized parameters from each bootstrap</span>
+        <span class="n">optimized_params_list</span> <span class="o">=</span> <span class="p">[]</span>
+
+        <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">num_bootstraps</span><span class="p">):</span>
+            <span class="c1"># Generate a bootstrap sample by randomly sampling with replacement</span>
+            <span class="n">indices</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">t</span><span class="p">),</span> <span class="nb">len</span><span class="p">(</span><span class="n">t</span><span class="p">),</span> <span class="n">replace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+            <span class="n">t_bootstrap</span><span class="p">,</span> <span class="n">Thz_bootstrap</span> <span class="o">=</span> <span class="n">t</span><span class="p">[</span><span class="n">indices</span><span class="p">],</span> <span class="n">Thz</span><span class="p">[</span><span class="n">indices</span><span class="p">]</span>
+            <span class="n">result</span> <span class="o">=</span> <span class="n">differential_evolution</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">objective_function</span>
+                                            <span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">bounds</span>
+                                            <span class="p">,</span> <span class="n">args</span><span class="o">=</span><span class="p">(</span><span class="n">t_bootstrap</span><span class="p">,</span> <span class="n">Thz_bootstrap</span><span class="p">)</span>
+                                            <span class="p">,</span> <span class="n">popsize</span><span class="o">=</span><span class="mi">5</span>
+                                            <span class="p">,</span> <span class="n">seed</span><span class="o">=</span><span class="mi">50</span>
+                                            <span class="p">,</span> <span class="n">strategy</span><span class="o">=</span><span class="s1">&#39;best1bin&#39;</span>
+                                            <span class="p">,</span> <span class="n">disp</span><span class="o">=</span><span class="kc">False</span>
+                                            <span class="p">,</span> <span class="n">atol</span><span class="o">=</span><span class="mf">1e-12</span>
+                                            <span class="p">,</span> <span class="n">polish</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+                                            
+            <span class="c1"># Store the optimized parameters</span>
+            <span class="n">optimized_params_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">x</span><span class="p">)</span>
+
+        <span class="c1"># Convert list of results to a numpy array for easier manipulation</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">optimized_params_array</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">optimized_params_list</span><span class="p">)</span>
+
+        <span class="c1"># Calculate median and 95% confidence intervals (2.5th and 97.5th percentiles) for each parameter to select the best fit.</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">fitted_params</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">median</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">optimized_params_array</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">lower_bounds</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">percentile</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">optimized_params_array</span><span class="p">,</span> <span class="mf">2.5</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">upper_bounds</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">percentile</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">optimized_params_array</span><span class="p">,</span> <span class="mf">97.5</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">confidence_intervals</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">vstack</span><span class="p">((</span><span class="bp">self</span><span class="o">.</span><span class="n">lower_bounds</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">upper_bounds</span><span class="p">))</span><span class="o">.</span><span class="n">T</span>
+
+        <span class="c1"># Calculate uncertainties as half the width of the 95% confidence intervals</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">uncertainties</span> <span class="o">=</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">upper_bounds</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">lower_bounds</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span>
+
+        <span class="c1"># Use the  fitted_params to generate the fitted_value</span>
+        <span class="n">fitted_value</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">theoretical_model</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="o">*</span><span class="bp">self</span><span class="o">.</span><span class="n">fitted_params</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">fitted_value</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">fitted_value</span><span class="p">)</span>            
+
+        <span class="c1"># Display the optimized parameters with confidence intervals</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">display_result</span><span class="p">()</span>
+
+        <span class="c1"># Print the metric Score of fitting:</span>
+        <span class="n">metric</span> <span class="o">=</span> <span class="n">Goodness_of_fit</span><span class="p">(</span><span class="n">Thz</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">fitted_value</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">fitted_params</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">uncertainties</span><span class="p">)</span>
+        <span class="n">metric</span><span class="o">.</span><span class="n">display_goodness_of_fit</span><span class="p">()</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">plot_fit</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">Thz</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">fitted_value</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">plot_components</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+
+        <span class="c1"># Plot the optimized parameters if needed controlled by Flag self.track_progress</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">track_progress</span><span class="p">:</span>
+            <span class="c1">#self.plot_optimized_parameters()</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">box_plot_optimized_parameters</span><span class="p">()</span>
+
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">fitted_params</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">uncertainties</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">fitted_value</span></div>
+
+    
+<div class="viewcode-block" id="Fitting.VariableDependentFit">
+<a class="viewcode-back" href="../../generated/PumpProbeFitting.Fitting.Fitting.VariableDependentFit.html#PumpProbeFitting.Fitting.Fitting.VariableDependentFit">[docs]</a>
+    <span class="k">def</span> <span class="nf">VariableDependentFit</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">df_experimental</span><span class="p">,</span> <span class="n">unit</span><span class="p">,</span> <span class="n">variable_name</span>
+                            <span class="p">,</span> <span class="n">variable_value</span><span class="p">,</span> <span class="n">energy</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">overrides</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Perform variable dependent fitting (eg power dependent or temperature dependent study) for a given variable (e.g., power, temperature, energy).</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        df_experimental : pandas.DataFrame</span>
+<span class="sd">            The input experimental data with specific column requirements:</span>
+<span class="sd">            - Must contain a `time_delay [ps]` column representing the independent variable (time delay).</span>
+<span class="sd">            - Must contain columns named with the format `del_T (&lt;value&gt;&lt;unit&gt;)`, where `&lt;value&gt;` corresponds to the variable </span>
+<span class="sd">            (e.g., power or temperature) and `&lt;unit&gt;` is the unit (e.g., `mW`, `K`).</span>
+<span class="sd">            - Optionally include an `Energy [eV]` column for energy-specific data.</span>
+<span class="sd">        </span>
+<span class="sd">        unit : str</span>
+<span class="sd">            The unit of the variable. Options include:</span>
+<span class="sd">            - `&#39;mW&#39;` for power-dependent fitting</span>
+<span class="sd">            - `&#39;K&#39;` for temperature-dependent fitting</span>
+<span class="sd">            - `&#39;eV&#39;` for energy</span>
+<span class="sd">            - `&#39;nm&#39;` for wavelength</span>
+<span class="sd">        </span>
+<span class="sd">        variable_name : str</span>
+<span class="sd">            Name of the variable for fitting (e.g., `&quot;power&quot;`, `&quot;Temperature&quot;`, `&quot;Energy&quot;`, `&quot;Wavelength&quot;`).</span>
+
+<span class="sd">        variable_value : list or numpy array</span>
+<span class="sd">            A list or array of variable values for which the fitting is to be performed. These values must match </span>
+<span class="sd">            the numeric values in the `del_T (&lt;value&gt;&lt;unit&gt;)` column names of the input `df_experimental`.</span>
+
+<span class="sd">        energy : float or int, optional</span>
+<span class="sd">            An optional energy value to include in the resulting parameter DataFrame.</span>
+
+<span class="sd">        overrides : list of dictionary</span>
+<span class="sd">            An optional dictionary to modify the parameter space for a given model.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        --------</span>
+<span class="sd">        df_with_result : pandas.DataFrame</span>
+<span class="sd">            A DataFrame containing:</span>
+<span class="sd">            - Original experimental data (`time_delay [ps]` and `del_T (&lt;value&gt;&lt;unit&gt;)` columns).</span>
+<span class="sd">            - Fitted values for each variable as new columns named `del_T (&lt;value&gt;&lt;unit&gt;)_fit`.</span>
+<span class="sd">            - `Energy [eV]` (if available) and the selected model type as additional columns.</span>
+
+<span class="sd">        df_param : pandas.DataFrame</span>
+<span class="sd">            A DataFrame containing extracted parameters and their uncertainties for each variable value. </span>
+<span class="sd">            Includes:</span>
+<span class="sd">            - The variable name and its values.</span>
+<span class="sd">            - Fitted parameters and their uncertainties.</span>
+<span class="sd">            - Energy (if specified) and the selected model type.</span>
+
+<span class="sd">        Notes</span>
+<span class="sd">        -----</span>
+<span class="sd">            - Iterates through the ``variable_value`` list and performs fitting for each value.</span>
+<span class="sd">            - The fitting process uses ``bootstrap_optimization`` to extract fitted parameters, uncertainties, </span>
+<span class="sd">            and fitted values.</span>
+<span class="sd">            - The ``SaveResults`` class is used to generate parameter DataFrames.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="c1">#Create empty dataframe for all the fitted data: Also Create empty list of fitted params for all the data</span>
+        <span class="n">df_with_result</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">([])</span>
+        <span class="n">fitted_params_list</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">uncertainties_list</span> <span class="o">=</span> <span class="p">[]</span>
+
+        <span class="n">first_name</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">save_file_path</span>
+        <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">variable_value</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">save_file_path</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">first_name</span><span class="si">}</span><span class="s1">_</span><span class="si">{</span><span class="nb">str</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">value</span><span class="p">))</span><span class="si">}{</span><span class="n">unit</span><span class="si">}</span><span class="s1">&#39;</span>
+
+            <span class="n">t</span> <span class="o">=</span> <span class="n">df_experimental</span><span class="p">[</span><span class="sa">f</span><span class="s1">&#39;time_delay [ps](</span><span class="si">{</span><span class="n">value</span><span class="si">}{</span><span class="n">unit</span><span class="si">}</span><span class="s1">)&#39;</span><span class="p">]</span>
+            <span class="n">Thz</span> <span class="o">=</span> <span class="n">df_experimental</span><span class="p">[</span><span class="sa">f</span><span class="s1">&#39;del_T (</span><span class="si">{</span><span class="n">value</span><span class="si">}{</span><span class="n">unit</span><span class="si">}</span><span class="s1">)&#39;</span><span class="p">]</span>
+
+            <span class="k">if</span> <span class="n">overrides</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">Bounds_class</span> <span class="o">=</span> <span class="n">BoundsClass</span><span class="p">(</span><span class="n">overrides</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+                
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Fitting Data for </span><span class="si">{</span><span class="n">variable_name</span><span class="si">}</span><span class="s1"> = </span><span class="si">{</span><span class="n">value</span><span class="si">}</span><span class="s1"> </span><span class="si">{</span><span class="n">unit</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+            <span class="n">fitted_params</span><span class="p">,</span> <span class="n">uncertainties</span><span class="p">,</span> <span class="n">fitted_value</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">bootstrap_optimization</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">Thz</span><span class="p">)</span>
+            <span class="n">fitted_params_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">fitted_params</span><span class="p">)</span>
+            <span class="n">uncertainties_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">uncertainties</span><span class="p">)</span>
+            
+            <span class="c1"># Create a temporary DataFrame for this variable_value</span>
+            <span class="n">temp_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span>
+                <span class="sa">f</span><span class="s1">&#39;time_delay [ps](</span><span class="si">{</span><span class="n">value</span><span class="si">}{</span><span class="n">unit</span><span class="si">}</span><span class="s1">)&#39;</span><span class="p">:</span> <span class="n">t</span><span class="p">,</span>
+                <span class="sa">f</span><span class="s1">&#39;del_T (</span><span class="si">{</span><span class="nb">int</span><span class="p">(</span><span class="n">value</span><span class="p">)</span><span class="si">}{</span><span class="n">unit</span><span class="si">}</span><span class="s1">)&#39;</span><span class="p">:</span> <span class="n">Thz</span><span class="p">,</span>
+                <span class="sa">f</span><span class="s1">&#39;del_T (</span><span class="si">{</span><span class="nb">int</span><span class="p">(</span><span class="n">value</span><span class="p">)</span><span class="si">}{</span><span class="n">unit</span><span class="si">}</span><span class="s1">)_fit&#39;</span><span class="p">:</span> <span class="n">fitted_value</span>
+            <span class="p">})</span>
+
+            <span class="c1"># Merge with the main DataFrame using an outer join to handle mismatched rows</span>
+            <span class="k">if</span> <span class="n">df_with_result</span><span class="o">.</span><span class="n">empty</span><span class="p">:</span>
+                <span class="n">df_with_result</span> <span class="o">=</span> <span class="n">temp_df</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">df_with_result</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">df_with_result</span><span class="p">,</span> <span class="n">temp_df</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s1">&#39;outer&#39;</span><span class="p">,</span> <span class="n">left_index</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">right_index</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+        <span class="c1"># Add constant columns to the result DataFrame</span>
+        <span class="n">df_with_result</span><span class="p">[</span><span class="s1">&#39;Model&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">selected_model_type</span>
+        <span class="k">if</span> <span class="s1">&#39;Energy [eV]&#39;</span> <span class="ow">in</span> <span class="n">df_experimental</span><span class="o">.</span><span class="n">columns</span><span class="p">:</span>
+            <span class="n">df_with_result</span><span class="p">[</span><span class="s1">&#39;Energy [eV]&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_experimental</span><span class="p">[</span><span class="s1">&#39;Energy [eV]&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>  <span class="c1"># Assuming constant energy for all rows</span>
+
+        <span class="c1"># Generate the parameters DataFrame</span>
+        <span class="n">saveresult</span> <span class="o">=</span> <span class="n">SaveResults</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">selected_model_type</span><span class="p">)</span>
+        <span class="n">df_param</span> <span class="o">=</span> <span class="n">saveresult</span><span class="o">.</span><span class="n">dataFrameofResults_withVariable</span><span class="p">(</span><span class="n">variable_name</span><span class="p">,</span> <span class="n">variable_value</span><span class="p">,</span> <span class="n">fitted_params_list</span><span class="p">,</span> <span class="n">uncertainties_list</span><span class="p">)</span>
+
+        <span class="c1"># Add metadata to parameters DataFrame</span>
+        <span class="k">if</span> <span class="n">energy</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">df_param</span><span class="p">[</span><span class="s1">&#39;Energy [eV]&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">energy</span>
+        <span class="n">df_param</span><span class="p">[</span><span class="s1">&#39;Model&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">selected_model_type</span>
+
+        <span class="k">return</span> <span class="n">df_with_result</span><span class="p">,</span> <span class="n">df_param</span></div>
+
+
+<div class="viewcode-block" id="Fitting.plot_fit">
+<a class="viewcode-back" href="../../generated/PumpProbeFitting.Fitting.Fitting.plot_fit.html#PumpProbeFitting.Fitting.Fitting.plot_fit">[docs]</a>
+    <span class="k">def</span> <span class="nf">plot_fit</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="n">Thz</span><span class="p">,</span> <span class="n">final_model_mean</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Visualize the fitted model and residuals compared to the experimental data.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        t : array-like</span>
+<span class="sd">            Time data.</span>
+<span class="sd">        Thz : array-like</span>
+<span class="sd">            Experimental THz data.</span>
+<span class="sd">        final_model_mean : array-like</span>
+<span class="sd">            Model values computed with the optimized parameters.</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">6</span><span class="p">))</span>
+        <span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">Thz</span><span class="p">,</span> <span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s1">&#39;Data&#39;</span><span class="p">)</span>
+        <span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">final_model_mean</span><span class="p">,</span> <span class="s1">&#39;-&#39;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s1">&#39;Fit&#39;</span><span class="p">)</span>
+        <span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;t [ps]&#39;</span><span class="p">)</span>
+        <span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;$\Delta T $ [a.u.]&#39;</span><span class="p">)</span>
+        <span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+
+        <span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">Thz</span> <span class="o">-</span> <span class="n">final_model_mean</span><span class="p">,</span> <span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s1">&#39;Residual&#39;</span><span class="p">)</span>
+        <span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;t [ps]&#39;</span><span class="p">)</span>
+        <span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;$\Delta T$ [a.u.]&#39;</span><span class="p">)</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">track_progress</span><span class="p">:</span>
+            <span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">save_file_path</span><span class="si">}</span><span class="s1">_fited_result.pdf&#39;</span><span class="p">)</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span></div>
+
+
+<div class="viewcode-block" id="Fitting.display_result">
+<a class="viewcode-back" href="../../generated/PumpProbeFitting.Fitting.Fitting.display_result.html#PumpProbeFitting.Fitting.Fitting.display_result">[docs]</a>
+    <span class="k">def</span> <span class="nf">display_result</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Display the optimized parameters along with their uncertainties and confidence intervals.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># Get parameter names for the selected model type</span>
+        <span class="n">header</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">param_names</span>
+
+        <span class="c1"># Ensure the number of parameter names matches the fitted parameters</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">header</span><span class="p">)</span> <span class="o">!=</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">fitted_params</span><span class="p">):</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Mismatch between number of parameter names and fitted parameters.&quot;</span><span class="p">)</span>
+
+        <span class="c1"># Prepare the table data: parameter names, estimated values, and uncertainties</span>
+        <span class="n">table_data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">column_stack</span><span class="p">((</span><span class="n">header</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">fitted_params</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">uncertainties</span><span class="p">))</span>
+
+        <span class="c1">#Print the results:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Results from the Fitting using </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">selected_model_type</span><span class="si">}</span><span class="s1"> Model:&#39;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;-&#39;</span> <span class="o">*</span> <span class="mi">70</span><span class="p">)</span>
+        <span class="c1"># Print the table header</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">{:&lt;15}</span><span class="s1"> </span><span class="si">{:&lt;25}</span><span class="s1"> </span><span class="si">{:&lt;25}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s1">&#39;Parameter&#39;</span><span class="p">,</span> <span class="s1">&#39;Estimated Value&#39;</span><span class="p">,</span> <span class="s1">&#39;Uncertainty&#39;</span><span class="p">))</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;-&#39;</span> <span class="o">*</span> <span class="mi">70</span><span class="p">)</span>
+
+        <span class="c1"># Display the table rows</span>
+        <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">table_data</span><span class="p">:</span>
+            <span class="n">param_name</span> <span class="o">=</span> <span class="n">row</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+            <span class="n">mean_val</span> <span class="o">=</span> <span class="n">row</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>  <span class="c1"># Estimated value</span>
+            <span class="n">std_val</span> <span class="o">=</span> <span class="n">row</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>   <span class="c1"># Uncertainty</span>
+            <span class="n">std_val_numeric</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">std_val</span><span class="p">)</span>  <span class="c1"># Convert uncertainty to a numeric type</span>
+            <span class="n">std_sign</span> <span class="o">=</span> <span class="s1">&#39;±&#39;</span> <span class="k">if</span> <span class="n">std_val_numeric</span> <span class="o">&gt;=</span> <span class="mi">0</span> <span class="k">else</span> <span class="s1">&#39;±&#39;</span>
+            <span class="n">std_val_str</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">std_sign</span><span class="si">}</span><span class="s1"> </span><span class="si">{</span><span class="nb">abs</span><span class="p">(</span><span class="n">std_val_numeric</span><span class="p">)</span><span class="si">}</span><span class="s1">&#39;</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">{:&lt;15}</span><span class="s1"> </span><span class="si">{:&lt;25}</span><span class="s1"> </span><span class="si">{:&lt;25}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">param_name</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">mean_val</span><span class="p">),</span> <span class="n">std_val_str</span><span class="p">))</span></div>
+
+
+<div class="viewcode-block" id="Fitting.plot_optimized_parameters">
+<a class="viewcode-back" href="../../generated/PumpProbeFitting.Fitting.Fitting.plot_optimized_parameters.html#PumpProbeFitting.Fitting.Fitting.plot_optimized_parameters">[docs]</a>
+    <span class="k">def</span> <span class="nf">plot_optimized_parameters</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Visualize optimized parameters across bootstrap iterations and pairwise relationships between parameters.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># Get parameter names for the selected model type</span>
+        <span class="n">param_names</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">param_names</span>
+        <span class="n">num_params</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">param_names</span><span class="p">)</span>
+
+        <span class="c1"># Calculate the total number of subplots needed</span>
+        <span class="n">total_subplots</span> <span class="o">=</span> <span class="n">num_params</span> <span class="o">+</span> <span class="n">num_params</span> <span class="o">*</span> <span class="p">(</span><span class="n">num_params</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">//</span> <span class="mi">2</span>
+
+        <span class="c1"># Calculate the number of rows and columns needed for plotting</span>
+        <span class="n">num_rows</span> <span class="o">=</span> <span class="p">(</span><span class="n">total_subplots</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">//</span> <span class="mi">2</span>  <span class="c1"># Add 1 to handle odd number of subplots</span>
+        <span class="n">num_cols</span> <span class="o">=</span> <span class="mi">2</span>
+
+        <span class="c1"># Create subplots</span>
+        <span class="n">fig</span><span class="p">,</span> <span class="n">axes</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">num_rows</span><span class="p">,</span> <span class="n">num_cols</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">4</span> <span class="o">*</span> <span class="n">num_rows</span><span class="p">))</span>
+        <span class="n">axes</span> <span class="o">=</span> <span class="n">axes</span><span class="o">.</span><span class="n">flatten</span><span class="p">()</span>
+
+        <span class="c1"># Plot each parameter vs. the number of bootstraps</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">num_params</span><span class="p">):</span>
+            <span class="n">ax</span> <span class="o">=</span> <span class="n">axes</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+            <span class="n">param_values</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">optimized_params_array</span><span class="p">[:,</span> <span class="n">i</span><span class="p">]</span>
+            <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">num_bootstraps</span> <span class="o">+</span> <span class="mi">1</span><span class="p">),</span> <span class="n">param_values</span><span class="p">,</span> <span class="s1">&#39;-o&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">param_names</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="si">}</span><span class="s1"> Samples&#39;</span><span class="p">)</span>
+
+            <span class="c1"># Plot median and confidence interval</span>
+            <span class="n">ax</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">fitted_params</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">f</span><span class="s1">&#39;Median </span><span class="si">{</span><span class="n">param_names</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+            <span class="n">ax</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">lower_bounds</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">f</span><span class="s1">&#39;2.5th Percentile (CI) </span><span class="si">{</span><span class="n">param_names</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+            <span class="n">ax</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">upper_bounds</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">f</span><span class="s1">&#39;97.5th Percentile (CI) </span><span class="si">{</span><span class="n">param_names</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+
+            <span class="c1"># Set y-limits based on bounds if available</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">bounds</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">plot_within_bounds</span> <span class="o">==</span> <span class="kc">True</span><span class="p">:</span>
+                <span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">bounds</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+
+            <span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="n">param_names</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+            <span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+
+        <span class="c1"># Plot each parameter against another parameter</span>
+        <span class="n">start_param</span> <span class="o">=</span> <span class="n">num_params</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">num_params</span><span class="p">):</span>
+            <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">num_params</span><span class="p">):</span>
+                <span class="k">if</span> <span class="n">start_param</span> <span class="o">&lt;</span> <span class="n">total_subplots</span><span class="p">:</span>
+                    <span class="n">ax</span> <span class="o">=</span> <span class="n">axes</span><span class="p">[</span><span class="n">start_param</span><span class="p">]</span>
+                    <span class="n">param_values_i</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">optimized_params_array</span><span class="p">[:,</span> <span class="n">i</span><span class="p">]</span>
+                    <span class="n">param_values_j</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">optimized_params_array</span><span class="p">[:,</span> <span class="n">j</span><span class="p">]</span>
+                    <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">param_values_i</span><span class="p">,</span> <span class="n">param_values_j</span><span class="p">,</span> <span class="s1">&#39;o&#39;</span><span class="p">)</span>
+
+                    <span class="c1"># Set x- and y-limits based on bounds if available</span>
+                    <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">bounds</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">plot_within_bounds</span> <span class="o">==</span> <span class="kc">True</span><span class="p">:</span>
+                        <span class="n">ax</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">bounds</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+                        <span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">bounds</span><span class="p">[</span><span class="n">j</span><span class="p">])</span>
+
+                    <span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="n">param_names</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+                    <span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="n">param_names</span><span class="p">[</span><span class="n">j</span><span class="p">])</span>
+                    <span class="n">start_param</span> <span class="o">+=</span> <span class="mi">1</span>
+
+        <span class="c1"># Hide any remaining empty subplots</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">start_param</span><span class="p">,</span> <span class="n">total_subplots</span><span class="p">):</span>
+            <span class="n">fig</span><span class="o">.</span><span class="n">delaxes</span><span class="p">(</span><span class="n">axes</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+
+        <span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">save_file_path</span><span class="si">}</span><span class="s1">_fit_statistics.pdf&#39;</span><span class="p">)</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span></div>
+
+
+<div class="viewcode-block" id="Fitting.box_plot_optimized_parameters">
+<a class="viewcode-back" href="../../generated/PumpProbeFitting.Fitting.Fitting.box_plot_optimized_parameters.html#PumpProbeFitting.Fitting.Fitting.box_plot_optimized_parameters">[docs]</a>
+    <span class="k">def</span> <span class="nf">box_plot_optimized_parameters</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Visualize optimized parameters across bootstrap iterations and pairwise relationships between parameters.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># Get parameter names for the selected model type</span>
+        <span class="n">param_names</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">param_names</span>
+        <span class="n">num_params</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">param_names</span><span class="p">)</span>
+
+        <span class="c1"># Calculate the total number of subplots needed</span>
+        <span class="n">total_subplots</span> <span class="o">=</span> <span class="n">num_params</span> <span class="o">+</span> <span class="n">num_params</span> <span class="o">*</span> <span class="p">(</span><span class="n">num_params</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">//</span> <span class="mi">2</span>
+
+        <span class="c1"># Calculate the number of rows and columns needed for plotting</span>
+        <span class="n">num_rows</span> <span class="o">=</span> <span class="p">(</span><span class="n">total_subplots</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">//</span> <span class="mi">2</span>  <span class="c1"># Add 1 to handle odd number of subplots</span>
+        <span class="n">num_cols</span> <span class="o">=</span> <span class="mi">2</span>
+
+        <span class="c1"># Create subplots</span>
+        <span class="n">fig</span><span class="p">,</span> <span class="n">axes</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">num_rows</span><span class="p">,</span> <span class="n">num_cols</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">3</span> <span class="o">*</span> <span class="n">num_rows</span><span class="p">))</span>
+        <span class="n">axes</span> <span class="o">=</span> <span class="n">axes</span><span class="o">.</span><span class="n">flatten</span><span class="p">()</span>
+
+        <span class="c1"># Plot each parameter vs. the number of bootstraps</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">num_params</span><span class="p">):</span>
+            <span class="n">ax</span> <span class="o">=</span> <span class="n">axes</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+            <span class="n">param_values</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">optimized_params_array</span><span class="p">[:,</span> <span class="n">i</span><span class="p">]</span>
+            <span class="n">ax</span><span class="o">.</span><span class="n">boxplot</span><span class="p">(</span><span class="n">param_values</span><span class="p">)</span>
+
+            <span class="c1"># Plot median and confidence interval</span>
+            <span class="n">ax</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">fitted_params</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">f</span><span class="s1">&#39;Md </span><span class="si">{</span><span class="n">param_names</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+            <span class="n">ax</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">lower_bounds</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">f</span><span class="s1">&#39;2.5th Percentile </span><span class="si">{</span><span class="n">param_names</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+            <span class="n">ax</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">upper_bounds</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;g&#39;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">f</span><span class="s1">&#39;97.5th Percentile </span><span class="si">{</span><span class="n">param_names</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+
+             <span class="c1"># Set y-limits based on bounds if available</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">bounds</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">plot_within_bounds</span> <span class="o">==</span> <span class="kc">True</span><span class="p">:</span>
+                 <span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">bounds</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+
+            <span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="n">param_names</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+            <span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+
+        <span class="c1"># Plot each parameter against another parameter</span>
+        <span class="n">start_param</span> <span class="o">=</span> <span class="n">num_params</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">num_params</span><span class="p">):</span>
+            <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">num_params</span><span class="p">):</span>
+                <span class="k">if</span> <span class="n">start_param</span> <span class="o">&lt;</span> <span class="n">total_subplots</span><span class="p">:</span>
+                    <span class="n">ax</span> <span class="o">=</span> <span class="n">axes</span><span class="p">[</span><span class="n">start_param</span><span class="p">]</span>
+                    <span class="n">param_values_i</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">optimized_params_array</span><span class="p">[:,</span> <span class="n">i</span><span class="p">]</span>
+                    <span class="n">param_values_j</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">optimized_params_array</span><span class="p">[:,</span> <span class="n">j</span><span class="p">]</span>
+                    <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">param_values_i</span><span class="p">,</span> <span class="n">param_values_j</span><span class="p">,</span> <span class="s1">&#39;o&#39;</span><span class="p">)</span>
+
+                    <span class="c1"># Set x- and y-limits based on bounds if available</span>
+                    <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">bounds</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">plot_within_bounds</span> <span class="o">==</span> <span class="kc">True</span><span class="p">:</span>
+                        <span class="n">ax</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">bounds</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+                        <span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">bounds</span><span class="p">[</span><span class="n">j</span><span class="p">])</span>
+
+                    <span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="n">param_names</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+                    <span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="n">param_names</span><span class="p">[</span><span class="n">j</span><span class="p">])</span>
+                    <span class="n">start_param</span> <span class="o">+=</span> <span class="mi">1</span>
+
+        <span class="c1"># Hide any remaining empty subplots</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">start_param</span><span class="p">,</span> <span class="n">total_subplots</span><span class="p">):</span>
+            <span class="n">fig</span><span class="o">.</span><span class="n">delaxes</span><span class="p">(</span><span class="n">axes</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+
+        <span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">save_file_path</span><span class="si">}</span><span class="s1">_fit_statistics.pdf&#39;</span><span class="p">)</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span></div>
+
+
+<div class="viewcode-block" id="Fitting.find_t0_max_min">
+<a class="viewcode-back" href="../../generated/PumpProbeFitting.Fitting.Fitting.find_t0_max_min.html#PumpProbeFitting.Fitting.Fitting.find_t0_max_min">[docs]</a>
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">find_t0_max_min</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">Thz</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Identify the time range near the minimum signal value where the THz signal reaches within a threshold.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        t : array-like</span>
+<span class="sd">            Time data.</span>
+<span class="sd">        Thz : array-like</span>
+<span class="sd">            Experimental THz data.</span>
+<span class="sd">            </span>
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        tuple</span>
+<span class="sd">            A tuple of ``t0_max`` (time at the minimum signal) and ``t0_min`` (time near the threshold).</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">min_index</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">argmin</span><span class="p">(</span><span class="n">Thz</span><span class="p">)</span>  <span class="c1"># Find the index of the minimum value in Thz</span>
+        <span class="n">t0_max</span> <span class="o">=</span> <span class="n">t</span><span class="p">[</span><span class="n">min_index</span><span class="p">]</span>
+        <span class="n">threshold</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">Thz</span><span class="p">)</span> <span class="o">*</span> <span class="mf">0.03</span>  <span class="c1"># Define the threshold (3% below the mean)</span>
+
+        <span class="c1"># Iterate backward from the minimum index to find where Thz first reaches within 3% of the mean</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">min_index</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">):</span>
+            <span class="k">if</span> <span class="n">Thz</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="n">threshold</span><span class="p">:</span>
+                <span class="n">t0_min</span> <span class="o">=</span> <span class="n">t</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+                <span class="k">return</span> <span class="n">t0_max</span><span class="p">,</span> <span class="n">t</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>  <span class="c1"># t0_min and t0_max</span>
+
+        <span class="k">return</span> <span class="n">t0_max</span><span class="p">,</span> <span class="mi">20</span>  <span class="c1"># Return 20 if no such time is found</span></div>
+
+    
+<div class="viewcode-block" id="Fitting.MinMaxscaler">
+<a class="viewcode-back" href="../../generated/PumpProbeFitting.Fitting.Fitting.MinMaxscaler.html#PumpProbeFitting.Fitting.Fitting.MinMaxscaler">[docs]</a>
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">MinMaxscaler</span><span class="p">(</span><span class="n">data</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Scale data to the range ``[-1, 0]``.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        data : array-like</span>
+<span class="sd">            Input data to be scaled.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        array-like</span>
+<span class="sd">            Scaled data in the range [-1, 0].</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="p">(</span> <span class="n">data</span> <span class="o">-</span> <span class="nb">min</span><span class="p">(</span><span class="n">data</span><span class="p">)</span> <span class="p">)</span> <span class="o">/</span>  <span class="p">(</span> <span class="nb">max</span><span class="p">(</span><span class="n">data</span><span class="p">)</span> <span class="o">-</span> <span class="nb">min</span><span class="p">(</span><span class="n">data</span><span class="p">)</span> <span class="p">)</span> <span class="o">-</span> <span class="mi">1</span></div>
+
+    
+
+<div class="viewcode-block" id="Fitting.plot_components">
+<a class="viewcode-back" href="../../generated/PumpProbeFitting.Fitting.Fitting.plot_components.html#PumpProbeFitting.Fitting.Fitting.plot_components">[docs]</a>
+    <span class="k">def</span> <span class="nf">plot_components</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">t</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Plot the results of the fitting procedure.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">            t : array_like</span>
+<span class="sd">                Time values.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>     <span class="c1"># Create figure</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">selected_model_type</span> <span class="o">==</span> <span class="s1">&#39;single_exp&#39;</span><span class="p">:</span>
+            <span class="n">A1</span><span class="p">,</span> <span class="n">tau1</span><span class="p">,</span> <span class="n">offset</span><span class="p">,</span> <span class="n">sig</span><span class="p">,</span> <span class="n">t0</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">fitted_params</span>
+            <span class="n">comp_1</span> <span class="o">=</span> <span class="n">A1</span> <span class="o">*</span> <span class="n">Fitting_Basis</span><span class="o">.</span><span class="n">TransDirectFunc</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">t0</span><span class="p">,</span> <span class="n">sig</span><span class="p">,</span> <span class="n">tau1</span><span class="p">)</span>
+            <span class="n">comp_3</span> <span class="o">=</span> <span class="n">offset</span> <span class="o">*</span> <span class="n">Fitting_Basis</span><span class="o">.</span><span class="n">ConstFunc</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+            <span class="n">irf</span> <span class="o">=</span> <span class="n">Fitting_Basis</span><span class="o">.</span><span class="n">instrument_response</span><span class="p">(</span><span class="n">sig</span><span class="p">,</span> <span class="n">t</span> <span class="o">-</span> <span class="n">t0</span><span class="p">)</span>
+            <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span> <span class="o">-</span> <span class="n">t0</span><span class="p">,</span> <span class="n">comp_1</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">r</span><span class="s1">&#39;$\tau_1$ component&#39;</span><span class="p">)</span>
+            <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span> <span class="o">-</span> <span class="n">t0</span><span class="p">,</span> <span class="n">comp_3</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Offset&#39;</span><span class="p">)</span>
+            <span class="c1">#plt.plot(t - t0, irf, label=&#39;IRF&#39;)</span>
+            <span class="c1">#plt.xlim(-2, 6)</span>
+            
+        <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">selected_model_type</span> <span class="o">==</span> <span class="s1">&#39;double_exp&#39;</span><span class="p">:</span>
+            <span class="n">A1</span><span class="p">,</span> <span class="n">tau1</span><span class="p">,</span> <span class="n">A2</span><span class="p">,</span> <span class="n">tau2</span><span class="p">,</span> <span class="n">offset</span><span class="p">,</span> <span class="n">sig</span><span class="p">,</span> <span class="n">t0</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">fitted_params</span>
+            <span class="n">comp_1</span> <span class="o">=</span> <span class="n">A1</span> <span class="o">*</span> <span class="n">Fitting_Basis</span><span class="o">.</span><span class="n">TransDirectFunc</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">t0</span><span class="p">,</span> <span class="n">sig</span><span class="p">,</span> <span class="n">tau1</span><span class="p">)</span>
+            <span class="n">comp_2</span> <span class="o">=</span> <span class="n">A2</span> <span class="o">*</span> <span class="n">Fitting_Basis</span><span class="o">.</span><span class="n">TransDirectFunc</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">t0</span><span class="p">,</span> <span class="n">sig</span><span class="p">,</span> <span class="n">tau2</span><span class="p">)</span>
+            <span class="n">comp_3</span> <span class="o">=</span> <span class="n">offset</span> <span class="o">*</span> <span class="n">Fitting_Basis</span><span class="o">.</span><span class="n">ConstFunc</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+            <span class="c1">#irf = Fitting_Basis.instrument_response(sig, t - t0)</span>
+            <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span> <span class="o">-</span> <span class="n">t0</span><span class="p">,</span> <span class="n">comp_1</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">r</span><span class="s1">&#39;$\tau_1$ component&#39;</span><span class="p">)</span>
+            <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span> <span class="o">-</span> <span class="n">t0</span><span class="p">,</span> <span class="n">comp_2</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">r</span><span class="s1">&#39;$\tau_2$ component&#39;</span><span class="p">)</span>
+            <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span> <span class="o">-</span> <span class="n">t0</span><span class="p">,</span> <span class="n">comp_3</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Offset&#39;</span><span class="p">)</span>
+            <span class="c1">#plt.plot(t - t0, irf, label=&#39;IRF&#39;)</span>
+            <span class="c1">#plt.xlim(-2, 6)</span>
+        
+        <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">selected_model_type</span> <span class="o">==</span> <span class="s1">&#39;exp_1_frt&#39;</span><span class="p">:</span>
+            <span class="n">A1</span><span class="p">,</span> <span class="n">tau1</span><span class="p">,</span> <span class="n">A2</span><span class="p">,</span> <span class="n">tau2</span><span class="p">,</span> <span class="n">offset</span><span class="p">,</span> <span class="n">sig</span><span class="p">,</span> <span class="n">t0</span><span class="p">,</span> <span class="n">T_A</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">fitted_params</span>
+            <span class="n">comp_1</span> <span class="o">=</span> <span class="n">A1</span> <span class="o">*</span> <span class="n">Fitting_Basis</span><span class="o">.</span><span class="n">TransDirectFunc</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">t0</span><span class="p">,</span> <span class="n">sig</span><span class="p">,</span> <span class="n">tau1</span><span class="p">)</span>
+            <span class="n">comp_2</span> <span class="o">=</span> <span class="n">A2</span> <span class="o">*</span> <span class="n">Fitting_Basis</span><span class="o">.</span><span class="n">TransDirect_frt_Func</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">t0</span><span class="p">,</span> <span class="n">sig</span><span class="p">,</span> <span class="n">tau2</span><span class="p">,</span> <span class="n">T_A</span><span class="p">)</span>
+            <span class="n">comp_3</span> <span class="o">=</span> <span class="n">offset</span> <span class="o">*</span> <span class="n">Fitting_Basis</span><span class="o">.</span><span class="n">ConstFunc</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+            <span class="n">irf</span> <span class="o">=</span> <span class="n">Fitting_Basis</span><span class="o">.</span><span class="n">instrument_response</span><span class="p">(</span><span class="n">sig</span><span class="p">,</span> <span class="n">t</span> <span class="o">-</span> <span class="n">t0</span><span class="p">)</span>
+            <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span> <span class="o">-</span> <span class="n">t0</span><span class="p">,</span> <span class="n">comp_1</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">r</span><span class="s1">&#39;$\tau_1$ component&#39;</span><span class="p">)</span>
+            <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span> <span class="o">-</span> <span class="n">t0</span><span class="p">,</span> <span class="n">comp_2</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">r</span><span class="s1">&#39;$\tau_2$ component&#39;</span><span class="p">)</span>
+            <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span> <span class="o">-</span> <span class="n">t0</span><span class="p">,</span> <span class="n">comp_3</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Offset&#39;</span><span class="p">)</span>
+            <span class="c1">#plt.plot(t - t0, irf, label=&#39;IRF&#39;)</span>
+            <span class="c1">#plt.xlim(-2, 6)</span>
+            
+        <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">selected_model_type</span> <span class="o">==</span> <span class="s1">&#39;thermal_frt&#39;</span><span class="p">:</span>
+            <span class="n">A1</span><span class="p">,</span> <span class="n">tau1</span><span class="p">,</span> <span class="n">A2</span><span class="p">,</span> <span class="n">offset</span><span class="p">,</span> <span class="n">sig</span><span class="p">,</span> <span class="n">t0</span><span class="p">,</span> <span class="n">T_A</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">fitted_params</span>
+            <span class="n">comp_1</span> <span class="o">=</span> <span class="n">A2</span> <span class="o">*</span> <span class="n">Fitting_Basis</span><span class="o">.</span><span class="n">TransDirectFunc</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">t0</span><span class="p">,</span> <span class="n">sig</span><span class="p">,</span> <span class="n">tau1</span><span class="p">)</span>
+            <span class="n">comp_2</span> <span class="o">=</span> <span class="n">A1</span> <span class="o">*</span> <span class="n">Fitting_Basis</span><span class="o">.</span><span class="n">TransDirect_frt_Func</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">t0</span><span class="p">,</span> <span class="n">sig</span><span class="p">,</span> <span class="n">tau1</span><span class="p">,</span> <span class="n">T_A</span><span class="p">)</span>
+            <span class="n">comp_3</span> <span class="o">=</span> <span class="n">offset</span> <span class="o">*</span> <span class="n">Fitting_Basis</span><span class="o">.</span><span class="n">ConstFunc</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+            <span class="n">irf</span> <span class="o">=</span> <span class="n">Fitting_Basis</span><span class="o">.</span><span class="n">instrument_response</span><span class="p">(</span><span class="n">sig</span><span class="p">,</span> <span class="n">t</span> <span class="o">-</span> <span class="n">t0</span><span class="p">)</span>
+            <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span> <span class="o">-</span> <span class="n">t0</span><span class="p">,</span> <span class="n">comp_1</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">r</span><span class="s1">&#39;Thermal component&#39;</span><span class="p">)</span>
+            <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span> <span class="o">-</span> <span class="n">t0</span><span class="p">,</span> <span class="n">comp_2</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">r</span><span class="s1">&#39;Finite Rise component&#39;</span><span class="p">)</span>
+            <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span> <span class="o">-</span> <span class="n">t0</span><span class="p">,</span> <span class="n">comp_3</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Offset&#39;</span><span class="p">)</span>
+            <span class="c1">#plt.plot(t - t0, irf, label=&#39;IRF&#39;)</span>
+            <span class="c1">#plt.xlim(-2, 6)</span>
+            
+        <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">selected_model_type</span> <span class="o">==</span> <span class="s1">&#39;frt&#39;</span><span class="p">:</span>
+            <span class="n">A1</span><span class="p">,</span> <span class="n">tau1</span><span class="p">,</span> <span class="n">offset</span><span class="p">,</span> <span class="n">sig</span><span class="p">,</span> <span class="n">t0</span><span class="p">,</span> <span class="n">T_A</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">fitted_params</span>
+            <span class="n">comp_1</span> <span class="o">=</span> <span class="n">A1</span> <span class="o">*</span> <span class="n">Fitting_Basis</span><span class="o">.</span><span class="n">TransDirect_frt_Func</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">t0</span><span class="p">,</span> <span class="n">sig</span><span class="p">,</span> <span class="n">tau1</span><span class="p">,</span> <span class="n">T_A</span><span class="p">)</span>
+            <span class="n">comp_3</span> <span class="o">=</span> <span class="n">offset</span> <span class="o">*</span> <span class="n">Fitting_Basis</span><span class="o">.</span><span class="n">ConstFunc</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+            <span class="n">irf</span> <span class="o">=</span> <span class="n">Fitting_Basis</span><span class="o">.</span><span class="n">instrument_response</span><span class="p">(</span><span class="n">sig</span><span class="p">,</span> <span class="n">t</span> <span class="o">-</span> <span class="n">t0</span><span class="p">)</span>
+            <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span> <span class="o">-</span> <span class="n">t0</span><span class="p">,</span> <span class="n">comp_1</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">r</span><span class="s1">&#39;$\tau_1$ component&#39;</span><span class="p">)</span>
+            <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span> <span class="o">-</span> <span class="n">t0</span><span class="p">,</span> <span class="n">comp_3</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Offset&#39;</span><span class="p">)</span>
+            <span class="c1">#plt.plot(t - t0, irf, label=&#39;IRF&#39;)</span>
+            <span class="c1">#plt.xlim(-2, 6)</span>
+            
+        <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">selected_model_type</span> <span class="o">==</span> <span class="s1">&#39;exp_2_frt&#39;</span><span class="p">:</span>
+            <span class="n">A1</span><span class="p">,</span> <span class="n">tau1</span><span class="p">,</span> <span class="n">A2</span><span class="p">,</span> <span class="n">tau2</span><span class="p">,</span> <span class="n">offset</span><span class="p">,</span> <span class="n">sig</span><span class="p">,</span> <span class="n">t0</span><span class="p">,</span> <span class="n">T_A</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">fitted_params</span>
+            <span class="n">comp_1</span> <span class="o">=</span> <span class="n">A1</span> <span class="o">*</span> <span class="n">Fitting_Basis</span><span class="o">.</span><span class="n">TransDirect_frt_Func</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">t0</span><span class="p">,</span> <span class="n">sig</span><span class="p">,</span> <span class="n">tau1</span><span class="p">,</span> <span class="n">T_A</span><span class="p">)</span>
+            <span class="n">comp_2</span> <span class="o">=</span> <span class="n">A2</span> <span class="o">*</span> <span class="n">Fitting_Basis</span><span class="o">.</span><span class="n">TransDirect_frt_Func</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">t0</span><span class="p">,</span> <span class="n">sig</span><span class="p">,</span> <span class="n">tau2</span><span class="p">,</span> <span class="n">T_A</span><span class="p">)</span>
+            <span class="n">comp_3</span> <span class="o">=</span> <span class="n">offset</span> <span class="o">*</span> <span class="n">Fitting_Basis</span><span class="o">.</span><span class="n">ConstFunc</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+            <span class="n">irf</span> <span class="o">=</span> <span class="n">Fitting_Basis</span><span class="o">.</span><span class="n">instrument_response</span><span class="p">(</span><span class="n">sig</span><span class="p">,</span> <span class="n">t</span> <span class="o">-</span> <span class="n">t0</span><span class="p">)</span>
+            <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span> <span class="o">-</span> <span class="n">t0</span><span class="p">,</span> <span class="n">comp_1</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">r</span><span class="s1">&#39;$\tau_1$ component&#39;</span><span class="p">)</span>
+            <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span> <span class="o">-</span> <span class="n">t0</span><span class="p">,</span> <span class="n">comp_2</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">r</span><span class="s1">&#39;$\tau_2$ component&#39;</span><span class="p">)</span>
+            <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span> <span class="o">-</span> <span class="n">t0</span><span class="p">,</span> <span class="n">comp_3</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Offset&#39;</span><span class="p">)</span>
+            <span class="c1">#plt.plot(t - t0, irf, label=&#39;IRF&#39;)</span>
+            <span class="c1">#plt.xlim(-2, 6)</span>
+            
+        <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">selected_model_type</span> <span class="o">==</span> <span class="s1">&#39;triple_exp&#39;</span><span class="p">:</span>
+            <span class="n">A1</span><span class="p">,</span> <span class="n">tau1</span><span class="p">,</span> <span class="n">A2</span><span class="p">,</span> <span class="n">tau2</span><span class="p">,</span> <span class="n">A3</span><span class="p">,</span> <span class="n">tau3</span><span class="p">,</span> <span class="n">offset</span><span class="p">,</span> <span class="n">sig</span><span class="p">,</span> <span class="n">t0</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">fitted_params</span>
+            <span class="n">comp_1</span> <span class="o">=</span> <span class="n">A1</span> <span class="o">*</span> <span class="n">Fitting_Basis</span><span class="o">.</span><span class="n">TransDirectFunc</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">t0</span><span class="p">,</span> <span class="n">sig</span><span class="p">,</span> <span class="n">tau1</span><span class="p">)</span>
+            <span class="n">comp_2</span> <span class="o">=</span> <span class="n">A2</span> <span class="o">*</span> <span class="n">Fitting_Basis</span><span class="o">.</span><span class="n">TransDirectFunc</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">t0</span><span class="p">,</span> <span class="n">sig</span><span class="p">,</span> <span class="n">tau2</span><span class="p">)</span>
+            <span class="n">comp_3</span> <span class="o">=</span> <span class="n">A3</span> <span class="o">*</span> <span class="n">Fitting_Basis</span><span class="o">.</span><span class="n">TransDirectFunc</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">t0</span><span class="p">,</span> <span class="n">sig</span><span class="p">,</span> <span class="n">tau3</span><span class="p">)</span>
+            <span class="n">comp_4</span> <span class="o">=</span> <span class="n">offset</span> <span class="o">*</span> <span class="n">Fitting_Basis</span><span class="o">.</span><span class="n">ConstFunc</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+            <span class="n">irf</span> <span class="o">=</span> <span class="n">Fitting_Basis</span><span class="o">.</span><span class="n">instrument_response</span><span class="p">(</span><span class="n">sig</span><span class="p">,</span> <span class="n">t</span> <span class="o">-</span> <span class="n">t0</span><span class="p">)</span>
+            <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span> <span class="o">-</span> <span class="n">t0</span><span class="p">,</span> <span class="n">comp_1</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">r</span><span class="s1">&#39;$\tau_1$ component&#39;</span><span class="p">)</span>
+            <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span> <span class="o">-</span> <span class="n">t0</span><span class="p">,</span> <span class="n">comp_2</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">r</span><span class="s1">&#39;$\tau_2$ component&#39;</span><span class="p">)</span>
+            <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span> <span class="o">-</span> <span class="n">t0</span><span class="p">,</span> <span class="n">comp_3</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">r</span><span class="s1">&#39;$\tau_3$ component&#39;</span><span class="p">)</span>
+            <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span> <span class="o">-</span> <span class="n">t0</span><span class="p">,</span> <span class="n">comp_4</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Offset&#39;</span><span class="p">)</span>
+            <span class="c1">#plt.plot(t - t0, irf, label=&#39;IRF&#39;)</span>
+            <span class="c1">#plt.xlim(-2, 6)</span>
+            
+        <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">selected_model_type</span> <span class="o">==</span> <span class="s1">&#39;exp_switch_exp&#39;</span><span class="p">:</span>
+            <span class="n">A1</span><span class="p">,</span> <span class="n">tau1</span><span class="p">,</span> <span class="n">A2</span><span class="p">,</span> <span class="n">tau2</span><span class="p">,</span> <span class="n">A3</span><span class="p">,</span> <span class="n">offset</span><span class="p">,</span> <span class="n">sig</span><span class="p">,</span> <span class="n">t0</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">fitted_params</span>
+            <span class="n">comp_1</span> <span class="o">=</span> <span class="n">A1</span> <span class="o">*</span> <span class="n">Fitting_Basis</span><span class="o">.</span><span class="n">TransDirectFunc</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">t0</span><span class="p">,</span> <span class="n">sig</span><span class="p">,</span> <span class="n">tau1</span><span class="p">)</span>
+            <span class="n">comp_2</span> <span class="o">=</span> <span class="n">A2</span> <span class="o">*</span> <span class="n">Fitting_Basis</span><span class="o">.</span><span class="n">TransDirectFunc</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">t0</span><span class="p">,</span> <span class="n">sig</span><span class="p">,</span> <span class="n">tau2</span><span class="p">)</span>
+            <span class="n">comp_3</span> <span class="o">=</span> <span class="n">A3</span> <span class="o">*</span> <span class="n">Fitting_Basis</span><span class="o">.</span><span class="n">switch_direct_func</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">t0</span><span class="p">,</span> <span class="n">sig</span><span class="p">)</span>
+            <span class="n">comp_4</span> <span class="o">=</span> <span class="n">offset</span> <span class="o">*</span> <span class="n">Fitting_Basis</span><span class="o">.</span><span class="n">ConstFunc</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+            <span class="n">irf</span> <span class="o">=</span> <span class="n">Fitting_Basis</span><span class="o">.</span><span class="n">instrument_response</span><span class="p">(</span><span class="n">sig</span><span class="p">,</span> <span class="n">t</span> <span class="o">-</span> <span class="n">t0</span><span class="p">)</span>
+            <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span> <span class="o">-</span> <span class="n">t0</span><span class="p">,</span> <span class="n">comp_1</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">r</span><span class="s1">&#39;$\tau_1$ component&#39;</span><span class="p">)</span>
+            <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span> <span class="o">-</span> <span class="n">t0</span><span class="p">,</span> <span class="n">comp_2</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">r</span><span class="s1">&#39;$\tau_2$ component&#39;</span><span class="p">)</span>
+            <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span> <span class="o">-</span> <span class="n">t0</span><span class="p">,</span> <span class="n">comp_3</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Switch component&#39;</span><span class="p">)</span>
+            <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span> <span class="o">-</span> <span class="n">t0</span><span class="p">,</span> <span class="n">comp_4</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Offset&#39;</span><span class="p">)</span>
+            <span class="c1">#plt.plot(t - t0, irf, label=&#39;IRF&#39;)</span>
+            <span class="c1">#plt.xlim(-2, 6)</span>
+            
+        <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">selected_model_type</span> <span class="o">==</span> <span class="s1">&#39;exp_switch&#39;</span><span class="p">:</span>
+            <span class="n">A1</span><span class="p">,</span> <span class="n">tau1</span><span class="p">,</span> <span class="n">A2</span><span class="p">,</span> <span class="n">offset</span><span class="p">,</span> <span class="n">sig</span><span class="p">,</span> <span class="n">t0</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">fitted_params</span>
+            <span class="n">comp_1</span> <span class="o">=</span> <span class="n">A1</span> <span class="o">*</span> <span class="n">Fitting_Basis</span><span class="o">.</span><span class="n">TransDirectFunc</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">t0</span><span class="p">,</span> <span class="n">sig</span><span class="p">,</span> <span class="n">tau1</span><span class="p">)</span>
+            <span class="n">comp_2</span> <span class="o">=</span> <span class="n">A2</span> <span class="o">*</span> <span class="n">Fitting_Basis</span><span class="o">.</span><span class="n">switch_direct_func</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">t0</span><span class="p">,</span> <span class="n">sig</span><span class="p">)</span>
+            <span class="n">comp_4</span> <span class="o">=</span> <span class="n">offset</span> <span class="o">*</span> <span class="n">Fitting_Basis</span><span class="o">.</span><span class="n">ConstFunc</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+            <span class="n">irf</span> <span class="o">=</span> <span class="n">Fitting_Basis</span><span class="o">.</span><span class="n">instrument_response</span><span class="p">(</span><span class="n">sig</span><span class="p">,</span> <span class="n">t</span> <span class="o">-</span> <span class="n">t0</span><span class="p">)</span>
+            <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span> <span class="o">-</span> <span class="n">t0</span><span class="p">,</span> <span class="n">comp_1</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">r</span><span class="s1">&#39;$\tau_1$ component&#39;</span><span class="p">)</span>
+            <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span> <span class="o">-</span> <span class="n">t0</span><span class="p">,</span> <span class="n">comp_2</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Switch component&#39;</span><span class="p">)</span>
+            <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span> <span class="o">-</span> <span class="n">t0</span><span class="p">,</span> <span class="n">comp_4</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Offset&#39;</span><span class="p">)</span>
+            <span class="c1">#plt.plot(t - t0, irf, label=&#39;IRF&#39;)</span>
+            <span class="c1">#plt.xlim(-2, 6)</span>
+            
+        <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">selected_model_type</span> <span class="o">==</span> <span class="s1">&#39;frt_exp_switch&#39;</span><span class="p">:</span>
+            <span class="n">A1</span><span class="p">,</span> <span class="n">tau1</span><span class="p">,</span> <span class="n">A2</span><span class="p">,</span> <span class="n">offset</span><span class="p">,</span> <span class="n">sig</span><span class="p">,</span> <span class="n">t0</span><span class="p">,</span> <span class="n">T_A</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">fitted_params</span>
+            <span class="n">comp_1</span> <span class="o">=</span> <span class="n">A1</span> <span class="o">*</span> <span class="n">Fitting_Basis</span><span class="o">.</span><span class="n">TransDirect_frt_Func</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">t0</span><span class="p">,</span> <span class="n">sig</span><span class="p">,</span> <span class="n">tau1</span><span class="p">,</span> <span class="n">T_A</span><span class="p">)</span>
+            <span class="n">comp_2</span> <span class="o">=</span> <span class="n">A2</span> <span class="o">*</span> <span class="n">Fitting_Basis</span><span class="o">.</span><span class="n">switch_direct_func</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">t0</span><span class="p">,</span> <span class="n">sig</span><span class="p">)</span>
+            <span class="n">comp_4</span> <span class="o">=</span> <span class="n">offset</span> <span class="o">*</span> <span class="n">Fitting_Basis</span><span class="o">.</span><span class="n">ConstFunc</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+            <span class="n">irf</span> <span class="o">=</span> <span class="n">Fitting_Basis</span><span class="o">.</span><span class="n">instrument_response</span><span class="p">(</span><span class="n">sig</span><span class="p">,</span> <span class="n">t</span> <span class="o">-</span> <span class="n">t0</span><span class="p">)</span>
+            <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span> <span class="o">-</span> <span class="n">t0</span><span class="p">,</span> <span class="n">comp_1</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">r</span><span class="s1">&#39;$\tau_1$ component&#39;</span><span class="p">)</span>
+            <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span> <span class="o">-</span> <span class="n">t0</span><span class="p">,</span> <span class="n">comp_2</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Switch component&#39;</span><span class="p">)</span>
+            <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span> <span class="o">-</span> <span class="n">t0</span><span class="p">,</span> <span class="n">comp_4</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Offset&#39;</span><span class="p">)</span>
+            <span class="c1">#plt.plot(t - t0, irf, label=&#39;IRF&#39;)</span>
+            <span class="c1">#plt.xlim(-2, 6)</span>
+            
+        <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">selected_model_type</span> <span class="o">==</span> <span class="s1">&#39;double_exp_gauss&#39;</span><span class="p">:</span>
+            <span class="n">A1</span><span class="p">,</span> <span class="n">tau1</span><span class="p">,</span> <span class="n">A2</span><span class="p">,</span> <span class="n">tau2</span><span class="p">,</span> <span class="n">A3</span><span class="p">,</span> <span class="n">offset</span><span class="p">,</span> <span class="n">sig</span><span class="p">,</span> <span class="n">t0</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">fitted_params</span>
+            <span class="n">comp_1</span> <span class="o">=</span> <span class="n">A1</span> <span class="o">*</span> <span class="n">Fitting_Basis</span><span class="o">.</span><span class="n">TransDirectFunc</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">t0</span><span class="p">,</span> <span class="n">sig</span><span class="p">,</span> <span class="n">tau1</span><span class="p">)</span>
+            <span class="n">comp_2</span> <span class="o">=</span> <span class="n">A2</span> <span class="o">*</span> <span class="n">Fitting_Basis</span><span class="o">.</span><span class="n">TransDirectFunc</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">t0</span><span class="p">,</span> <span class="n">sig</span><span class="p">,</span> <span class="n">tau2</span><span class="p">)</span>
+            <span class="n">comp_3</span> <span class="o">=</span> <span class="n">A3</span> <span class="o">*</span> <span class="n">Fitting_Basis</span><span class="o">.</span><span class="n">gauss_func</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">t0</span><span class="p">,</span> <span class="n">sig</span><span class="p">)</span>
+            <span class="n">comp_4</span> <span class="o">=</span> <span class="n">offset</span> <span class="o">*</span> <span class="n">Fitting_Basis</span><span class="o">.</span><span class="n">ConstFunc</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+            <span class="n">irf</span> <span class="o">=</span> <span class="n">Fitting_Basis</span><span class="o">.</span><span class="n">instrument_response</span><span class="p">(</span><span class="n">sig</span><span class="p">,</span> <span class="n">t</span> <span class="o">-</span> <span class="n">t0</span><span class="p">)</span>
+            <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span> <span class="o">-</span> <span class="n">t0</span><span class="p">,</span> <span class="n">comp_1</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">r</span><span class="s1">&#39;$\tau_1$ component&#39;</span><span class="p">)</span>
+            <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span> <span class="o">-</span> <span class="n">t0</span><span class="p">,</span> <span class="n">comp_2</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">r</span><span class="s1">&#39;$\tau_2$ component&#39;</span><span class="p">)</span>
+            <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span> <span class="o">-</span> <span class="n">t0</span><span class="p">,</span> <span class="n">comp_3</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">r</span><span class="s1">&#39;Gaussian component&#39;</span><span class="p">)</span>
+            <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span> <span class="o">-</span> <span class="n">t0</span><span class="p">,</span> <span class="n">comp_4</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Offset&#39;</span><span class="p">)</span>
+            <span class="c1">#plt.plot(t - t0, irf, label=&#39;IRF&#39;)</span>
+            <span class="c1">#plt.xlim(-2, 6)</span>
+            
+        <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">selected_model_type</span> <span class="o">==</span> <span class="s1">&#39;tetra_exp&#39;</span><span class="p">:</span>
+            <span class="n">A1</span><span class="p">,</span> <span class="n">tau1</span><span class="p">,</span> <span class="n">A2</span><span class="p">,</span> <span class="n">tau2</span><span class="p">,</span> <span class="n">A3</span><span class="p">,</span> <span class="n">tau3</span><span class="p">,</span> <span class="n">A4</span><span class="p">,</span> <span class="n">tau4</span><span class="p">,</span> <span class="n">offset</span><span class="p">,</span> <span class="n">sig</span><span class="p">,</span> <span class="n">t0</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">fitted_params</span>
+            <span class="n">comp_1</span> <span class="o">=</span> <span class="n">A1</span> <span class="o">*</span> <span class="n">Fitting_Basis</span><span class="o">.</span><span class="n">TransDirectFunc</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">t0</span><span class="p">,</span> <span class="n">sig</span><span class="p">,</span> <span class="n">tau1</span><span class="p">)</span>
+            <span class="n">comp_2</span> <span class="o">=</span> <span class="n">A2</span> <span class="o">*</span> <span class="n">Fitting_Basis</span><span class="o">.</span><span class="n">TransDirectFunc</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">t0</span><span class="p">,</span> <span class="n">sig</span><span class="p">,</span> <span class="n">tau2</span><span class="p">)</span>
+            <span class="n">comp_3</span> <span class="o">=</span> <span class="n">A3</span> <span class="o">*</span> <span class="n">Fitting_Basis</span><span class="o">.</span><span class="n">TransDirectFunc</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">t0</span><span class="p">,</span> <span class="n">sig</span><span class="p">,</span> <span class="n">tau3</span><span class="p">)</span>
+            <span class="n">comp_4</span> <span class="o">=</span> <span class="n">A4</span> <span class="o">*</span> <span class="n">Fitting_Basis</span><span class="o">.</span><span class="n">TransDirectFunc</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">t0</span><span class="p">,</span> <span class="n">sig</span><span class="p">,</span> <span class="n">tau4</span><span class="p">)</span>
+            <span class="n">comp_5</span> <span class="o">=</span> <span class="n">offset</span> <span class="o">*</span> <span class="n">Fitting_Basis</span><span class="o">.</span><span class="n">ConstFunc</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+            <span class="n">irf</span> <span class="o">=</span> <span class="n">Fitting_Basis</span><span class="o">.</span><span class="n">instrument_response</span><span class="p">(</span><span class="n">sig</span><span class="p">,</span> <span class="n">t</span> <span class="o">-</span> <span class="n">t0</span><span class="p">)</span>
+            <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span> <span class="o">-</span> <span class="n">t0</span><span class="p">,</span> <span class="n">comp_1</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">r</span><span class="s1">&#39;$\tau_1$ component&#39;</span><span class="p">)</span>
+            <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span> <span class="o">-</span> <span class="n">t0</span><span class="p">,</span> <span class="n">comp_2</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">r</span><span class="s1">&#39;$\tau_2$ component&#39;</span><span class="p">)</span>
+            <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span> <span class="o">-</span> <span class="n">t0</span><span class="p">,</span> <span class="n">comp_3</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">r</span><span class="s1">&#39;$\tau_3$ component&#39;</span><span class="p">)</span>
+            <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span> <span class="o">-</span> <span class="n">t0</span><span class="p">,</span> <span class="n">comp_4</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">r</span><span class="s1">&#39;$\tau_4$ component&#39;</span><span class="p">)</span>
+            <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span> <span class="o">-</span> <span class="n">t0</span><span class="p">,</span> <span class="n">comp_5</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Offset&#39;</span><span class="p">)</span>
+            <span class="c1">#plt.plot(t - t0, irf, label=&#39;IRF&#39;)</span>
+            <span class="c1">#plt.xlim(-2, 6)</span>
+            
+        <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">selected_model_type</span> <span class="o">==</span> <span class="s1">&#39;exp_1frt_2_exp&#39;</span><span class="p">:</span>
+            <span class="n">A1</span><span class="p">,</span> <span class="n">tau1</span><span class="p">,</span> <span class="n">A2</span><span class="p">,</span> <span class="n">tau2</span><span class="p">,</span> <span class="n">A3</span><span class="p">,</span> <span class="n">tau3</span><span class="p">,</span> <span class="n">offset</span><span class="p">,</span> <span class="n">sig</span><span class="p">,</span> <span class="n">t0</span><span class="p">,</span> <span class="n">T_A</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">fitted_params</span>
+            <span class="n">comp_1</span> <span class="o">=</span> <span class="n">A1</span> <span class="o">*</span> <span class="n">Fitting_Basis</span><span class="o">.</span><span class="n">TransDirectFunc</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">t0</span><span class="p">,</span> <span class="n">sig</span><span class="p">,</span> <span class="n">tau1</span><span class="p">)</span>
+            <span class="n">comp_2</span> <span class="o">=</span> <span class="n">A2</span> <span class="o">*</span> <span class="n">Fitting_Basis</span><span class="o">.</span><span class="n">TransDirect_frt_Func</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">t0</span><span class="p">,</span> <span class="n">sig</span><span class="p">,</span> <span class="n">tau2</span><span class="p">,</span> <span class="n">T_A</span><span class="p">)</span>
+            <span class="n">comp_3</span> <span class="o">=</span> <span class="n">A3</span> <span class="o">*</span> <span class="n">Fitting_Basis</span><span class="o">.</span><span class="n">TransDirectFunc</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">t0</span><span class="p">,</span> <span class="n">sig</span><span class="p">,</span> <span class="n">tau3</span><span class="p">)</span>
+            <span class="n">comp_4</span> <span class="o">=</span> <span class="n">offset</span> <span class="o">*</span> <span class="n">Fitting_Basis</span><span class="o">.</span><span class="n">ConstFunc</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+            <span class="n">irf</span> <span class="o">=</span> <span class="n">Fitting_Basis</span><span class="o">.</span><span class="n">instrument_response</span><span class="p">(</span><span class="n">sig</span><span class="p">,</span> <span class="n">t</span> <span class="o">-</span> <span class="n">t0</span><span class="p">)</span>
+            <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span> <span class="o">-</span> <span class="n">t0</span><span class="p">,</span> <span class="n">comp_1</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">r</span><span class="s1">&#39;$\tau_1$ component&#39;</span><span class="p">)</span>
+            <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span> <span class="o">-</span> <span class="n">t0</span><span class="p">,</span> <span class="n">comp_2</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">r</span><span class="s1">&#39;$\tau_2$ component&#39;</span><span class="p">)</span>
+            <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span> <span class="o">-</span> <span class="n">t0</span><span class="p">,</span> <span class="n">comp_3</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">r</span><span class="s1">&#39;$\tau_3$ component&#39;</span><span class="p">)</span>
+            <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span> <span class="o">-</span> <span class="n">t0</span><span class="p">,</span> <span class="n">comp_4</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Offset&#39;</span><span class="p">)</span>
+            <span class="c1">#plt.plot(t - t0, irf, label=&#39;IRF&#39;)</span>
+            <span class="c1">#plt.xlim(-2, 6)</span>
+            
+        <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">selected_model_type</span> <span class="o">==</span> <span class="s1">&#39;exp_1frt_3_exp&#39;</span><span class="p">:</span>
+            <span class="n">A1</span><span class="p">,</span> <span class="n">tau1</span><span class="p">,</span> <span class="n">A2</span><span class="p">,</span> <span class="n">tau2</span><span class="p">,</span> <span class="n">A3</span><span class="p">,</span> <span class="n">tau3</span><span class="p">,</span> <span class="n">A4</span><span class="p">,</span> <span class="n">tau4</span><span class="p">,</span> <span class="n">offset</span><span class="p">,</span> <span class="n">sig</span><span class="p">,</span> <span class="n">t0</span><span class="p">,</span> <span class="n">T_A</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">fitted_params</span>
+            <span class="n">comp_1</span> <span class="o">=</span> <span class="n">A1</span> <span class="o">*</span> <span class="n">Fitting_Basis</span><span class="o">.</span><span class="n">TransDirectFunc</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">t0</span><span class="p">,</span> <span class="n">sig</span><span class="p">,</span> <span class="n">tau1</span><span class="p">)</span>
+            <span class="n">comp_2</span> <span class="o">=</span> <span class="n">A2</span> <span class="o">*</span> <span class="n">Fitting_Basis</span><span class="o">.</span><span class="n">TransDirect_frt_Func</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">t0</span><span class="p">,</span> <span class="n">sig</span><span class="p">,</span> <span class="n">tau2</span><span class="p">,</span> <span class="n">T_A</span><span class="p">)</span>
+            <span class="n">comp_3</span> <span class="o">=</span> <span class="n">A3</span> <span class="o">*</span> <span class="n">Fitting_Basis</span><span class="o">.</span><span class="n">TransDirectFunc</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">t0</span><span class="p">,</span> <span class="n">sig</span><span class="p">,</span> <span class="n">tau3</span><span class="p">)</span>
+            <span class="n">comp_4</span> <span class="o">=</span> <span class="n">A4</span> <span class="o">*</span> <span class="n">Fitting_Basis</span><span class="o">.</span><span class="n">TransDirectFunc</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">t0</span><span class="p">,</span> <span class="n">sig</span><span class="p">,</span> <span class="n">tau4</span><span class="p">)</span>
+            <span class="n">comp_5</span> <span class="o">=</span> <span class="n">offset</span> <span class="o">*</span> <span class="n">Fitting_Basis</span><span class="o">.</span><span class="n">ConstFunc</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+            <span class="n">irf</span> <span class="o">=</span> <span class="n">Fitting_Basis</span><span class="o">.</span><span class="n">instrument_response</span><span class="p">(</span><span class="n">sig</span><span class="p">,</span> <span class="n">t</span> <span class="o">-</span> <span class="n">t0</span><span class="p">)</span>
+            <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span> <span class="o">-</span> <span class="n">t0</span><span class="p">,</span> <span class="n">comp_1</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">r</span><span class="s1">&#39;$\tau_1$ component&#39;</span><span class="p">)</span>
+            <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span> <span class="o">-</span> <span class="n">t0</span><span class="p">,</span> <span class="n">comp_2</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">r</span><span class="s1">&#39;$\tau_2$ component&#39;</span><span class="p">)</span>
+            <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span> <span class="o">-</span> <span class="n">t0</span><span class="p">,</span> <span class="n">comp_3</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">r</span><span class="s1">&#39;$\tau_3$ component&#39;</span><span class="p">)</span>
+            <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span> <span class="o">-</span> <span class="n">t0</span><span class="p">,</span> <span class="n">comp_4</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">r</span><span class="s1">&#39;$\tau_4$ component&#39;</span><span class="p">)</span>
+            <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span> <span class="o">-</span> <span class="n">t0</span><span class="p">,</span> <span class="n">comp_5</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Offset&#39;</span><span class="p">)</span>
+            <span class="c1">#plt.plot(t - t0, irf, label=&#39;IRF&#39;)</span>
+            <span class="c1">#plt.xlim(-2, 6)</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">(</span><span class="o">-</span><span class="n">t0</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="nb">max</span><span class="p">(</span><span class="n">t</span> <span class="o">-</span> <span class="n">t0</span><span class="p">))</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Pump Arrival&#39;</span><span class="p">)</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">bbox_to_anchor</span><span class="o">=</span><span class="p">(</span><span class="mf">1.05</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="n">loc</span><span class="o">=</span><span class="s1">&#39;upper left&#39;</span><span class="p">)</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;t [ps]&#39;</span><span class="p">)</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;$ \Delta T$ [a.u.]&#39;</span><span class="p">)</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">track_progress</span><span class="p">:</span>
+            <span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">save_file_path</span><span class="si">}{</span><span class="bp">self</span><span class="o">.</span><span class="n">selected_model_type</span><span class="si">}</span><span class="s1">_components.pdf&#39;</span><span class="p">)</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span></div>
+
+</pre></div>
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2024 - present, Mohan Giri.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.1.3.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  <!-- # L10n: Setting the PST URL as an argument as this does not need to be localized -->
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.16.1.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

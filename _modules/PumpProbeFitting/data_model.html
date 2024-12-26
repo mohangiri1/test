@@ -1,0 +1,1638 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PumpProbeFitting.data_model &#8212; PumpProbeFitting  documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=80d5e7a1" />
+    <link rel="stylesheet" type="text/css" href="../../_static/plot_directive.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery.css?v=d2d258e8" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="../../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '_modules/PumpProbeFitting/data_model';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="0.1.0." />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/PumpProbeFitting_logo.svg" class="logo__image only-light" alt="PumpProbeFitting  documentation - Home"/>
+    <img src="../../_static/PumpProbeFitting_logo_dark.svg" class="logo__image only-dark pst-js-only" alt="PumpProbeFitting  documentation - Home"/>
+  
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../index.html">
+    Home
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../getting_started.html">
+    Getting started
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../examples.html">
+    Examples
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../api.html">
+    Documentation
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../PumpProbeFitting.html">
+    API Reference
+  </a>
+</li>
+
+            <li class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button"
+                data-bs-toggle="dropdown" aria-expanded="false"
+                aria-controls="pst-nav-more-links">
+                    More
+                </button>
+                <ul id="pst-nav-more-links" class="dropdown-menu">
+                    
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../../contributing.html">
+    Contributing
+  </a>
+</li>
+
+                </ul>
+            </li>
+            
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/mohangiri1/PumpProbeFitting" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fab fa-github-square fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar hide-on-wide">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../index.html">
+    Home
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../getting_started.html">
+    Getting started
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../examples.html">
+    Examples
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../api.html">
+    Documentation
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../PumpProbeFitting.html">
+    API Reference
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../contributing.html">
+    Contributing
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/mohangiri1/PumpProbeFitting" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fab fa-github-square fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../index.html" class="nav-link">Module code</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">PumpProbeFitting.data_model</span></li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <h1>Source code for PumpProbeFitting.data_model</h1><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">scipy.stats</span> <span class="k">as</span> <span class="nn">spst</span>
+
+<div class="viewcode-block" id="one_plus_erf">
+<a class="viewcode-back" href="../../PumpProbeFitting.html#PumpProbeFitting.data_model.one_plus_erf">[docs]</a>
+<span class="k">def</span> <span class="nf">one_plus_erf</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Compute a numerically stable implementation of the function `1 + erf(x)` using the cumulative distribution function (CDF) of the standard normal distribution.</span>
+
+<span class="sd">    Mathematically</span>
+<span class="sd">        1 + erf(x) = 2 * CDF(x * sqrt(2))</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    x : float or array-like</span>
+<span class="sd">          Input value(s) at which to evaluate the function.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    ----------</span>
+<span class="sd">    one_plus_erf : float or ndarray</span>
+<span class="sd">          The computed values of the function `1 + erf(x)` for the input `x`.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="mf">2.</span> <span class="o">*</span> <span class="n">spst</span><span class="o">.</span><span class="n">norm</span><span class="o">.</span><span class="n">cdf</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="mf">1.0</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mf">2.0</span><span class="p">))</span></div>
+
+
+<div class="viewcode-block" id="Fitting_Basis">
+<a class="viewcode-back" href="../../PumpProbeFitting.html#PumpProbeFitting.data_model.Fitting_Basis">[docs]</a>
+<span class="k">class</span> <span class="nc">Fitting_Basis</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Class containing basic functions for fitting.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+<div class="viewcode-block" id="Fitting_Basis.instrument_response">
+<a class="viewcode-back" href="../../PumpProbeFitting.html#PumpProbeFitting.data_model.Fitting_Basis.instrument_response">[docs]</a>
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">instrument_response</span><span class="p">(</span><span class="n">sigma</span><span class="p">,</span> <span class="n">t</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Define an instrument response function (IRF) as a Gaussian.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        ----------</span>
+<span class="sd">        array-like</span>
+<span class="sd">            Constant function values.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">t</span><span class="o">**</span><span class="mi">2</span> <span class="o">/</span> <span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">sigma</span><span class="o">**</span><span class="mi">2</span><span class="p">))</span> <span class="o">/</span> <span class="p">(</span><span class="n">sigma</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">))</span></div>
+
+
+<div class="viewcode-block" id="Fitting_Basis.ConstFunc">
+<a class="viewcode-back" href="../../PumpProbeFitting.html#PumpProbeFitting.data_model.Fitting_Basis.ConstFunc">[docs]</a>
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">ConstFunc</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Constant function.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        x : array-like</span>
+<span class="sd">            Independent variable, pump probe time delay [ps] .</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        ----------</span>
+<span class="sd">        array-like</span>
+<span class="sd">            Constant function values.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">full</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="n">fill_value</span><span class="o">=</span><span class="mf">1.0</span><span class="p">)</span>
+        <span class="k">except</span><span class="p">:</span>
+            <span class="k">return</span> <span class="mf">1.0</span></div>
+
+
+<div class="viewcode-block" id="Fitting_Basis.gauss_func">
+<a class="viewcode-back" href="../../PumpProbeFitting.html#PumpProbeFitting.data_model.Fitting_Basis.gauss_func">[docs]</a>
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">gauss_func</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">t0</span><span class="p">,</span> <span class="n">sig</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Gaussian function.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">            x : array-like</span>
+<span class="sd">                Independent variable, pump probe time delay [ps] .</span>
+<span class="sd">            t0 : float</span>
+<span class="sd">                Time offset [ps].</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        ----------</span>
+<span class="sd">            array-like</span>
+<span class="sd">                Gaussian function values.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="p">((</span><span class="n">x</span> <span class="o">-</span> <span class="n">t0</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="o">*</span><span class="n">sig</span><span class="p">))</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="Fitting_Basis.switch_direct_func">
+<a class="viewcode-back" href="../../PumpProbeFitting.html#PumpProbeFitting.data_model.Fitting_Basis.switch_direct_func">[docs]</a>
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">switch_direct_func</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">t0</span><span class="p">,</span> <span class="n">sig</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Switch function with direct response.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        x : array-like</span>
+<span class="sd">            Independent variable, pump probe time delay [ps] .</span>
+<span class="sd">        t0 : float</span>
+<span class="sd">            Time offset [ps].</span>
+<span class="sd">        sig : float</span>
+<span class="sd">            Overal temporal profile of the pump and probe pulse [ps].</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        ----------</span>
+<span class="sd">            array-like</span>
+<span class="sd">                Switch function values.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">one_plus_erf</span><span class="p">(</span><span class="o">+</span><span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="n">t0</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="o">*</span><span class="n">sig</span><span class="p">))</span></div>
+
+
+<div class="viewcode-block" id="Fitting_Basis.switch_backward_func">
+<a class="viewcode-back" href="../../PumpProbeFitting.html#PumpProbeFitting.data_model.Fitting_Basis.switch_backward_func">[docs]</a>
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">switch_backward_func</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">t0</span><span class="p">,</span> <span class="n">sig</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Switch function with backward response.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">            x : array-like</span>
+<span class="sd">                Independent variable, pump probe time delay [ps] .</span>
+<span class="sd">            t0 : float</span>
+<span class="sd">                Time offset [ps].</span>
+<span class="sd">            sig : float</span>
+<span class="sd">                Overal temporal profile of the pump and probe pulse [ps].</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        ----------</span>
+<span class="sd">            array-like</span>
+<span class="sd">                Switch function values.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">one_plus_erf</span><span class="p">(</span><span class="o">-</span><span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="n">t0</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="o">*</span><span class="n">sig</span><span class="p">))</span></div>
+
+
+<div class="viewcode-block" id="Fitting_Basis.TransDirectFunc">
+<a class="viewcode-back" href="../../PumpProbeFitting.html#PumpProbeFitting.data_model.Fitting_Basis.TransDirectFunc">[docs]</a>
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">TransDirectFunc</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">t0</span><span class="p">,</span> <span class="n">sig</span><span class="p">,</span> <span class="n">T</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Transient function with direct response.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">            x : array-like</span>
+<span class="sd">                Independent variable, pump probe time delay [ps] .</span>
+<span class="sd">            t0 : float</span>
+<span class="sd">                Time offset [ps].</span>
+<span class="sd">            sig : float</span>
+<span class="sd">                Overal temporal profile of the pump and probe pulse [ps].</span>
+<span class="sd">            T : float</span>
+<span class="sd">                Decay time [ps].</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        ----------</span>
+<span class="sd">            array-like</span>
+<span class="sd">                Transient function values.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">T</span> <span class="o">&gt;</span> <span class="mf">0.02</span> <span class="o">*</span> <span class="n">sig</span><span class="p">:</span>
+            <span class="k">return</span> <span class="mf">0.5</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="n">t0</span><span class="p">)</span> <span class="o">/</span> <span class="n">T</span><span class="p">)</span> <span class="o">*</span> <span class="n">one_plus_erf</span><span class="p">((</span><span class="o">+</span><span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="n">t0</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="o">*</span><span class="n">sig</span><span class="p">))</span> <span class="o">-</span> <span class="p">(</span><span class="mf">0.5</span> <span class="o">*</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="o">*</span><span class="n">sig</span><span class="p">)</span> <span class="o">/</span> <span class="n">T</span><span class="p">))</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="mf">0.25</span> <span class="o">*</span> <span class="p">((</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="o">*</span><span class="n">sig</span><span class="p">)</span> <span class="o">/</span> <span class="n">T</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+<span class="c1">#             return 0.5*np.exp(-(x - t0) / T) * one_plus_erf((+(x - t0) / (np.sqrt(2)*sig)) - (0.5 * (np.sqrt(2)*sig) / T)) * np.exp(0.25 * ((np.sqrt(2)*sig) / T) ** 2)</span>
+            <span class="k">return</span> <span class="n">Fitting_Basis</span><span class="o">.</span><span class="n">gauss_func</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">t0</span><span class="p">,</span> <span class="n">sig</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="Fitting_Basis.trans_backward_func">
+<a class="viewcode-back" href="../../PumpProbeFitting.html#PumpProbeFitting.data_model.Fitting_Basis.trans_backward_func">[docs]</a>
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">trans_backward_func</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">t0</span><span class="p">,</span> <span class="n">sig</span><span class="p">,</span> <span class="n">T</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Transient function with backward response.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">            x : array-like</span>
+<span class="sd">                Independent variable, pump probe time delay [ps] .</span>
+<span class="sd">            t0 : float</span>
+<span class="sd">                Time offset [ps].</span>
+<span class="sd">            sig : float</span>
+<span class="sd">                Overal temporal profile of the pump and probe pulse [ps].</span>
+<span class="sd">            T : float</span>
+<span class="sd">                Decay time [ps].</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        ----------</span>
+<span class="sd">            array-like</span>
+<span class="sd">                Transient function values.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">T</span> <span class="o">&gt;</span> <span class="mf">0.02</span> <span class="o">*</span> <span class="n">sig</span><span class="p">:</span>
+            <span class="k">return</span> <span class="mf">0.5</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">+</span><span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="n">t0</span><span class="p">)</span> <span class="o">/</span> <span class="n">T</span><span class="p">)</span> <span class="o">*</span> <span class="n">one_plus_erf</span><span class="p">((</span><span class="o">-</span><span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="n">t0</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="o">*</span><span class="n">sig</span><span class="p">))</span> <span class="o">-</span> <span class="p">(</span><span class="mf">0.5</span> <span class="o">*</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="o">*</span><span class="n">sig</span><span class="p">)</span> <span class="o">/</span> <span class="n">T</span><span class="p">))</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="mf">0.25</span> <span class="o">*</span> <span class="p">((</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="o">*</span><span class="n">sig</span><span class="p">)</span> <span class="o">/</span> <span class="n">T</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">Fitting_Basis</span><span class="o">.</span><span class="n">gauss_func</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">t0</span><span class="p">,</span> <span class="n">sig</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="Fitting_Basis.TransDirect_frt_Func">
+<a class="viewcode-back" href="../../PumpProbeFitting.html#PumpProbeFitting.data_model.Fitting_Basis.TransDirect_frt_Func">[docs]</a>
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">TransDirect_frt_Func</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">t0</span><span class="p">,</span> <span class="n">sig</span><span class="p">,</span> <span class="n">T</span><span class="p">,</span> <span class="n">T_A</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Transient function with finite rise time.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">            x : array-like</span>
+<span class="sd">                Independent variable, pump probe time delay [ps] .</span>
+<span class="sd">            t0 : float</span>
+<span class="sd">                Time offset [ps].</span>
+<span class="sd">            sig : float</span>
+<span class="sd">                Overal temporal profile of the pump and probe pulse [ps].</span>
+<span class="sd">            T : float</span>
+<span class="sd">                Decay time [ps].</span>
+<span class="sd">            T_A : float</span>
+<span class="sd">                Finite rise time parameter [ps].</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        ----------</span>
+<span class="sd">        array-like</span>
+<span class="sd">            Transient function values.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">T</span> <span class="o">&gt;</span> <span class="mf">0.02</span> <span class="o">*</span> <span class="n">sig</span><span class="p">:</span>
+            <span class="n">t_eq</span> <span class="o">=</span> <span class="n">T</span> <span class="o">*</span> <span class="n">T_A</span> <span class="o">/</span> <span class="p">(</span><span class="n">T</span> <span class="o">+</span> <span class="n">T_A</span><span class="p">)</span>
+            <span class="n">trans</span> <span class="o">=</span> <span class="mf">0.5</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="n">t0</span><span class="p">)</span> <span class="o">/</span> <span class="n">T</span><span class="p">)</span> <span class="o">*</span> <span class="n">one_plus_erf</span><span class="p">((</span><span class="o">+</span><span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="n">t0</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="o">*</span><span class="n">sig</span><span class="p">))</span> <span class="o">-</span> <span class="p">(</span><span class="mf">0.5</span> <span class="o">*</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="o">*</span><span class="n">sig</span><span class="p">)</span> <span class="o">/</span> <span class="n">T</span><span class="p">))</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="mf">0.25</span> <span class="o">*</span> <span class="p">((</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="o">*</span><span class="n">sig</span><span class="p">)</span> <span class="o">/</span> <span class="n">T</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span>
+            <span class="n">rise_time_response</span> <span class="o">=</span> <span class="mf">0.5</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="n">t0</span><span class="p">)</span> <span class="o">/</span> <span class="n">t_eq</span><span class="p">)</span> <span class="o">*</span> <span class="n">one_plus_erf</span><span class="p">((</span><span class="o">+</span><span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="n">t0</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="o">*</span><span class="n">sig</span><span class="p">))</span> <span class="o">-</span> <span class="p">(</span><span class="mf">0.5</span> <span class="o">*</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="o">*</span><span class="n">sig</span><span class="p">)</span> <span class="o">/</span> <span class="n">t_eq</span><span class="p">))</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="mf">0.25</span> <span class="o">*</span> <span class="p">((</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="o">*</span><span class="n">sig</span><span class="p">)</span> <span class="o">/</span> <span class="n">t_eq</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span>
+            <span class="k">return</span> <span class="n">trans</span> <span class="o">-</span> <span class="n">rise_time_response</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">Fitting_Basis</span><span class="o">.</span><span class="n">gauss_func</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">t0</span><span class="p">,</span> <span class="n">sig</span><span class="p">)</span></div>
+</div>
+
+        
+<div class="viewcode-block" id="Models">
+<a class="viewcode-back" href="../../PumpProbeFitting.html#PumpProbeFitting.data_model.Models">[docs]</a>
+<span class="k">class</span> <span class="nc">Models</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Collection of custom theoretical model functions for fitting data.</span>
+
+<span class="sd">    This class provides various theoretical model functions for fitting experimental data. </span>
+<span class="sd">    These functions cover scenarios such as single exponential decay, double exponential decay, </span>
+<span class="sd">    triple exponential decay, and tetra exponential decay, with options for finite rise time in some cases.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    
+<div class="viewcode-block" id="Models.Select_model">
+<a class="viewcode-back" href="../../PumpProbeFitting.html#PumpProbeFitting.data_model.Models.Select_model">[docs]</a>
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">Select_model</span><span class="p">(</span><span class="n">model_type</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Select and return the appropriate model function based on the model type.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">            model_type : str</span>
+<span class="sd">                Type of model.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        ----------</span>
+<span class="sd">            function</span>
+<span class="sd">                The selected model function.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">model_type</span> <span class="o">==</span> <span class="s1">&#39;single_exp&#39;</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">Models</span><span class="o">.</span><span class="n">single_exp</span>
+        <span class="k">elif</span> <span class="n">model_type</span> <span class="o">==</span> <span class="s1">&#39;double_exp&#39;</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">Models</span><span class="o">.</span><span class="n">double_exp</span>
+        <span class="k">elif</span> <span class="n">model_type</span> <span class="o">==</span> <span class="s1">&#39;triple_exp&#39;</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">Models</span><span class="o">.</span><span class="n">triple_exp</span>
+        <span class="k">elif</span> <span class="n">model_type</span> <span class="o">==</span> <span class="s1">&#39;exp_switch_exp&#39;</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">Models</span><span class="o">.</span><span class="n">exp_switch_exp</span>
+        <span class="k">elif</span> <span class="n">model_type</span> <span class="o">==</span> <span class="s1">&#39;exp_switch&#39;</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">Models</span><span class="o">.</span><span class="n">exp_switch</span>
+        <span class="k">elif</span> <span class="n">model_type</span> <span class="o">==</span> <span class="s1">&#39;frt_exp_switch&#39;</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">Models</span><span class="o">.</span><span class="n">frt_exp_switch</span>
+        <span class="k">elif</span> <span class="n">model_type</span> <span class="o">==</span> <span class="s1">&#39;double_exp_gauss&#39;</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">Models</span><span class="o">.</span><span class="n">double_exp_gauss</span>
+        <span class="k">elif</span> <span class="n">model_type</span> <span class="o">==</span> <span class="s1">&#39;tetra_exp&#39;</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">Models</span><span class="o">.</span><span class="n">tetra_exp</span>
+        <span class="k">elif</span> <span class="n">model_type</span> <span class="o">==</span> <span class="s1">&#39;exp_1_frt&#39;</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">Models</span><span class="o">.</span><span class="n">exp_1_frt</span>
+        <span class="k">elif</span> <span class="n">model_type</span> <span class="o">==</span> <span class="s1">&#39;exp_2_frt&#39;</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">Models</span><span class="o">.</span><span class="n">exp_2_frt</span>
+        <span class="k">elif</span> <span class="n">model_type</span> <span class="o">==</span> <span class="s1">&#39;frt&#39;</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">Models</span><span class="o">.</span><span class="n">frt</span>
+        <span class="k">elif</span> <span class="n">model_type</span> <span class="o">==</span> <span class="s1">&#39;exp_1frt_2_exp&#39;</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">Models</span><span class="o">.</span><span class="n">exp_1frt_2_exp</span>
+        <span class="k">elif</span> <span class="n">model_type</span> <span class="o">==</span> <span class="s1">&#39;exp_1frt_3_exp&#39;</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">Models</span><span class="o">.</span><span class="n">exp_1frt_3_exp</span>
+        <span class="k">elif</span> <span class="n">model_type</span> <span class="o">==</span> <span class="s1">&#39;thermal_frt&#39;</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">Models</span><span class="o">.</span><span class="n">thermal_frt</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Invalid model type. Supported model types are: &#39;single_exp&#39;, &#39;double_exp&#39;,double_exp_gauss,  &#39;triple_exp&#39;, &#39;tetra_exp&#39;, &#39;exp_1_frt&#39;, &#39;exp_2_frt&#39;, &#39;frt&#39;, &#39;thermal_frt&#39;.&quot;</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="Models.thermal_frt">
+<a class="viewcode-back" href="../../PumpProbeFitting.html#PumpProbeFitting.data_model.Models.thermal_frt">[docs]</a>
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">thermal_frt</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">A1</span><span class="p">,</span> <span class="n">tau1</span><span class="p">,</span> <span class="n">A2</span><span class="p">,</span> <span class="n">offset</span><span class="p">,</span> <span class="n">sig</span><span class="p">,</span> <span class="n">t0</span><span class="p">,</span> <span class="n">T_A</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Custom theoretical model function with finite rise time.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+
+<span class="sd">            t : array-like</span>
+<span class="sd">                Time data [ps].</span>
+<span class="sd">            A1 : float</span>
+<span class="sd">                Amplitude of the first exponential decay.</span>
+<span class="sd">            tau1 : float</span>
+<span class="sd">                Lifetime of the first exponential decay [ps].</span>
+<span class="sd">            A2 : float</span>
+<span class="sd">                Amplitude of the second exponential decay.</span>
+<span class="sd">            offset : float</span>
+<span class="sd">                Offset parameter.</span>
+<span class="sd">            sig : float</span>
+<span class="sd">                Overal temporal profile of the pump and probe pulse [ps].</span>
+<span class="sd">            t0 : float</span>
+<span class="sd">                Time offset [ps].</span>
+<span class="sd">            T_A : float</span>
+<span class="sd">                Finite rise time parameter [ps].</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        ----------</span>
+<span class="sd">            array-like</span>
+<span class="sd">                Model prediction.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">model</span> <span class="o">=</span> <span class="n">A1</span> <span class="o">*</span> <span class="n">Fitting_Basis</span><span class="o">.</span><span class="n">TransDirect_frt_Func</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">t0</span><span class="p">,</span> <span class="n">sig</span><span class="p">,</span> <span class="n">tau1</span><span class="p">,</span> <span class="n">T_A</span><span class="p">)</span> <span class="o">+</span> \
+                <span class="n">A2</span> <span class="o">*</span> <span class="n">Fitting_Basis</span><span class="o">.</span><span class="n">TransDirectFunc</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">t0</span><span class="p">,</span> <span class="n">sig</span><span class="p">,</span> <span class="n">tau1</span><span class="p">)</span> <span class="o">+</span> \
+                <span class="n">offset</span> <span class="o">*</span> <span class="n">Fitting_Basis</span><span class="o">.</span><span class="n">ConstFunc</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">model</span></div>
+
+    
+<div class="viewcode-block" id="Models.exp_1_frt">
+<a class="viewcode-back" href="../../PumpProbeFitting.html#PumpProbeFitting.data_model.Models.exp_1_frt">[docs]</a>
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">exp_1_frt</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">A1</span><span class="p">,</span> <span class="n">tau1</span><span class="p">,</span> <span class="n">A2</span><span class="p">,</span> <span class="n">tau2</span><span class="p">,</span> <span class="n">offset</span><span class="p">,</span> <span class="n">sig</span><span class="p">,</span> <span class="n">t0</span><span class="p">,</span> <span class="n">T_A</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Custom theoretical model function with finite rise time.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+
+<span class="sd">            t : array-like</span>
+<span class="sd">                Time data [ps].</span>
+<span class="sd">            A1 : float</span>
+<span class="sd">                Amplitude of the first exponential decay.</span>
+<span class="sd">            tau1 : float</span>
+<span class="sd">                Lifetime of the first exponential decay [ps].</span>
+<span class="sd">            A2 : float</span>
+<span class="sd">                Amplitude of the second exponential decay.</span>
+<span class="sd">            tau2 : float</span>
+<span class="sd">                Lifetime of the second exponential decay [ps].</span>
+<span class="sd">            offset : float</span>
+<span class="sd">                Offset parameter.</span>
+<span class="sd">            sig : float</span>
+<span class="sd">                Overal temporal profile of the pump and probe pulse [ps].</span>
+<span class="sd">            t0 : float</span>
+<span class="sd">                Time offset [ps].</span>
+<span class="sd">            T_A : float</span>
+<span class="sd">                Finite rise time parameter [ps].</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        ----------</span>
+<span class="sd">            array-like</span>
+<span class="sd">                Model prediction.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">model</span> <span class="o">=</span> <span class="n">A2</span> <span class="o">*</span> <span class="n">Fitting_Basis</span><span class="o">.</span><span class="n">TransDirect_frt_Func</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">t0</span><span class="p">,</span> <span class="n">sig</span><span class="p">,</span> <span class="n">tau2</span><span class="p">,</span> <span class="n">T_A</span><span class="p">)</span> <span class="o">+</span> \
+                <span class="n">A1</span> <span class="o">*</span> <span class="n">Fitting_Basis</span><span class="o">.</span><span class="n">TransDirectFunc</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">t0</span><span class="p">,</span> <span class="n">sig</span><span class="p">,</span> <span class="n">tau1</span><span class="p">)</span> <span class="o">+</span> \
+                <span class="n">offset</span>
+        <span class="k">return</span> <span class="n">model</span></div>
+
+    
+<div class="viewcode-block" id="Models.frt">
+<a class="viewcode-back" href="../../PumpProbeFitting.html#PumpProbeFitting.data_model.Models.frt">[docs]</a>
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">frt</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">A1</span><span class="p">,</span> <span class="n">tau1</span><span class="p">,</span> <span class="n">offset</span><span class="p">,</span> <span class="n">sig</span><span class="p">,</span> <span class="n">t0</span><span class="p">,</span> <span class="n">T_A</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Custom theoretical model function with finite rise time.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+
+<span class="sd">            t : array-like</span>
+<span class="sd">                Time data [ps].</span>
+<span class="sd">            A1 : float</span>
+<span class="sd">                Amplitude of the first exponential decay.</span>
+<span class="sd">            tau1 : float</span>
+<span class="sd">                Lifetime of the first exponential decay [ps].</span>
+<span class="sd">            offset : float</span>
+<span class="sd">                Offset parameter.</span>
+<span class="sd">            sig : float</span>
+<span class="sd">                Overal temporal profile of the pump and probe pulse [ps].</span>
+<span class="sd">            t0 : float</span>
+<span class="sd">                Time offset [ps].</span>
+<span class="sd">            T_A : float</span>
+<span class="sd">                Finite rise time parameter [ps].</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        ----------</span>
+<span class="sd">            array-like</span>
+<span class="sd">                Model prediction.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">model</span> <span class="o">=</span> <span class="n">A1</span> <span class="o">*</span> <span class="n">Fitting_Basis</span><span class="o">.</span><span class="n">TransDirect_frt_Func</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">t0</span><span class="p">,</span> <span class="n">sig</span><span class="p">,</span> <span class="n">tau1</span><span class="p">,</span> <span class="n">T_A</span><span class="p">)</span> <span class="o">+</span> \
+                <span class="n">offset</span> <span class="o">*</span> <span class="n">Fitting_Basis</span><span class="o">.</span><span class="n">ConstFunc</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">model</span></div>
+
+    
+<div class="viewcode-block" id="Models.exp_2_frt">
+<a class="viewcode-back" href="../../PumpProbeFitting.html#PumpProbeFitting.data_model.Models.exp_2_frt">[docs]</a>
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">exp_2_frt</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">A1</span><span class="p">,</span> <span class="n">tau1</span><span class="p">,</span> <span class="n">A2</span><span class="p">,</span> <span class="n">tau2</span><span class="p">,</span> <span class="n">offset</span><span class="p">,</span> <span class="n">sig</span><span class="p">,</span> <span class="n">t0</span><span class="p">,</span> <span class="n">T_A</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Custom theoretical model function with finite rise time.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+
+<span class="sd">            t : array-like</span>
+<span class="sd">                Time data [ps].</span>
+<span class="sd">            A1 : float</span>
+<span class="sd">                Amplitude of the first exponential decay.</span>
+<span class="sd">            tau1 : float</span>
+<span class="sd">                Lifetime of the first exponential decay [ps].</span>
+<span class="sd">            A2 : float</span>
+<span class="sd">                Amplitude of the second exponential decay.</span>
+<span class="sd">            tau2 : float</span>
+<span class="sd">                Lifetime of the second exponential decay [ps].</span>
+<span class="sd">            offset : float</span>
+<span class="sd">                Offset parameter.</span>
+<span class="sd">            sig : float</span>
+<span class="sd">                Overal temporal profile of the pump and probe pulse [ps].</span>
+<span class="sd">            t0 : float</span>
+<span class="sd">                Time offset [ps].</span>
+<span class="sd">            T_A : float</span>
+<span class="sd">                Finite rise time parameter [ps].</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        ----------</span>
+<span class="sd">            array-like</span>
+<span class="sd">                Model prediction.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">model</span> <span class="o">=</span> <span class="n">A2</span> <span class="o">*</span> <span class="n">Fitting_Basis</span><span class="o">.</span><span class="n">TransDirect_frt_Func</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">t0</span><span class="p">,</span> <span class="n">sig</span><span class="p">,</span> <span class="n">tau2</span><span class="p">,</span> <span class="n">T_A</span><span class="p">)</span> <span class="o">+</span> \
+                <span class="n">A1</span> <span class="o">*</span> <span class="n">Fitting_Basis</span><span class="o">.</span><span class="n">TransDirect_frt_Func</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">t0</span><span class="p">,</span> <span class="n">sig</span><span class="p">,</span> <span class="n">tau1</span><span class="p">,</span> <span class="n">T_A</span><span class="p">)</span> <span class="o">+</span> \
+                <span class="n">offset</span> <span class="o">*</span> <span class="n">Fitting_Basis</span><span class="o">.</span><span class="n">ConstFunc</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">model</span></div>
+
+
+<div class="viewcode-block" id="Models.double_exp">
+<a class="viewcode-back" href="../../PumpProbeFitting.html#PumpProbeFitting.data_model.Models.double_exp">[docs]</a>
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">double_exp</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">A1</span><span class="p">,</span> <span class="n">tau1</span><span class="p">,</span> <span class="n">A2</span><span class="p">,</span> <span class="n">tau2</span><span class="p">,</span> <span class="n">offset</span><span class="p">,</span> <span class="n">sig</span><span class="p">,</span> <span class="n">t0</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Custom theoretical model function for double exponential.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+
+<span class="sd">            t : array-like</span>
+<span class="sd">                Time data [ps].</span>
+<span class="sd">            A1 : float</span>
+<span class="sd">                Amplitude of the first exponential decay.</span>
+<span class="sd">            tau1 : float</span>
+<span class="sd">                Lifetime of the first exponential decay [ps].</span>
+<span class="sd">            A2 : float</span>
+<span class="sd">                Amplitude of the second exponential decay.</span>
+<span class="sd">            tau2 : float</span>
+<span class="sd">                Lifetime of the second exponential decay [ps].</span>
+<span class="sd">            offset : float</span>
+<span class="sd">                Offset parameter.</span>
+<span class="sd">            sig : float</span>
+<span class="sd">                Overal temporal profile of the pump and probe pulse [ps].</span>
+<span class="sd">            t0 : float</span>
+<span class="sd">                Time offset [ps].</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        ----------</span>
+<span class="sd">            array-like</span>
+<span class="sd">                Model prediction.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">model</span> <span class="o">=</span> <span class="n">A2</span> <span class="o">*</span> <span class="n">Fitting_Basis</span><span class="o">.</span><span class="n">TransDirectFunc</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">t0</span><span class="p">,</span> <span class="n">sig</span><span class="p">,</span> <span class="n">tau2</span><span class="p">)</span> <span class="o">+</span> \
+                <span class="n">A1</span> <span class="o">*</span> <span class="n">Fitting_Basis</span><span class="o">.</span><span class="n">TransDirectFunc</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">t0</span><span class="p">,</span> <span class="n">sig</span><span class="p">,</span> <span class="n">tau1</span><span class="p">)</span> <span class="o">+</span> \
+                <span class="n">offset</span> <span class="o">*</span> <span class="n">Fitting_Basis</span><span class="o">.</span><span class="n">ConstFunc</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">model</span></div>
+
+
+<div class="viewcode-block" id="Models.single_exp">
+<a class="viewcode-back" href="../../PumpProbeFitting.html#PumpProbeFitting.data_model.Models.single_exp">[docs]</a>
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">single_exp</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">A1</span><span class="p">,</span> <span class="n">tau1</span><span class="p">,</span> <span class="n">offset</span><span class="p">,</span> <span class="n">sig</span><span class="p">,</span> <span class="n">t0</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Custom theoretical model function for single exponential.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+
+<span class="sd">            t : array-like</span>
+<span class="sd">                Time data [ps].</span>
+<span class="sd">            A1 : float</span>
+<span class="sd">                Amplitude of the first exponential decay.</span>
+<span class="sd">            tau1 : float</span>
+<span class="sd">                Lifetime of the first exponential decay [ps].</span>
+<span class="sd">            offset : float</span>
+<span class="sd">                Offset parameter.</span>
+<span class="sd">            sig : float</span>
+<span class="sd">                Overal temporal profile of the pump and probe pulse [ps].</span>
+<span class="sd">            t0 : float</span>
+<span class="sd">                Time offset [ps].</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        ----------</span>
+<span class="sd">            array-like</span>
+<span class="sd">                Model prediction.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">model</span> <span class="o">=</span> <span class="n">A1</span> <span class="o">*</span> <span class="n">Fitting_Basis</span><span class="o">.</span><span class="n">TransDirectFunc</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">t0</span><span class="p">,</span> <span class="n">sig</span><span class="p">,</span> <span class="n">tau1</span><span class="p">)</span> <span class="o">+</span> \
+                <span class="n">offset</span> <span class="o">*</span> <span class="n">Fitting_Basis</span><span class="o">.</span><span class="n">ConstFunc</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">model</span></div>
+
+    
+<div class="viewcode-block" id="Models.triple_exp">
+<a class="viewcode-back" href="../../PumpProbeFitting.html#PumpProbeFitting.data_model.Models.triple_exp">[docs]</a>
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">triple_exp</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">A1</span><span class="p">,</span> <span class="n">tau1</span><span class="p">,</span> <span class="n">A2</span><span class="p">,</span> <span class="n">tau2</span><span class="p">,</span> <span class="n">A3</span><span class="p">,</span> <span class="n">tau3</span><span class="p">,</span> <span class="n">offset</span><span class="p">,</span> <span class="n">sig</span><span class="p">,</span> <span class="n">t0</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Custom theoretical model function for triple exponential.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+
+<span class="sd">            t : array-like</span>
+<span class="sd">                Time data [ps].</span>
+<span class="sd">            A1 : float</span>
+<span class="sd">                Amplitude of the first exponential decay.</span>
+<span class="sd">            tau1 : float</span>
+<span class="sd">                Lifetime of the first exponential decay [ps].</span>
+<span class="sd">            A2 : float</span>
+<span class="sd">                Amplitude of the second exponential decay.</span>
+<span class="sd">            tau2 : float</span>
+<span class="sd">                Lifetime of the second exponential decay [ps].</span>
+<span class="sd">            A3 : float</span>
+<span class="sd">                Amplitude of the third exponential decay.</span>
+<span class="sd">            tau3 : float</span>
+<span class="sd">                Lifetime of the third exponential decay [ps].</span>
+<span class="sd">            offset : float</span>
+<span class="sd">                Offset parameter.</span>
+<span class="sd">            sig : float</span>
+<span class="sd">                Overal temporal profile of the pump and probe pulse [ps].</span>
+<span class="sd">            t0 : float</span>
+<span class="sd">                Time offset [ps].</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        ----------</span>
+<span class="sd">            array-like</span>
+<span class="sd">                Model prediction.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">model</span> <span class="o">=</span> <span class="n">A3</span> <span class="o">*</span> <span class="n">Fitting_Basis</span><span class="o">.</span><span class="n">TransDirectFunc</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">t0</span><span class="p">,</span> <span class="n">sig</span><span class="p">,</span> <span class="n">tau3</span><span class="p">)</span> <span class="o">+</span> \
+                <span class="n">A2</span> <span class="o">*</span> <span class="n">Fitting_Basis</span><span class="o">.</span><span class="n">TransDirectFunc</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">t0</span><span class="p">,</span> <span class="n">sig</span><span class="p">,</span> <span class="n">tau2</span><span class="p">)</span> <span class="o">+</span> \
+                <span class="n">A1</span> <span class="o">*</span> <span class="n">Fitting_Basis</span><span class="o">.</span><span class="n">TransDirectFunc</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">t0</span><span class="p">,</span> <span class="n">sig</span><span class="p">,</span> <span class="n">tau1</span><span class="p">)</span> <span class="o">+</span> \
+                <span class="n">offset</span> <span class="o">*</span> <span class="n">Fitting_Basis</span><span class="o">.</span><span class="n">ConstFunc</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">model</span></div>
+
+    
+<div class="viewcode-block" id="Models.exp_switch_exp">
+<a class="viewcode-back" href="../../PumpProbeFitting.html#PumpProbeFitting.data_model.Models.exp_switch_exp">[docs]</a>
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">exp_switch_exp</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">A1</span><span class="p">,</span> <span class="n">tau1</span><span class="p">,</span> <span class="n">A2</span><span class="p">,</span> <span class="n">tau2</span><span class="p">,</span> <span class="n">A3</span><span class="p">,</span> <span class="n">offset</span><span class="p">,</span> <span class="n">sig</span><span class="p">,</span> <span class="n">t0</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Custom theoretical model function for double exponential and a switch of background.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+
+<span class="sd">            t : array-like</span>
+<span class="sd">                Time data [ps].</span>
+<span class="sd">            A1 : float</span>
+<span class="sd">                Amplitude of the first exponential decay.</span>
+<span class="sd">            tau1 : float</span>
+<span class="sd">                Lifetime of the first exponential decay [ps].</span>
+<span class="sd">            A2 : float</span>
+<span class="sd">                Amplitude of the second exponential decay.</span>
+<span class="sd">            tau2 : float</span>
+<span class="sd">                Lifetime of the second exponential decay [ps].</span>
+<span class="sd">            A3 : float</span>
+<span class="sd">                Amplitude of the third exponential decay.</span>
+<span class="sd">            offset : float</span>
+<span class="sd">                Offset parameter.</span>
+<span class="sd">            sig : float</span>
+<span class="sd">                Overal temporal profile of the pump and probe pulse [ps].</span>
+<span class="sd">            t0 : float</span>
+<span class="sd">                Time offset [ps].</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        ----------</span>
+<span class="sd">            array-like</span>
+<span class="sd">                Model prediction.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">model</span> <span class="o">=</span> <span class="n">A3</span> <span class="o">*</span> <span class="n">Fitting_Basis</span><span class="o">.</span><span class="n">switch_direct_func</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">t0</span><span class="p">,</span> <span class="n">sig</span><span class="p">)</span> <span class="o">+</span> \
+                <span class="n">A2</span> <span class="o">*</span> <span class="n">Fitting_Basis</span><span class="o">.</span><span class="n">TransDirectFunc</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">t0</span><span class="p">,</span> <span class="n">sig</span><span class="p">,</span> <span class="n">tau2</span><span class="p">)</span> <span class="o">+</span> \
+                <span class="n">A1</span> <span class="o">*</span> <span class="n">Fitting_Basis</span><span class="o">.</span><span class="n">TransDirectFunc</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">t0</span><span class="p">,</span> <span class="n">sig</span><span class="p">,</span> <span class="n">tau1</span><span class="p">)</span> <span class="o">+</span> \
+                <span class="n">offset</span> <span class="o">*</span> <span class="n">Fitting_Basis</span><span class="o">.</span><span class="n">ConstFunc</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">model</span></div>
+
+    
+<div class="viewcode-block" id="Models.exp_switch">
+<a class="viewcode-back" href="../../PumpProbeFitting.html#PumpProbeFitting.data_model.Models.exp_switch">[docs]</a>
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">exp_switch</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">A1</span><span class="p">,</span> <span class="n">tau1</span><span class="p">,</span> <span class="n">A2</span><span class="p">,</span> <span class="n">offset</span><span class="p">,</span> <span class="n">sig</span><span class="p">,</span> <span class="n">t0</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Custom theoretical model function for exponential exponential with a switch of constant.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+
+<span class="sd">            t : array-like</span>
+<span class="sd">                Time data [ps].</span>
+<span class="sd">            A1 : float</span>
+<span class="sd">                Amplitude of the first exponential decay.</span>
+<span class="sd">            tau1 : float</span>
+<span class="sd">                Lifetime of the first exponential decay [ps].</span>
+<span class="sd">            A2 : float</span>
+<span class="sd">                Amplitude of the Constant switch.</span>
+<span class="sd">            offset : float</span>
+<span class="sd">                Offset parameter.</span>
+<span class="sd">            sig : float</span>
+<span class="sd">                Overal temporal profile of the pump and probe pulse [ps].</span>
+<span class="sd">            t0 : float</span>
+<span class="sd">                Time offset [ps].</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        ----------</span>
+<span class="sd">            array-like</span>
+<span class="sd">                Model prediction.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">model</span> <span class="o">=</span> <span class="n">A2</span> <span class="o">*</span> <span class="n">Fitting_Basis</span><span class="o">.</span><span class="n">switch_direct_func</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">t0</span><span class="p">,</span> <span class="n">sig</span><span class="p">)</span> <span class="o">+</span> \
+                <span class="n">A1</span> <span class="o">*</span> <span class="n">Fitting_Basis</span><span class="o">.</span><span class="n">TransDirectFunc</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">t0</span><span class="p">,</span> <span class="n">sig</span><span class="p">,</span> <span class="n">tau1</span><span class="p">)</span> <span class="o">+</span> \
+                <span class="n">offset</span> <span class="o">*</span> <span class="n">Fitting_Basis</span><span class="o">.</span><span class="n">ConstFunc</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">model</span></div>
+
+    
+<div class="viewcode-block" id="Models.frt_exp_switch">
+<a class="viewcode-back" href="../../PumpProbeFitting.html#PumpProbeFitting.data_model.Models.frt_exp_switch">[docs]</a>
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">frt_exp_switch</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">A1</span><span class="p">,</span> <span class="n">tau1</span><span class="p">,</span> <span class="n">A2</span><span class="p">,</span> <span class="n">offset</span><span class="p">,</span> <span class="n">sig</span><span class="p">,</span> <span class="n">t0</span><span class="p">,</span> <span class="n">T_A</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Custom theoretical model function for frt exponential with a switch of constant.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+
+<span class="sd">            t : array-like</span>
+<span class="sd">                Time data [ps].</span>
+<span class="sd">            A1 : float</span>
+<span class="sd">                Amplitude of the first exponential decay.</span>
+<span class="sd">            tau1 : float</span>
+<span class="sd">                Lifetime of the first exponential decay [ps].</span>
+<span class="sd">            A2 : float</span>
+<span class="sd">                Amplitude of the Constant switch.</span>
+<span class="sd">            offset : float</span>
+<span class="sd">                Offset parameter.</span>
+<span class="sd">            sig : float</span>
+<span class="sd">                Overal temporal profile of the pump and probe pulse [ps].</span>
+<span class="sd">            t0 : float</span>
+<span class="sd">                Time offset [ps].</span>
+<span class="sd">            T_A : float</span>
+<span class="sd">                Finite rise time parameter [ps].</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        ----------</span>
+<span class="sd">            array-like</span>
+<span class="sd">                Model prediction.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">model</span> <span class="o">=</span> <span class="n">A2</span> <span class="o">*</span> <span class="n">Fitting_Basis</span><span class="o">.</span><span class="n">switch_direct_func</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">t0</span><span class="p">,</span> <span class="n">sig</span><span class="p">)</span> <span class="o">+</span> \
+                <span class="n">A1</span> <span class="o">*</span> <span class="n">Fitting_Basis</span><span class="o">.</span><span class="n">TransDirect_frt_Func</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">t0</span><span class="p">,</span> <span class="n">sig</span><span class="p">,</span> <span class="n">tau1</span><span class="p">,</span> <span class="n">T_A</span><span class="p">)</span> <span class="o">+</span> \
+                <span class="n">offset</span> <span class="o">*</span> <span class="n">Fitting_Basis</span><span class="o">.</span><span class="n">ConstFunc</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">model</span></div>
+
+    
+<div class="viewcode-block" id="Models.double_exp_gauss">
+<a class="viewcode-back" href="../../PumpProbeFitting.html#PumpProbeFitting.data_model.Models.double_exp_gauss">[docs]</a>
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">double_exp_gauss</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">A1</span><span class="p">,</span> <span class="n">tau1</span><span class="p">,</span> <span class="n">A2</span><span class="p">,</span> <span class="n">tau2</span><span class="p">,</span> <span class="n">A3</span><span class="p">,</span> <span class="n">offset</span><span class="p">,</span> <span class="n">sig</span><span class="p">,</span> <span class="n">t0</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Custom theoretical model function for double exponential and gaussian.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+
+<span class="sd">            t : array-like</span>
+<span class="sd">                Time data [ps].</span>
+<span class="sd">            A1 : float</span>
+<span class="sd">                Amplitude of the first exponential decay.</span>
+<span class="sd">            tau1 : float</span>
+<span class="sd">                Lifetime of the first exponential decay [ps].</span>
+<span class="sd">            A2 : float</span>
+<span class="sd">                Amplitude of the second exponential decay.</span>
+<span class="sd">            tau2 : float</span>
+<span class="sd">                Lifetime of the second exponential decay [ps].</span>
+<span class="sd">            offset : float</span>
+<span class="sd">                Offset parameter.</span>
+<span class="sd">            sig : float</span>
+<span class="sd">                Overal temporal profile of the pump and probe pulse [ps].</span>
+<span class="sd">            t0 : float</span>
+<span class="sd">                Time offset [ps].</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        ----------</span>
+<span class="sd">            array-like</span>
+<span class="sd">                Model prediction.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">model</span> <span class="o">=</span> <span class="n">A3</span> <span class="o">*</span> <span class="n">Fitting_Basis</span><span class="o">.</span><span class="n">gauss_func</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">t0</span><span class="p">,</span> <span class="n">sig</span><span class="p">)</span> <span class="o">+</span> \
+                <span class="n">A2</span> <span class="o">*</span> <span class="n">Fitting_Basis</span><span class="o">.</span><span class="n">TransDirectFunc</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">t0</span><span class="p">,</span> <span class="n">sig</span><span class="p">,</span> <span class="n">tau2</span><span class="p">)</span> <span class="o">+</span> \
+                <span class="n">A1</span> <span class="o">*</span> <span class="n">Fitting_Basis</span><span class="o">.</span><span class="n">TransDirectFunc</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">t0</span><span class="p">,</span> <span class="n">sig</span><span class="p">,</span> <span class="n">tau1</span><span class="p">)</span> <span class="o">+</span> \
+                <span class="n">offset</span> <span class="o">*</span> <span class="n">Fitting_Basis</span><span class="o">.</span><span class="n">ConstFunc</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">model</span></div>
+
+
+<div class="viewcode-block" id="Models.tetra_exp">
+<a class="viewcode-back" href="../../PumpProbeFitting.html#PumpProbeFitting.data_model.Models.tetra_exp">[docs]</a>
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">tetra_exp</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">A1</span><span class="p">,</span> <span class="n">tau1</span><span class="p">,</span> <span class="n">A2</span><span class="p">,</span> <span class="n">tau2</span><span class="p">,</span> <span class="n">A3</span><span class="p">,</span> <span class="n">tau3</span><span class="p">,</span> <span class="n">A4</span><span class="p">,</span> <span class="n">tau4</span><span class="p">,</span> <span class="n">offset</span><span class="p">,</span> <span class="n">sig</span><span class="p">,</span> <span class="n">t0</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Custom theoretical model function for tetra exponential.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+
+<span class="sd">            t : array-like</span>
+<span class="sd">                Time data [ps].</span>
+<span class="sd">            A1 : float</span>
+<span class="sd">                Amplitude of the first exponential decay.</span>
+<span class="sd">            tau1 : float</span>
+<span class="sd">                Lifetime of the first exponential decay [ps].</span>
+<span class="sd">            A2 : float</span>
+<span class="sd">                Amplitude of the second exponential decay.</span>
+<span class="sd">            tau2 : float</span>
+<span class="sd">                Lifetime of the second exponential decay [ps].</span>
+<span class="sd">            A3 : float</span>
+<span class="sd">                Amplitude of the third exponential decay.</span>
+<span class="sd">            tau3 : float</span>
+<span class="sd">                Lifetime of the third exponential decay [ps].</span>
+<span class="sd">            A4 : float</span>
+<span class="sd">                Amplitude of the fourth exponential decay.</span>
+<span class="sd">            tau4 : float</span>
+<span class="sd">                Lifetime of the fourth exponential decay [ps].</span>
+<span class="sd">            offset : float</span>
+<span class="sd">                Offset parameter.</span>
+<span class="sd">            sig : float</span>
+<span class="sd">                Overal temporal profile of the pump and probe pulse [ps].</span>
+<span class="sd">            t0 : float</span>
+<span class="sd">                Time offset [ps].</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        ----------</span>
+<span class="sd">            array-like</span>
+<span class="sd">                Model prediction.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">model</span> <span class="o">=</span> <span class="n">A4</span> <span class="o">*</span> <span class="n">Fitting_Basis</span><span class="o">.</span><span class="n">TransDirectFunc</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">t0</span><span class="p">,</span> <span class="n">sig</span><span class="p">,</span> <span class="n">tau4</span><span class="p">)</span> <span class="o">+</span> \
+                <span class="n">A3</span> <span class="o">*</span> <span class="n">Fitting_Basis</span><span class="o">.</span><span class="n">TransDirectFunc</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">t0</span><span class="p">,</span> <span class="n">sig</span><span class="p">,</span> <span class="n">tau3</span><span class="p">)</span> <span class="o">+</span> \
+                <span class="n">A2</span> <span class="o">*</span> <span class="n">Fitting_Basis</span><span class="o">.</span><span class="n">TransDirectFunc</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">t0</span><span class="p">,</span> <span class="n">sig</span><span class="p">,</span> <span class="n">tau2</span><span class="p">)</span> <span class="o">+</span> \
+                <span class="n">A1</span> <span class="o">*</span> <span class="n">Fitting_Basis</span><span class="o">.</span><span class="n">TransDirectFunc</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">t0</span><span class="p">,</span> <span class="n">sig</span><span class="p">,</span> <span class="n">tau1</span><span class="p">)</span> <span class="o">+</span> \
+                <span class="n">offset</span> <span class="o">*</span> <span class="n">Fitting_Basis</span><span class="o">.</span><span class="n">ConstFunc</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">model</span></div>
+
+    
+<div class="viewcode-block" id="Models.exp_1frt_2_exp">
+<a class="viewcode-back" href="../../PumpProbeFitting.html#PumpProbeFitting.data_model.Models.exp_1frt_2_exp">[docs]</a>
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">exp_1frt_2_exp</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">A1</span><span class="p">,</span> <span class="n">tau1</span><span class="p">,</span> <span class="n">A2</span><span class="p">,</span> <span class="n">tau2</span><span class="p">,</span> <span class="n">A3</span><span class="p">,</span> <span class="n">tau3</span><span class="p">,</span> <span class="n">offset</span><span class="p">,</span> <span class="n">sig</span><span class="p">,</span> <span class="n">t0</span><span class="p">,</span> <span class="n">T_A</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Custom theoretical model function with one finite rise time and two exponential decays.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+
+<span class="sd">            t : array-like</span>
+<span class="sd">                Time data [ps].</span>
+<span class="sd">            A1 : float</span>
+<span class="sd">                Amplitude of the first exponential decay.</span>
+<span class="sd">            tau1 : float</span>
+<span class="sd">                Lifetime of the first exponential decay [ps].</span>
+<span class="sd">            A2 : float</span>
+<span class="sd">                Amplitude of the second exponential decay.</span>
+<span class="sd">            tau2 : float</span>
+<span class="sd">                Lifetime of the second exponential decay [ps].</span>
+<span class="sd">            A3 : float</span>
+<span class="sd">                Amplitude of the third exponential decay.</span>
+<span class="sd">            tau3 : float</span>
+<span class="sd">                Lifetime of the third exponential decay [ps].</span>
+<span class="sd">            offset : float</span>
+<span class="sd">                Offset parameter.</span>
+<span class="sd">            sig : float</span>
+<span class="sd">                Overal temporal profile of the pump and probe pulse [ps].</span>
+<span class="sd">            t0 : float</span>
+<span class="sd">                Time offset [ps].</span>
+<span class="sd">            T_A : float</span>
+<span class="sd">                Finite rise time parameter [ps].</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        ----------</span>
+<span class="sd">            array-like</span>
+<span class="sd">                Model prediction.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">model</span> <span class="o">=</span> <span class="n">A3</span> <span class="o">*</span> <span class="n">Fitting_Basis</span><span class="o">.</span><span class="n">TransDirect_frt_Func</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">t0</span><span class="p">,</span> <span class="n">sig</span><span class="p">,</span> <span class="n">tau3</span><span class="p">,</span> <span class="n">T_A</span><span class="p">)</span> <span class="o">+</span> \
+                <span class="n">A2</span> <span class="o">*</span> <span class="n">Fitting_Basis</span><span class="o">.</span><span class="n">TransDirect_frt_Func</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">t0</span><span class="p">,</span> <span class="n">sig</span><span class="p">,</span> <span class="n">tau2</span><span class="p">,</span> <span class="n">T_A</span><span class="p">)</span> <span class="o">+</span> \
+                <span class="n">A1</span> <span class="o">*</span> <span class="n">Fitting_Basis</span><span class="o">.</span><span class="n">TransDirectFunc</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">t0</span><span class="p">,</span> <span class="n">sig</span><span class="p">,</span> <span class="n">tau1</span><span class="p">)</span> <span class="o">+</span> \
+                <span class="n">offset</span> <span class="o">*</span> <span class="n">Fitting_Basis</span><span class="o">.</span><span class="n">ConstFunc</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">model</span></div>
+
+
+<div class="viewcode-block" id="Models.exp_1frt_3_exp">
+<a class="viewcode-back" href="../../PumpProbeFitting.html#PumpProbeFitting.data_model.Models.exp_1frt_3_exp">[docs]</a>
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">exp_1frt_3_exp</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">A1</span><span class="p">,</span> <span class="n">tau1</span><span class="p">,</span> <span class="n">A2</span><span class="p">,</span> <span class="n">tau2</span><span class="p">,</span> <span class="n">A3</span><span class="p">,</span> <span class="n">tau3</span><span class="p">,</span> <span class="n">A4</span><span class="p">,</span> <span class="n">tau4</span><span class="p">,</span> <span class="n">offset</span><span class="p">,</span> <span class="n">sig</span><span class="p">,</span> <span class="n">t0</span><span class="p">,</span> <span class="n">T_A</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Custom theoretical model function with one finite rise time and three exponential decays.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+
+<span class="sd">            t : array-like</span>
+<span class="sd">                Time data [ps].</span>
+<span class="sd">            A1 : float</span>
+<span class="sd">                Amplitude of the first exponential decay.</span>
+<span class="sd">            tau1 : float</span>
+<span class="sd">                Lifetime of the first exponential decay [ps].</span>
+<span class="sd">            A2 : float</span>
+<span class="sd">                Amplitude of the second exponential decay.</span>
+<span class="sd">            tau2 : float</span>
+<span class="sd">                Lifetime of the second exponential decay [ps].</span>
+<span class="sd">            A3 : float</span>
+<span class="sd">                Amplitude of the third exponential decay.</span>
+<span class="sd">            tau3 : float</span>
+<span class="sd">                Lifetime of the third exponential decay [ps].</span>
+<span class="sd">            A4 : float</span>
+<span class="sd">                Amplitude of the fourth exponential decay.</span>
+<span class="sd">            tau4 : float</span>
+<span class="sd">                Lifetime of the fourth exponential decay [ps].</span>
+<span class="sd">            offset : float</span>
+<span class="sd">                Offset parameter.</span>
+<span class="sd">            sig : float</span>
+<span class="sd">                Overal temporal profile of the pump and probe pulse [ps].</span>
+<span class="sd">            t0 : float</span>
+<span class="sd">                Time offset [ps].</span>
+<span class="sd">            T_A : float</span>
+<span class="sd">                Finite rise time parameter [ps].</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        ----------</span>
+<span class="sd">            array-like</span>
+<span class="sd">                Model prediction.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">model</span> <span class="o">=</span> <span class="n">A4</span> <span class="o">*</span> <span class="n">Fitting_Basis</span><span class="o">.</span><span class="n">TransDirect_frt_Func</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">t0</span><span class="p">,</span> <span class="n">sig</span><span class="p">,</span> <span class="n">tau4</span><span class="p">,</span> <span class="n">T_A</span><span class="p">)</span> <span class="o">+</span> \
+                <span class="n">A3</span> <span class="o">*</span> <span class="n">Fitting_Basis</span><span class="o">.</span><span class="n">TransDirect_frt_Func</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">t0</span><span class="p">,</span> <span class="n">sig</span><span class="p">,</span> <span class="n">tau3</span><span class="p">,</span> <span class="n">T_A</span><span class="p">)</span> <span class="o">+</span> \
+                <span class="n">A2</span> <span class="o">*</span> <span class="n">Fitting_Basis</span><span class="o">.</span><span class="n">TransDirect_frt_Func</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">t0</span><span class="p">,</span> <span class="n">sig</span><span class="p">,</span> <span class="n">tau2</span><span class="p">,</span> <span class="n">T_A</span><span class="p">)</span> <span class="o">+</span> \
+                <span class="n">A1</span> <span class="o">*</span> <span class="n">Fitting_Basis</span><span class="o">.</span><span class="n">TransDirectFunc</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">t0</span><span class="p">,</span> <span class="n">sig</span><span class="p">,</span> <span class="n">tau1</span><span class="p">)</span> <span class="o">+</span> \
+                <span class="n">offset</span> <span class="o">*</span> <span class="n">Fitting_Basis</span><span class="o">.</span><span class="n">ConstFunc</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">model</span></div>
+</div>
+
+
+<div class="viewcode-block" id="Models_Utilities">
+<a class="viewcode-back" href="../../PumpProbeFitting.html#PumpProbeFitting.data_model.Models_Utilities">[docs]</a>
+<span class="k">class</span> <span class="nc">Models_Utilities</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    Utility class for the Models class.</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">selected_model_type</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">selected_model_type</span> <span class="o">=</span> <span class="n">selected_model_type</span>
+
+
+<div class="viewcode-block" id="Models_Utilities.get_bounds">
+<a class="viewcode-back" href="../../PumpProbeFitting.html#PumpProbeFitting.data_model.Models_Utilities.get_bounds">[docs]</a>
+    <span class="k">def</span> <span class="nf">get_bounds</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">bound_variables</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Get bounds for parameters based on the selected model type.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+
+<span class="sd">            bound_variables : tuple</span>
+<span class="sd">                Tuple containing the bound variables.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        ----------</span>
+<span class="sd">            list</span>
+<span class="sd">                List of parameter bounds.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="p">(</span><span class="n">A1_max</span><span class="p">,</span> <span class="n">A1_min</span><span class="p">,</span> <span class="n">tau1_max</span><span class="p">,</span> <span class="n">tau1_min</span><span class="p">,</span>
+                    <span class="n">A2_max</span><span class="p">,</span> <span class="n">A2_min</span><span class="p">,</span> <span class="n">tau2_max</span><span class="p">,</span> <span class="n">tau2_min</span><span class="p">,</span>
+                    <span class="n">A3_max</span><span class="p">,</span> <span class="n">A3_min</span><span class="p">,</span> <span class="n">tau3_max</span><span class="p">,</span> <span class="n">tau3_min</span><span class="p">,</span>
+                    <span class="n">A4_max</span><span class="p">,</span> <span class="n">A4_min</span><span class="p">,</span> <span class="n">tau4_max</span><span class="p">,</span> <span class="n">tau4_min</span><span class="p">,</span>
+                    <span class="n">sig_max</span><span class="p">,</span> <span class="n">sig_min</span><span class="p">,</span>
+                    <span class="n">offset_max</span><span class="p">,</span> <span class="n">offset_min</span><span class="p">,</span>
+                    <span class="n">t0_max</span><span class="p">,</span> <span class="n">t0_min</span><span class="p">,</span>
+                    <span class="n">T_A_max</span><span class="p">,</span> <span class="n">T_A_min</span><span class="p">)</span> <span class="o">=</span> <span class="n">bound_variables</span>
+        
+        <span class="n">bounds_dict</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s1">&#39;single_exp&#39;</span><span class="p">:</span> <span class="p">[(</span><span class="n">A1_min</span><span class="p">,</span> <span class="n">A1_max</span><span class="p">),</span> <span class="p">(</span><span class="n">tau1_min</span><span class="p">,</span> <span class="n">tau1_max</span><span class="p">),</span>
+                        <span class="p">(</span><span class="n">offset_min</span><span class="p">,</span> <span class="n">offset_max</span><span class="p">),</span> <span class="p">(</span><span class="n">sig_min</span><span class="p">,</span> <span class="n">sig_max</span><span class="p">),</span> <span class="p">(</span><span class="n">t0_min</span><span class="p">,</span> <span class="n">t0_max</span><span class="p">)],</span>
+            <span class="s1">&#39;double_exp&#39;</span><span class="p">:</span> <span class="p">[(</span><span class="n">A1_min</span><span class="p">,</span> <span class="n">A1_max</span><span class="p">),</span> <span class="p">(</span><span class="n">tau1_min</span><span class="p">,</span> <span class="n">tau1_max</span><span class="p">),</span> <span class="p">(</span><span class="n">A2_min</span><span class="p">,</span> <span class="n">A2_max</span><span class="p">),</span> <span class="p">(</span><span class="n">tau2_min</span><span class="p">,</span> <span class="n">tau2_max</span><span class="p">),</span>
+                        <span class="p">(</span><span class="n">offset_min</span><span class="p">,</span> <span class="n">offset_max</span><span class="p">),</span> <span class="p">(</span><span class="n">sig_min</span><span class="p">,</span> <span class="n">sig_max</span><span class="p">),</span> <span class="p">(</span><span class="n">t0_min</span><span class="p">,</span> <span class="n">t0_max</span><span class="p">)],</span>
+            <span class="s1">&#39;double_exp_gauss&#39;</span><span class="p">:</span> <span class="p">[(</span><span class="n">A1_min</span><span class="p">,</span> <span class="n">A1_max</span><span class="p">),</span> <span class="p">(</span><span class="n">tau1_min</span><span class="p">,</span> <span class="n">tau1_max</span><span class="p">),</span> <span class="p">(</span><span class="n">A2_min</span><span class="p">,</span> <span class="n">A2_max</span><span class="p">),</span> <span class="p">(</span><span class="n">tau2_min</span><span class="p">,</span> <span class="n">tau2_max</span><span class="p">),</span>
+                        <span class="p">(</span><span class="n">A3_min</span><span class="p">,</span> <span class="n">A3_max</span><span class="p">),</span> <span class="p">(</span><span class="n">offset_min</span><span class="p">,</span> <span class="n">offset_max</span><span class="p">),</span> <span class="p">(</span><span class="n">sig_min</span><span class="p">,</span> <span class="n">sig_max</span><span class="p">),</span> <span class="p">(</span><span class="n">t0_min</span><span class="p">,</span> <span class="n">t0_max</span><span class="p">)],</span>
+            <span class="s1">&#39;exp_switch_exp&#39;</span><span class="p">:</span> <span class="p">[(</span><span class="n">A1_min</span><span class="p">,</span> <span class="n">A1_max</span><span class="p">),</span> <span class="p">(</span><span class="n">tau1_min</span><span class="p">,</span> <span class="n">tau1_max</span><span class="p">),</span> <span class="p">(</span><span class="n">A2_min</span><span class="p">,</span> <span class="n">A2_max</span><span class="p">),</span> <span class="p">(</span><span class="n">tau2_min</span><span class="p">,</span> <span class="n">tau2_max</span><span class="p">),</span>
+                        <span class="p">(</span><span class="n">A3_min</span><span class="p">,</span> <span class="n">A3_max</span><span class="p">),</span> <span class="p">(</span><span class="n">offset_min</span><span class="p">,</span> <span class="n">offset_max</span><span class="p">),</span> <span class="p">(</span><span class="n">sig_min</span><span class="p">,</span> <span class="n">sig_max</span><span class="p">),</span> <span class="p">(</span><span class="n">t0_min</span><span class="p">,</span> <span class="n">t0_max</span><span class="p">)],</span>
+            <span class="s1">&#39;exp_switch&#39;</span><span class="p">:</span> <span class="p">[(</span><span class="n">A1_min</span><span class="p">,</span> <span class="n">A1_max</span><span class="p">),</span> <span class="p">(</span><span class="n">tau1_min</span><span class="p">,</span> <span class="n">tau1_max</span><span class="p">),</span> <span class="p">(</span><span class="n">A2_min</span><span class="p">,</span> <span class="n">A2_max</span><span class="p">),</span> <span class="p">(</span><span class="n">offset_min</span><span class="p">,</span> <span class="n">offset_max</span><span class="p">),</span> <span class="p">(</span><span class="n">sig_min</span><span class="p">,</span> <span class="n">sig_max</span><span class="p">),</span> <span class="p">(</span><span class="n">t0_min</span><span class="p">,</span> <span class="n">t0_max</span><span class="p">)],</span>
+            <span class="s1">&#39;frt_exp_switch&#39;</span><span class="p">:</span> <span class="p">[(</span><span class="n">A1_min</span><span class="p">,</span> <span class="n">A1_max</span><span class="p">),</span> <span class="p">(</span><span class="n">tau1_min</span><span class="p">,</span> <span class="n">tau1_max</span><span class="p">),</span> <span class="p">(</span><span class="n">A2_min</span><span class="p">,</span> <span class="n">A2_max</span><span class="p">),</span> <span class="p">(</span><span class="n">offset_min</span><span class="p">,</span> <span class="n">offset_max</span><span class="p">),</span> <span class="p">(</span><span class="n">sig_min</span><span class="p">,</span> <span class="n">sig_max</span><span class="p">),</span> <span class="p">(</span><span class="n">t0_min</span><span class="p">,</span> <span class="n">t0_max</span><span class="p">),</span> <span class="p">(</span><span class="n">T_A_min</span><span class="p">,</span> <span class="n">T_A_max</span><span class="p">)],</span>
+            <span class="s1">&#39;triple_exp&#39;</span><span class="p">:</span> <span class="p">[(</span><span class="n">A1_min</span><span class="p">,</span> <span class="n">A1_max</span><span class="p">),</span> <span class="p">(</span><span class="n">tau1_min</span><span class="p">,</span> <span class="n">tau1_max</span><span class="p">),</span> <span class="p">(</span><span class="n">A2_min</span><span class="p">,</span> <span class="n">A2_max</span><span class="p">),</span> <span class="p">(</span><span class="n">tau2_min</span><span class="p">,</span> <span class="n">tau2_max</span><span class="p">),</span>
+                        <span class="p">(</span><span class="n">A3_min</span><span class="p">,</span> <span class="n">A3_max</span><span class="p">),</span> <span class="p">(</span><span class="n">tau3_min</span><span class="p">,</span> <span class="n">tau3_max</span><span class="p">),</span> <span class="p">(</span><span class="n">offset_min</span><span class="p">,</span> <span class="n">offset_max</span><span class="p">),</span>
+                        <span class="p">(</span><span class="n">sig_min</span><span class="p">,</span> <span class="n">sig_max</span><span class="p">),</span> <span class="p">(</span><span class="n">t0_min</span><span class="p">,</span> <span class="n">t0_max</span><span class="p">)],</span>
+            <span class="s1">&#39;tetra_exp&#39;</span><span class="p">:</span> <span class="p">[(</span><span class="n">A1_min</span><span class="p">,</span> <span class="n">A1_max</span><span class="p">),</span> <span class="p">(</span><span class="n">tau1_min</span><span class="p">,</span> <span class="n">tau1_max</span><span class="p">),</span> <span class="p">(</span><span class="n">A2_min</span><span class="p">,</span> <span class="n">A2_max</span><span class="p">),</span> <span class="p">(</span><span class="n">tau2_min</span><span class="p">,</span> <span class="n">tau2_max</span><span class="p">),</span>
+                        <span class="p">(</span><span class="n">A3_min</span><span class="p">,</span> <span class="n">A3_max</span><span class="p">),</span> <span class="p">(</span><span class="n">tau3_min</span><span class="p">,</span> <span class="n">tau3_max</span><span class="p">),</span> <span class="p">(</span><span class="n">A4_min</span><span class="p">,</span> <span class="n">A4_max</span><span class="p">),</span> <span class="p">(</span><span class="n">tau4_min</span><span class="p">,</span> <span class="n">tau4_max</span><span class="p">),</span>
+                        <span class="p">(</span><span class="n">offset_min</span><span class="p">,</span> <span class="n">offset_max</span><span class="p">),</span> <span class="p">(</span><span class="n">sig_min</span><span class="p">,</span> <span class="n">sig_max</span><span class="p">),</span> <span class="p">(</span><span class="n">t0_min</span><span class="p">,</span> <span class="n">t0_max</span><span class="p">)],</span>
+            <span class="s1">&#39;exp_1_frt&#39;</span><span class="p">:</span> <span class="p">[(</span><span class="n">A1_min</span><span class="p">,</span> <span class="n">A1_max</span><span class="p">),</span> <span class="p">(</span><span class="n">tau1_min</span><span class="p">,</span> <span class="n">tau1_max</span><span class="p">),</span> <span class="p">(</span><span class="n">A2_min</span><span class="p">,</span> <span class="n">A2_max</span><span class="p">),</span> <span class="p">(</span><span class="n">tau2_min</span><span class="p">,</span> <span class="n">tau2_max</span><span class="p">),</span>
+                        <span class="p">(</span><span class="n">offset_min</span><span class="p">,</span> <span class="n">offset_max</span><span class="p">),</span> <span class="p">(</span><span class="n">sig_min</span><span class="p">,</span> <span class="n">sig_max</span><span class="p">),</span> <span class="p">(</span><span class="n">t0_min</span><span class="p">,</span> <span class="n">t0_max</span><span class="p">),</span> <span class="p">(</span><span class="n">T_A_min</span><span class="p">,</span> <span class="n">T_A_max</span><span class="p">)],</span>
+            <span class="s1">&#39;exp_2_frt&#39;</span><span class="p">:</span> <span class="p">[(</span><span class="n">A1_min</span><span class="p">,</span> <span class="n">A1_max</span><span class="p">),</span> <span class="p">(</span><span class="n">tau1_min</span><span class="p">,</span> <span class="n">tau1_max</span><span class="p">),</span> <span class="p">(</span><span class="n">A2_min</span><span class="p">,</span> <span class="n">A2_max</span><span class="p">),</span> <span class="p">(</span><span class="n">tau2_min</span><span class="p">,</span> <span class="n">tau2_max</span><span class="p">),</span>
+                        <span class="p">(</span><span class="n">offset_min</span><span class="p">,</span> <span class="n">offset_max</span><span class="p">),</span> <span class="p">(</span><span class="n">sig_min</span><span class="p">,</span> <span class="n">sig_max</span><span class="p">),</span> <span class="p">(</span><span class="n">t0_min</span><span class="p">,</span> <span class="n">t0_max</span><span class="p">),</span> <span class="p">(</span><span class="n">T_A_min</span><span class="p">,</span> <span class="n">T_A_max</span><span class="p">)],</span>
+            <span class="s1">&#39;frt&#39;</span><span class="p">:</span> <span class="p">[(</span><span class="n">A1_min</span><span class="p">,</span> <span class="n">A1_max</span><span class="p">),</span> <span class="p">(</span><span class="n">tau1_min</span><span class="p">,</span> <span class="n">tau1_max</span><span class="p">),</span>
+                        <span class="p">(</span><span class="n">offset_min</span><span class="p">,</span> <span class="n">offset_max</span><span class="p">),</span> <span class="p">(</span><span class="n">sig_min</span><span class="p">,</span> <span class="n">sig_max</span><span class="p">),</span> <span class="p">(</span><span class="n">t0_min</span><span class="p">,</span> <span class="n">t0_max</span><span class="p">),</span> <span class="p">(</span><span class="n">T_A_min</span><span class="p">,</span> <span class="n">T_A_max</span><span class="p">)],</span>
+            <span class="s1">&#39;exp_1frt_2_exp&#39;</span><span class="p">:</span> <span class="p">[(</span><span class="n">A1_min</span><span class="p">,</span> <span class="n">A1_max</span><span class="p">),</span> <span class="p">(</span><span class="n">tau1_min</span><span class="p">,</span> <span class="n">tau1_max</span><span class="p">),</span> <span class="p">(</span><span class="n">A2_min</span><span class="p">,</span> <span class="n">A2_max</span><span class="p">),</span> <span class="p">(</span><span class="n">tau2_min</span><span class="p">,</span> <span class="n">tau2_max</span><span class="p">),</span>
+                        <span class="p">(</span><span class="n">A3_min</span><span class="p">,</span> <span class="n">A3_max</span><span class="p">),</span> <span class="p">(</span><span class="n">tau3_min</span><span class="p">,</span> <span class="n">tau3_max</span><span class="p">),</span> <span class="p">(</span><span class="n">offset_min</span><span class="p">,</span> <span class="n">offset_max</span><span class="p">),</span>
+                        <span class="p">(</span><span class="n">sig_min</span><span class="p">,</span> <span class="n">sig_max</span><span class="p">),</span> <span class="p">(</span><span class="n">t0_min</span><span class="p">,</span> <span class="n">t0_max</span><span class="p">),</span> <span class="p">(</span><span class="n">T_A_min</span><span class="p">,</span> <span class="n">T_A_max</span><span class="p">)],</span>
+            <span class="s1">&#39;exp_1frt_3_exp&#39;</span><span class="p">:</span> <span class="p">[(</span><span class="n">A1_min</span><span class="p">,</span> <span class="n">A1_max</span><span class="p">),</span> <span class="p">(</span><span class="n">tau1_min</span><span class="p">,</span> <span class="n">tau1_max</span><span class="p">),</span> <span class="p">(</span><span class="n">A2_min</span><span class="p">,</span> <span class="n">A2_max</span><span class="p">),</span> <span class="p">(</span><span class="n">tau2_min</span><span class="p">,</span> <span class="n">tau2_max</span><span class="p">),</span>
+                        <span class="p">(</span><span class="n">A3_min</span><span class="p">,</span> <span class="n">A3_max</span><span class="p">),</span> <span class="p">(</span><span class="n">tau3_min</span><span class="p">,</span> <span class="n">tau3_max</span><span class="p">),</span> <span class="p">(</span><span class="n">A4_min</span><span class="p">,</span> <span class="n">A4_max</span><span class="p">),</span> <span class="p">(</span><span class="n">tau4_min</span><span class="p">,</span> <span class="n">tau4_max</span><span class="p">),</span>
+                        <span class="p">(</span><span class="n">offset_min</span><span class="p">,</span> <span class="n">offset_max</span><span class="p">),</span> <span class="p">(</span><span class="n">sig_min</span><span class="p">,</span> <span class="n">sig_max</span><span class="p">),</span> <span class="p">(</span><span class="n">t0_min</span><span class="p">,</span> <span class="n">t0_max</span><span class="p">),</span> <span class="p">(</span><span class="n">T_A_min</span><span class="p">,</span> <span class="n">T_A_max</span><span class="p">)],</span>
+            <span class="s1">&#39;thermal_frt&#39;</span><span class="p">:</span> <span class="p">[(</span><span class="n">A1_min</span><span class="p">,</span> <span class="n">A1_max</span><span class="p">),</span> <span class="p">(</span><span class="n">tau1_min</span><span class="p">,</span> <span class="n">tau1_max</span><span class="p">),</span> <span class="p">(</span><span class="n">A2_min</span><span class="p">,</span> <span class="n">A2_max</span><span class="p">),</span>
+                        <span class="p">(</span><span class="n">offset_min</span><span class="p">,</span> <span class="n">offset_max</span><span class="p">),</span> <span class="p">(</span><span class="n">sig_min</span><span class="p">,</span> <span class="n">sig_max</span><span class="p">),</span> <span class="p">(</span><span class="n">t0_min</span><span class="p">,</span> <span class="n">t0_max</span><span class="p">),</span> <span class="p">(</span><span class="n">T_A_min</span><span class="p">,</span> <span class="n">T_A_max</span><span class="p">)],</span>
+        <span class="p">}</span>
+        
+        <span class="k">return</span> <span class="n">bounds_dict</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">selected_model_type</span><span class="p">]</span></div>
+
+    
+<div class="viewcode-block" id="Models_Utilities.get_ParamName">
+<a class="viewcode-back" href="../../PumpProbeFitting.html#PumpProbeFitting.data_model.Models_Utilities.get_ParamName">[docs]</a>
+    <span class="k">def</span> <span class="nf">get_ParamName</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Retrieve parameter names based on the selected model type.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        ----------</span>
+<span class="sd">            list</span>
+<span class="sd">              List of parameter names for the selected model type.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">params_dict</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s1">&#39;single_exp&#39;</span>        <span class="p">:</span> <span class="p">[</span><span class="s1">&#39;A1&#39;</span><span class="p">,</span> <span class="s1">&#39;tau1&#39;</span><span class="p">,</span> <span class="s1">&#39;offset&#39;</span><span class="p">,</span> <span class="s1">&#39;sig&#39;</span><span class="p">,</span> <span class="s1">&#39;t0&#39;</span><span class="p">],</span>
+            <span class="s1">&#39;double_exp&#39;</span>        <span class="p">:</span> <span class="p">[</span><span class="s1">&#39;A1&#39;</span><span class="p">,</span> <span class="s1">&#39;tau1&#39;</span><span class="p">,</span> <span class="s1">&#39;A2&#39;</span><span class="p">,</span> <span class="s1">&#39;tau2&#39;</span><span class="p">,</span> <span class="s1">&#39;offset&#39;</span><span class="p">,</span> <span class="s1">&#39;sig&#39;</span><span class="p">,</span> <span class="s1">&#39;t0&#39;</span><span class="p">],</span>
+            <span class="s1">&#39;exp_switch&#39;</span>        <span class="p">:</span> <span class="p">[</span><span class="s1">&#39;A1&#39;</span><span class="p">,</span> <span class="s1">&#39;tau1&#39;</span><span class="p">,</span> <span class="s1">&#39;A2&#39;</span><span class="p">,</span> <span class="s1">&#39;offset&#39;</span><span class="p">,</span> <span class="s1">&#39;sig&#39;</span><span class="p">,</span> <span class="s1">&#39;t0&#39;</span><span class="p">],</span>
+            <span class="s1">&#39;frt_exp_switch&#39;</span>    <span class="p">:</span> <span class="p">[</span><span class="s1">&#39;A1&#39;</span><span class="p">,</span> <span class="s1">&#39;tau1&#39;</span><span class="p">,</span> <span class="s1">&#39;A2&#39;</span><span class="p">,</span> <span class="s1">&#39;offset&#39;</span><span class="p">,</span> <span class="s1">&#39;sig&#39;</span><span class="p">,</span> <span class="s1">&#39;t0&#39;</span><span class="p">,</span> <span class="s1">&#39;T_A&#39;</span><span class="p">],</span>
+            <span class="s1">&#39;exp_switch_exp&#39;</span>    <span class="p">:</span> <span class="p">[</span><span class="s1">&#39;A1&#39;</span><span class="p">,</span> <span class="s1">&#39;tau1&#39;</span><span class="p">,</span> <span class="s1">&#39;A2&#39;</span><span class="p">,</span> <span class="s1">&#39;tau2&#39;</span><span class="p">,</span> <span class="s1">&#39;A3&#39;</span><span class="p">,</span> <span class="s1">&#39;offset&#39;</span><span class="p">,</span> <span class="s1">&#39;sig&#39;</span><span class="p">,</span> <span class="s1">&#39;t0&#39;</span><span class="p">],</span>
+            <span class="s1">&#39;double_exp_gauss&#39;</span>  <span class="p">:</span> <span class="p">[</span><span class="s1">&#39;A1&#39;</span><span class="p">,</span> <span class="s1">&#39;tau1&#39;</span><span class="p">,</span> <span class="s1">&#39;A2&#39;</span><span class="p">,</span> <span class="s1">&#39;tau2&#39;</span><span class="p">,</span> <span class="s1">&#39;A3&#39;</span><span class="p">,</span> <span class="s1">&#39;offset&#39;</span><span class="p">,</span> <span class="s1">&#39;sig&#39;</span><span class="p">,</span> <span class="s1">&#39;t0&#39;</span><span class="p">],</span>
+            <span class="s1">&#39;triple_exp&#39;</span>        <span class="p">:</span> <span class="p">[</span><span class="s1">&#39;A1&#39;</span><span class="p">,</span> <span class="s1">&#39;tau1&#39;</span><span class="p">,</span> <span class="s1">&#39;A2&#39;</span><span class="p">,</span> <span class="s1">&#39;tau2&#39;</span><span class="p">,</span> <span class="s1">&#39;A3&#39;</span><span class="p">,</span> <span class="s1">&#39;tau3&#39;</span><span class="p">,</span> <span class="s1">&#39;offset&#39;</span><span class="p">,</span> <span class="s1">&#39;sig&#39;</span><span class="p">,</span> <span class="s1">&#39;t0&#39;</span><span class="p">],</span>
+            <span class="s1">&#39;tetra_exp&#39;</span>         <span class="p">:</span> <span class="p">[</span><span class="s1">&#39;A1&#39;</span><span class="p">,</span> <span class="s1">&#39;tau1&#39;</span><span class="p">,</span> <span class="s1">&#39;A2&#39;</span><span class="p">,</span> <span class="s1">&#39;tau2&#39;</span><span class="p">,</span> <span class="s1">&#39;A3&#39;</span><span class="p">,</span> <span class="s1">&#39;tau3&#39;</span><span class="p">,</span> <span class="s1">&#39;A4&#39;</span><span class="p">,</span> <span class="s1">&#39;tau4&#39;</span><span class="p">,</span> <span class="s1">&#39;offset&#39;</span><span class="p">,</span> <span class="s1">&#39;sig&#39;</span><span class="p">,</span> <span class="s1">&#39;t0&#39;</span><span class="p">],</span>
+            <span class="s1">&#39;exp_1_frt&#39;</span>         <span class="p">:</span> <span class="p">[</span><span class="s1">&#39;A1&#39;</span><span class="p">,</span> <span class="s1">&#39;tau1&#39;</span><span class="p">,</span> <span class="s1">&#39;A2&#39;</span><span class="p">,</span> <span class="s1">&#39;tau2&#39;</span><span class="p">,</span> <span class="s1">&#39;offset&#39;</span><span class="p">,</span> <span class="s1">&#39;sig&#39;</span><span class="p">,</span> <span class="s1">&#39;t0&#39;</span><span class="p">,</span> <span class="s1">&#39;T_A&#39;</span><span class="p">],</span>
+            <span class="s1">&#39;exp_2_frt&#39;</span>         <span class="p">:</span> <span class="p">[</span><span class="s1">&#39;A1&#39;</span><span class="p">,</span> <span class="s1">&#39;tau1&#39;</span><span class="p">,</span> <span class="s1">&#39;A2&#39;</span><span class="p">,</span> <span class="s1">&#39;tau2&#39;</span><span class="p">,</span> <span class="s1">&#39;offset&#39;</span><span class="p">,</span> <span class="s1">&#39;sig&#39;</span><span class="p">,</span> <span class="s1">&#39;t0&#39;</span><span class="p">,</span> <span class="s1">&#39;T_A&#39;</span><span class="p">],</span>
+            <span class="s1">&#39;frt&#39;</span>               <span class="p">:</span> <span class="p">[</span><span class="s1">&#39;A1&#39;</span><span class="p">,</span> <span class="s1">&#39;tau1&#39;</span><span class="p">,</span> <span class="s1">&#39;offset&#39;</span><span class="p">,</span> <span class="s1">&#39;sig&#39;</span><span class="p">,</span> <span class="s1">&#39;t0&#39;</span><span class="p">,</span> <span class="s1">&#39;T_A&#39;</span><span class="p">],</span>
+            <span class="s1">&#39;exp_1frt_2_exp&#39;</span>    <span class="p">:</span> <span class="p">[</span><span class="s1">&#39;A1&#39;</span><span class="p">,</span> <span class="s1">&#39;tau1&#39;</span><span class="p">,</span> <span class="s1">&#39;A2&#39;</span><span class="p">,</span> <span class="s1">&#39;tau2&#39;</span><span class="p">,</span> <span class="s1">&#39;A3&#39;</span><span class="p">,</span> <span class="s1">&#39;tau3&#39;</span><span class="p">,</span> <span class="s1">&#39;offset&#39;</span><span class="p">,</span> <span class="s1">&#39;sig&#39;</span><span class="p">,</span> <span class="s1">&#39;t0&#39;</span><span class="p">,</span> <span class="s1">&#39;T_A&#39;</span><span class="p">],</span>
+            <span class="s1">&#39;exp_1frt_3_exp&#39;</span>    <span class="p">:</span> <span class="p">[</span><span class="s1">&#39;A1&#39;</span><span class="p">,</span> <span class="s1">&#39;tau1&#39;</span><span class="p">,</span> <span class="s1">&#39;A2&#39;</span><span class="p">,</span> <span class="s1">&#39;tau2&#39;</span><span class="p">,</span> <span class="s1">&#39;A3&#39;</span><span class="p">,</span> <span class="s1">&#39;tau3&#39;</span><span class="p">,</span> <span class="s1">&#39;A4&#39;</span><span class="p">,</span> <span class="s1">&#39;tau4&#39;</span><span class="p">,</span> <span class="s1">&#39;offset&#39;</span><span class="p">,</span> <span class="s1">&#39;sig&#39;</span><span class="p">,</span> <span class="s1">&#39;t0&#39;</span><span class="p">,</span> <span class="s1">&#39;T_A&#39;</span><span class="p">],</span>
+            <span class="s1">&#39;thermal_frt&#39;</span>       <span class="p">:</span> <span class="p">[</span><span class="s1">&#39;A1&#39;</span><span class="p">,</span> <span class="s1">&#39;tau1&#39;</span><span class="p">,</span><span class="s1">&#39;A2&#39;</span><span class="p">,</span> <span class="s1">&#39;offset&#39;</span><span class="p">,</span> <span class="s1">&#39;sig&#39;</span><span class="p">,</span> <span class="s1">&#39;t0&#39;</span><span class="p">,</span> <span class="s1">&#39;T_A&#39;</span><span class="p">],</span>
+        <span class="p">}</span>
+        
+        <span class="k">return</span> <span class="n">params_dict</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">selected_model_type</span><span class="p">]</span></div>
+
+    
+<div class="viewcode-block" id="Models_Utilities.get_ParamUncertaintyName">
+<a class="viewcode-back" href="../../PumpProbeFitting.html#PumpProbeFitting.data_model.Models_Utilities.get_ParamUncertaintyName">[docs]</a>
+    <span class="k">def</span> <span class="nf">get_ParamUncertaintyName</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Retrieve parameter Uncertainty names based on the selected model type.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        ----------</span>
+<span class="sd">            list</span>
+<span class="sd">              List of parameter names for the selected model type.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">param_name</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_ParamName</span><span class="p">()</span>
+        <span class="n">uncertaintyName</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">param_name</span><span class="p">:</span>
+            <span class="n">uncertaintyName</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s1">_uncertainty&#39;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">uncertaintyName</span></div>
+</div>
+
+
+<div class="viewcode-block" id="Utilities">
+<a class="viewcode-back" href="../../PumpProbeFitting.html#PumpProbeFitting.data_model.Utilities">[docs]</a>
+<span class="k">class</span> <span class="nc">Utilities</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Utility class for additional models.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">pass</span>
+
+<div class="viewcode-block" id="Utilities.stretched_exponential">
+<a class="viewcode-back" href="../../PumpProbeFitting.html#PumpProbeFitting.data_model.Utilities.stretched_exponential">[docs]</a>
+    <span class="k">def</span> <span class="nf">stretched_exponential</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="n">A</span><span class="p">,</span> <span class="n">T</span><span class="p">,</span> <span class="n">beta</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Custom stretched/compressed function.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">            t : float or array-like</span>
+<span class="sd">                Time data [ps].</span>
+<span class="sd">            A : float</span>
+<span class="sd">                Amplitude.</span>
+<span class="sd">            T : float</span>
+<span class="sd">                Time constant [ps].</span>
+<span class="sd">            beta : float</span>
+<span class="sd">                Stretching/compression parameter.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        ----------</span>
+<span class="sd">            array-like</span>
+<span class="sd">                Model prediction.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">heaviside</span><span class="p">(</span><span class="n">t</span><span class="p">)</span> <span class="o">*</span> <span class="n">A</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">t</span> <span class="o">/</span> <span class="n">T</span><span class="p">))</span> <span class="o">**</span> <span class="n">beta</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="Utilities.exponential">
+<a class="viewcode-back" href="../../PumpProbeFitting.html#PumpProbeFitting.data_model.Utilities.exponential">[docs]</a>
+    <span class="k">def</span> <span class="nf">exponential</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="n">A</span><span class="p">,</span> <span class="n">T</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Exponential Decay function.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">            t : float or array-like</span>
+<span class="sd">                Time data [ps].</span>
+<span class="sd">            A : float</span>
+<span class="sd">                Amplitude.</span>
+<span class="sd">            T : float</span>
+<span class="sd">                Time constant [ps].</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        ----------</span>
+<span class="sd">            array-like</span>
+<span class="sd">                Model prediction.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">heaviside</span><span class="p">(</span><span class="n">t</span><span class="p">)</span> <span class="o">*</span> <span class="n">A</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">t</span> <span class="o">/</span> <span class="n">T</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="Utilities.heaviside">
+<a class="viewcode-back" href="../../PumpProbeFitting.html#PumpProbeFitting.data_model.Utilities.heaviside">[docs]</a>
+    <span class="k">def</span> <span class="nf">heaviside</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Custom Heaviside step function.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">            x : float or array-like</span>
+<span class="sd">                Input value(s).</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        ----------</span>
+<span class="sd">            int or array-like</span>
+<span class="sd">              Value(s) of the Heaviside step function.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">x</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="Utilities.gaussian">
+<a class="viewcode-back" href="../../PumpProbeFitting.html#PumpProbeFitting.data_model.Utilities.gaussian">[docs]</a>
+    <span class="k">def</span> <span class="nf">gaussian</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">mu</span><span class="p">,</span> <span class="n">sigma</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Calculate the value of a Gaussian (normal) distribution.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">            x : float or numpy.ndarray</span>
+<span class="sd">                The value(s) at which to evaluate the Gaussian distribution.</span>
+<span class="sd">            mu : float</span>
+<span class="sd">                The mean (average) value of the distribution.</span>
+<span class="sd">            sigma : float</span>
+<span class="sd">                The standard deviation, a measure of the spread of the distribution.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        ----------</span>
+<span class="sd">            float or numpy.ndarray</span>
+<span class="sd">                The value(s) of the Gaussian distribution at the given point(s) x.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">coefficient</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">/</span> <span class="p">(</span><span class="n">sigma</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">))</span>
+        <span class="n">exponent</span> <span class="o">=</span> <span class="o">-</span><span class="p">((</span><span class="n">x</span> <span class="o">-</span> <span class="n">mu</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">sigma</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">coefficient</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="n">exponent</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="Utilities.convolution_stretchedExp">
+<a class="viewcode-back" href="../../PumpProbeFitting.html#PumpProbeFitting.data_model.Utilities.convolution_stretchedExp">[docs]</a>
+    <span class="k">def</span> <span class="nf">convolution_stretchedExp</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="n">tau</span><span class="p">,</span> <span class="n">t0</span><span class="p">,</span> <span class="n">A</span><span class="p">,</span> <span class="n">sigma</span><span class="p">,</span> <span class="n">beta</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Perform convolution of a stretched exponential decay function and a Gaussian function with given parameters using direct summation method.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">            t : numpy.ndarray</span>
+<span class="sd">                Array of time points [ps].</span>
+<span class="sd">            tau : float</span>
+<span class="sd">                Time constant of the stretched exponential decay function.</span>
+<span class="sd">            t0 : float</span>
+<span class="sd">                Time offset [ps].</span>
+<span class="sd">            A : float</span>
+<span class="sd">                Amplitude of the stretched exponential decay function.</span>
+<span class="sd">            sigma : float</span>
+<span class="sd">                Standard deviation of the Gaussian function [ps].</span>
+<span class="sd">            beta : float</span>
+<span class="sd">                Stretching parameter of the stretched exponential decay function.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        ----------</span>
+<span class="sd">            numpy.ndarray</span>
+<span class="sd">                Result of convolution of the two functions.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># Alias t to x and t0 to mu for better readability</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="n">t</span>
+        <span class="n">mu</span> <span class="o">=</span> <span class="n">t0</span>
+        
+        <span class="c1"># Direct numerical convolution of Gaussian with stretched exponential decay</span>
+        <span class="n">IRF</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">gaussian</span><span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="n">x</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span> <span class="n">mu</span><span class="p">,</span> <span class="n">sigma</span><span class="p">)</span>
+        <span class="n">IRF</span> <span class="o">/=</span> <span class="n">IRF</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>  <span class="c1"># Area normalization</span>
+        
+        <span class="n">decay</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">stretched_exponential</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">A</span><span class="p">,</span> <span class="n">tau</span><span class="p">,</span> <span class="n">beta</span><span class="p">)</span>
+        
+        <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">convolve</span><span class="p">(</span><span class="n">decay</span><span class="p">,</span> <span class="n">IRF</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s2">&quot;same&quot;</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="Utilities.convolution_exp">
+<a class="viewcode-back" href="../../PumpProbeFitting.html#PumpProbeFitting.data_model.Utilities.convolution_exp">[docs]</a>
+    <span class="k">def</span> <span class="nf">convolution_exp</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="n">tau</span><span class="p">,</span> <span class="n">t0</span><span class="p">,</span> <span class="n">A</span><span class="p">,</span> <span class="n">sigma</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Perform convolution of a exponential decay function and a Gaussian function using direct summation method.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">            t : numpy.ndarray</span>
+<span class="sd">                Array of time points [ps].</span>
+<span class="sd">            tau : float</span>
+<span class="sd">                Time constant of the exponential decay function [ps].</span>
+<span class="sd">            t0 : float</span>
+<span class="sd">                Mean of the Gaussian function [ps].</span>
+<span class="sd">            A : float</span>
+<span class="sd">                Amplitude of the exponential decay function.</span>
+<span class="sd">            sigma : float</span>
+<span class="sd">                Standard deviation of the Gaussian function [ps].</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        ----------</span>
+<span class="sd">            numpy.ndarray</span>
+<span class="sd">                Result of convolution of the two functions.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># Alias t to x and t0 to mu for better readability</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="n">t</span>
+        <span class="n">mu</span> <span class="o">=</span> <span class="n">t0</span>
+        
+        <span class="c1"># Direct numerical convolution of Gaussian with stretched exponential decay</span>
+        <span class="n">IRF</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">gaussian</span><span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="n">x</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span> <span class="n">mu</span><span class="p">,</span> <span class="n">sigma</span><span class="p">)</span>
+        <span class="n">IRF</span> <span class="o">/=</span> <span class="n">IRF</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>  <span class="c1"># Area normalization</span>
+        
+        <span class="n">decay</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">exponential</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">A</span><span class="p">,</span> <span class="n">tau</span><span class="p">)</span>
+        
+        <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">convolve</span><span class="p">(</span><span class="n">decay</span><span class="p">,</span> <span class="n">IRF</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s2">&quot;same&quot;</span><span class="p">)</span></div>
+</div>
+
+</pre></div>
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2024 - present, Mohan Giri.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.1.3.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  <!-- # L10n: Setting the PST URL as an argument as this does not need to be localized -->
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.16.1.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>
